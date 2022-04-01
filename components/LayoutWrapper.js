@@ -6,8 +6,12 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useTranslation, useLanguageQuery, LanguageSwitcher } from 'next-export-i18n'
 
 const LayoutWrapper = ({ children }) => {
+  const { t } = useTranslation()
+  const [query] = useLanguageQuery()
+
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
@@ -36,7 +40,7 @@ const LayoutWrapper = ({ children }) => {
                   href={link.href}
                   className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
                 >
-                  {link.title}
+                  {t(link.title)}
                 </Link>
               ))}
             </div>
