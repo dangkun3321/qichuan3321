@@ -15,8 +15,27 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      maxWidth: {
+        '8xl': '96rem',
+        '9xl': '128rem',
+      },
+      screens: {
+        tablet: '640px',
+        // => @media (min-width: 640px) { ... }
+
+        laptop: '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: '1920px',
+        // => @media (min-width: 1920px) { ... }
+      },
       spacing: {
         '9/16': '56.25%',
+        118: '29.5rem',
+        128: '32rem',
+        178: '44rem',
+        '8xl': '96rem',
+        '9xl': '128rem',
       },
       lineHeight: {
         11: '2.75rem',
@@ -25,11 +44,26 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['PingFang SC', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,
         gray: colors.neutral,
+        navBackground: '#303E4E',
+        btnPrimary: '#33E1A8',
+        downloadText: '#3F4045',
+        serviceBackground: '#434856',
+        serviceText: '#DFDFDF',
+        copyrightText: '#637587',
+        copyrightBorder: '#4F5960',
+        serviceOval: '#48D5A3',
+        trialText: '#35C491',
+        fromNavbackground: 'rgba(48, 62, 78, 0.99)',
+        stopNavbackground: '#263036',
+        title: '#4C4E56',
+        content: '#818699',
+        copyrightBackground: '#303E4D',
+        imBackground: '#578CFF',
       },
       typography: (theme) => ({
         DEFAULT: {
