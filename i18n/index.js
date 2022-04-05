@@ -7,7 +7,7 @@ const i18n = {
     zh,
   },
   defaultLang: 'zh',
-  useBrowserDefault: true,
+  //useBrowserDefault: true, // 开启此选项优先跟浏览器语言一致
 }
 
 module.exports = i18n

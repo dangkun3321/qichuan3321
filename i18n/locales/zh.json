@@ -1,3 +1,24 @@
 {
-  "Product": "产品"
+  "Products": "产品",
+  "Solutions": "解决方案",
+  "Pricing": "价格",
+  "Resource": "资源",
+  "Case": "案例",
+  "About Us": "关于我们",
+  "Free Download": "免费下载",
+  "zh": "中文",
+  "en": "English",
+  "company": "烟台小樱桃网络科技有限公司",
+  "copyright": "© 版权所有",
+  "reserved": "保留所有权利",
+  "audio call": "音频通话",
+  "video call": "视频通话",
+  "online meeting": "线上会议",
+  "call center": "呼叫中心",
+  "document": "文档",
+  "illustrate": "说明",
+  "Related Links": "相关链接",
+  "xyt homepage": "小樱桃官网",
+  "rts homepage": "RTS中文社区",
+  "Contact Us": "联系我们"
 }
