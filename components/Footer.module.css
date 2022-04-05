@@ -1,0 +1,10 @@
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(48, 62, 78, 0.99) 0%, #263036 100%);
+  /* clip-path: inset(0 -50px 0 -50px round 50% 50% 0 0px); */
+}
