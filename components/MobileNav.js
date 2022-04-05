@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import { useTranslation } from 'next-export-i18n'
 
 const MobileNav = () => {
+  const { t } = useTranslation()
   const [navShow, setNavShow] = useState(false)
 
   const onToggleNav = () => {
@@ -18,10 +20,10 @@ const MobileNav = () => {
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="mr-2 flex h-full items-center justify-center laptop:hidden">
       <button
         type="button"
-        className="ml-1 mr-1 h-8 w-8 rounded py-1"
+        className="h-9 w-9 rounded py-1 px-1"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -29,7 +31,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
+          className="text-white text-opacity-90 dark:text-gray-100"
         >
           {navShow ? (
             <path
@@ -47,7 +49,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-24 right-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
+        className={`fixed top-16 right-0 z-10 h-full w-full transform bg-gray-100 duration-300 ease-in-out dark:bg-gray-800 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -65,7 +67,7 @@ const MobileNav = () => {
                 className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                 onClick={onToggleNav}
               >
-                {link.title}
+                {t(link.title)}
               </Link>
             </div>
           ))}
