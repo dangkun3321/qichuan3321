@@ -165,9 +165,27 @@ export default function Products() {
         </div>
 
         <div className="mt-16 flex items-center justify-center space-x-6 text-content laptop:space-x-20">
-          <div>强扩展性</div>
-          <div>安全稳定</div>
-          <div className="flex items-center">
+          <div className="flex cursor-pointer items-center">
+            <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
+              <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
+                <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
+              </div>
+            </div>
+
+            <div>强扩展性</div>
+          </div>
+
+          <div className="flex cursor-pointer items-center">
+            <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
+              <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
+                <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
+              </div>
+            </div>
+
+            <div>安全稳定</div>
+          </div>
+
+          <div className="flex cursor-pointer items-center">
             <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
               <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
                 <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
@@ -178,7 +196,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mt-8 flex bg-white pl-10 laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
+        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
               <div>技术好 生态好</div>
@@ -203,7 +221,97 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="-mt-3 pb-16">
+          <div className="-mt-3">
+            <Img1 className="hidden laptop:block" />
+          </div>
+        </div>
+
+        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
+          <div className="flex flex-1 flex-col pr-12">
+            <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
+              <div>强扩展性</div>
+            </div>
+
+            <div className="mt-9 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">
+                高效易用的Web UI、低代码开发以及丰富的二次开发接口
+              </div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              支持REST、Websocket、NATS等协议，支持主流的开发语言
+            </div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">丰富的扩展模块</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              回声消除、降噪、语音识别、人脸识别、物体识别等，可积木式叠加，灵活混搭
+            </div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">
+                支持全方位的互联互通，不会把您和您的用户“锁”在系统里
+              </div>
+            </div>
+            <div className=" ml-6 mt-2 text-sm text-content laptop:w-[34rem]">
+              支持4G VoLTE及5G
+              NR视频通话，支持主流的通信协议（如SIP、H323、WebRTC、RTMP等）和全方位的互联互通，如微信小程序，声网Agora、腾讯TRTC等
+            </div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">兼容FreeSWITCH API</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              兼容所有FreeSWITCH API接口：Lua、ESL、HTTAPI等，兼容第三方功能模块
+            </div>
+          </div>
+
+          <div className="-mt-36">
+            <Image
+              width="586px"
+              height="365px"
+              src="/static/images/xswitch/20.webp"
+              alt={t('rts homepage')}
+              className="hidden h-full w-full select-none object-contain laptop:block"
+            />
+
+            {/* <Img1 className="hidden laptop:block" /> */}
+          </div>
+        </div>
+
+        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
+          <div className="flex flex-1 flex-col pr-12">
+            <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
+              <div>安全·稳定</div>
+            </div>
+
+            <div className="mt-9 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">信令媒体安全</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              防SIP扫描、防Dos攻击、防注册暴力破解、TLS信令加密、IP黑名单、User-Agent黑白名单、SRTP媒体加密、ZRTP端到端媒体加密
+            </div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">系统保护</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">守护进程、系统过载保护</div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">
+                RBAC权限控制、可供审计的操作日志、通话时长限制
+              </div>
+            </div>
+          </div>
+
+          <div className="-mt-3">
             <Img1 className="hidden laptop:block" />
           </div>
         </div>
