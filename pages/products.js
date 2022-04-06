@@ -10,13 +10,16 @@ import People from '@/svg/people.svg'
 import Dot from '@/svg/dot.svg'
 import Fs from '@/svg/fs.svg'
 import Img1 from '@/svg/img-01.svg'
+import { useTranslation } from 'next-export-i18n'
 
 export default function Products() {
+  const { t } = useTranslation()
+
   return (
     <div className="mx-auto desktop:max-w-screen-desktop">
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
-      <div className="w-ful -z-10  -mt-16  flex h-[740px] select-none justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-contain bg-no-repeat px-3 laptop:h-178  laptop:px-0">
+      <div className="w-ful -z-10  -mt-16  flex h-[740px] select-none justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-contain bg-no-repeat px-3 laptop:h-[46rem]  laptop:px-0">
         <div className="flex w-full max-w-7xl">
           <div className=" mt-48 flex flex-1 flex-col items-center text-center laptop:mt-52">
             <div className="text-4xl leading-14 text-white">高度可定制的实时音视频通信平台</div>
@@ -80,7 +83,7 @@ export default function Products() {
 
         <div className="mt-14 flex flex-wrap items-center justify-center space-y-4 laptop:px-28 desktop:px-0">
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
-            <div className="h-full w-72 bg-[url('/static/images/xswitch/16.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/10.webp')] laptop:bg-contain"></div>
+            <div className="h-full w-72 bg-[url('/static/images/xswitch/10@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/10.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               音视频通话
             </div>
@@ -91,7 +94,7 @@ export default function Products() {
           </div>
 
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
-            <div className="h-full  w-72 bg-[url('/static/images/xswitch/11.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/11.webp')] laptop:bg-contain"></div>
+            <div className="h-full  w-72 bg-[url('/static/images/xswitch/11@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/11.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               线上会议
             </div>
@@ -102,7 +105,7 @@ export default function Products() {
           </div>
 
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
-            <div className="h-full  w-72 bg-[url('/static/images/xswitch/12.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/12.webp')] laptop:bg-contain"></div>
+            <div className="h-full  w-72 bg-[url('/static/images/xswitch/12@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/12.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               呼叫中心
             </div>
@@ -113,7 +116,7 @@ export default function Products() {
           </div>
 
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
-            <div className="h-full  w-72 bg-[url('/static/images/xswitch/13.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/13.webp')] laptop:bg-contain"></div>
+            <div className="h-full  w-72 bg-[url('/static/images/xswitch/13@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/13.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               多协议网关
             </div>
@@ -125,7 +128,7 @@ export default function Products() {
           </div>
 
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
-            <div className="h-full  w-72 bg-[url('/static/images/xswitch/14.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/14.webp')] laptop:bg-contain"></div>
+            <div className="h-full  w-72 bg-[url('/static/images/xswitch/14@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/14.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               人工智能
             </div>
@@ -153,7 +156,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center bg-screenBackground pt-20 laptop:px-20 laptop:pt-32 desktop:px-28">
+      <div className="flex flex-col items-center bg-screenBackground pt-20 laptop:px-20 laptop:pt-32 laptop:pb-12 desktop:px-28">
         <div className=" text-4xl font-semibold text-title laptop:text-5xl">
           为什么选择XSwitch？
         </div>
@@ -175,7 +178,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mt-8 flex bg-white pl-10 laptop:overflow-hidden laptop:rounded-md laptop:border laptop:pr-16 laptop:pl-16 laptop:shadow-sm">
+        <div className="mt-8 flex bg-white pl-10 laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
               <div>技术好 生态好</div>
@@ -202,6 +205,72 @@ export default function Products() {
 
           <div className="-mt-3 pb-16">
             <Img1 className="hidden laptop:block" />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex w-full justify-center bg-screenBackground py-28">
+        <div className="flex w-full max-w-7xl items-center space-x-4">
+          <div className="hidden w-full flex-1 items-center justify-end laptop:flex">
+            <div className="  h-[380px] w-full items-end bg-contain bg-no-repeat laptop:flex laptop:bg-[url('/static/images/xswitch/18.webp')]"></div>
+          </div>
+
+          <div className="flex flex-1 flex-col ">
+            <div className="text-5xl font-semibold text-title">活跃的开源社区</div>
+            <div className="mt-8 flex max-w-lg flex-col space-y-5 text-sm text-content">
+              <div>
+                XSwitch基于开源技术构建，我们的团队为主流的开源通信软件贡献了十几万行代码，我们相信开源是最好的开发协作模式。
+              </div>
+              <div>
+                我们团队维护着RTS社区和FreeSWITCH中文社区，同时
+                <span className="text-[#3E414D]">免费提供</span>
+                我们所使用的所有开源软件的技术咨询和技术支持。
+              </div>
+              <div>
+                通过这些技术支持我们得以全面地了解这些基础软件的各种玩法，以及容易遇到的各种“坑”，并以最快的速度做出解决方案。
+              </div>
+            </div>
+            <div className="mt-12 flex max-w-lg justify-between ">
+              <div className="flex">
+                <Link
+                  className="flex items-center space-x-2"
+                  href="/"
+                  aria-label={siteMetadata.headerTitle}
+                >
+                  <Image
+                    width="16px"
+                    height="16px"
+                    src="/static/images/xswitch/07.png"
+                    alt={t('rts homepage')}
+                    className="h-4 w-4 select-none"
+                  />
+                  <span className="text-sm text-content">{t('rts homepage')}</span>
+                </Link>
+
+                <Link
+                  className="ml-5 flex items-center space-x-2"
+                  href="/"
+                  aria-label={siteMetadata.headerTitle}
+                >
+                  <Image
+                    width="16px"
+                    height="16px"
+                    src="/static/images/xswitch/19.png"
+                    alt={t('FreeSWITCH-CN')}
+                    className="h-4 w-4 select-none"
+                  />
+                  <span className="text-sm text-content">{t('FreeSWITCH-CN')}</span>
+                </Link>
+              </div>
+
+              <Link
+                className="flex items-center space-x-2 rounded  border border-downloadText px-4 py-2"
+                href="/"
+                aria-label={siteMetadata.headerTitle}
+              >
+                <span className="text-sm text-downloadText">开源技术咨询</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
