@@ -18,6 +18,11 @@ const Header = () => {
   const [navShow, setNavShow] = useState(false)
 
   useEffect(() => {
+    const scrollY = window.pageYOffset
+    setIsScrollToTop(scrollY === 0)
+  }, [])
+
+  useEffect(() => {
     var url = document.location.toString()
     var arrUrl = url.split('//')
 
@@ -30,7 +35,7 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    const handleRouteChange = (url, { shallow }) => {
+    const handleRouteChange = (url) => {
       setIsProducts(url === '/products' || url === '/')
     }
 
