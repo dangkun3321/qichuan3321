@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
@@ -11,9 +12,15 @@ import Dot from '@/svg/dot.svg'
 import Fs from '@/svg/fs.svg'
 import Img1 from '@/svg/img-01.svg'
 import { useTranslation } from 'next-export-i18n'
+import cls from 'classnames'
 
 export default function Products() {
   const { t } = useTranslation()
+  const [tabIndex, setTabIndex] = useState(0)
+
+  const tabOnClick = (index) => {
+    setTabIndex(index)
+  }
 
   return (
     <div className="mx-auto desktop:max-w-screen-desktop">
@@ -165,8 +172,13 @@ export default function Products() {
         </div>
 
         <div className="mt-16 flex items-center justify-center space-x-6 text-content laptop:space-x-20">
-          <div className="flex cursor-pointer items-center">
-            <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
+          <div onClick={() => tabOnClick(0)} className="flex cursor-pointer items-center">
+            <div
+              className={cls(
+                tabIndex === 0 ? 'flex' : 'hidden',
+                'h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10'
+              )}
+            >
               <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
                 <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
               </div>
@@ -175,8 +187,13 @@ export default function Products() {
             <div>强扩展性</div>
           </div>
 
-          <div className="flex cursor-pointer items-center">
-            <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
+          <div onClick={() => tabOnClick(1)} className="flex cursor-pointer items-center">
+            <div
+              className={cls(
+                tabIndex === 1 ? 'flex' : 'hidden',
+                'h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10'
+              )}
+            >
               <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
                 <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
               </div>
@@ -185,8 +202,13 @@ export default function Products() {
             <div>安全稳定</div>
           </div>
 
-          <div className="flex cursor-pointer items-center">
-            <div className=" flex h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10">
+          <div onClick={() => tabOnClick(2)} className="flex cursor-pointer items-center">
+            <div
+              className={cls(
+                tabIndex === 2 ? 'flex' : 'hidden',
+                'h-6 w-6 items-center justify-center rounded-sm bg-trialText bg-opacity-10'
+              )}
+            >
               <div className=" flex h-4  w-4 items-center justify-center rounded-full bg-trialText bg-opacity-25">
                 <div className="h-2 w-2 rounded-full bg-trialText bg-opacity-80" />
               </div>
@@ -196,37 +218,12 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
-          <div className="flex flex-1 flex-col pr-12">
-            <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
-              <div>技术好 生态好</div>
-            </div>
-
-            <div className="mt-9 flex items-center">
-              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">支持多运行环境</div>
-            </div>
-            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
-              支持公有云平台部署、Docker容器化和K8S部署、私有化部署、支持国产操作系统和CPU、集群部署和弹性伸缩
-            </div>
-
-            <div className="mt-7 flex items-center">
-              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">开源社区</div>
-            </div>
-            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
-              我们团队维护着RTS社区和FreeSWITCH中文社区，并
-              <span className=" font-semibold  text-title">免费提供</span>
-              我们所使用的所有开源软件的技术咨询和技术支持。
-            </div>
-          </div>
-
-          <div className="-mt-3">
-            <Img1 className="hidden laptop:block" />
-          </div>
-        </div>
-
-        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
+        <div
+          className={cls(
+            tabIndex === 0 ? 'flex' : 'hidden',
+            'mt-8 bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+          )}
+        >
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
               <div>强扩展性</div>
@@ -278,12 +275,15 @@ export default function Products() {
               alt={t('rts homepage')}
               className="hidden h-full w-full select-none object-contain laptop:block"
             />
-
-            {/* <Img1 className="hidden laptop:block" /> */}
           </div>
         </div>
 
-        <div className="mt-8 flex h-[30rem] bg-white pl-10 laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow">
+        <div
+          className={cls(
+            tabIndex === 1 ? 'flex' : 'hidden',
+            'mt-8 bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+          )}
+        >
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
               <div>安全·稳定</div>
@@ -308,6 +308,47 @@ export default function Products() {
               <div className="ml-3 font-medium text-title">
                 RBAC权限控制、可供审计的操作日志、通话时长限制
               </div>
+            </div>
+          </div>
+
+          <div>
+            <Image
+              width="586px"
+              height="365px"
+              src="/static/images/xswitch/22.png"
+              alt={t('rts homepage')}
+              className="hidden h-full w-[422px] select-none object-contain laptop:block"
+            />
+          </div>
+        </div>
+
+        <div
+          className={cls(
+            tabIndex === 2 ? 'flex' : 'hidden',
+            'mt-8  bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+          )}
+        >
+          <div className="flex flex-1 flex-col pr-12">
+            <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
+              <div>技术好 生态好</div>
+            </div>
+
+            <div className="mt-9 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">支持多运行环境</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              支持公有云平台部署、Docker容器化和K8S部署、私有化部署、支持国产操作系统和CPU、集群部署和弹性伸缩
+            </div>
+
+            <div className="mt-7 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">开源社区</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              我们团队维护着RTS社区和FreeSWITCH中文社区，并
+              <span className=" font-semibold  text-title">免费提供</span>
+              我们所使用的所有开源软件的技术咨询和技术支持。
             </div>
           </div>
 
