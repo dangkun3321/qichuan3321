@@ -209,14 +209,14 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex w-full justify-center bg-screenBackground py-28">
+      <div className="flex w-full justify-center bg-screenBackground pt-28 pb-12 laptop:py-28 ">
         <div className="flex w-full max-w-7xl items-center space-x-4">
           <div className="hidden w-full flex-1 items-center justify-end laptop:flex">
             <div className="  h-[380px] w-full items-end bg-contain bg-no-repeat laptop:flex laptop:bg-[url('/static/images/xswitch/18.webp')]"></div>
           </div>
 
-          <div className="flex flex-1 flex-col ">
-            <div className="text-5xl font-semibold text-title">活跃的开源社区</div>
+          <div className="flex flex-1 flex-col  pr-4 laptop:pr-0">
+            <div className="text-4xl font-semibold text-title laptop:text-5xl">活跃的开源社区</div>
             <div className="mt-8 flex max-w-lg flex-col space-y-5 text-sm text-content">
               <div>
                 XSwitch基于开源技术构建，我们的团队为主流的开源通信软件贡献了十几万行代码，我们相信开源是最好的开发协作模式。
@@ -230,10 +230,10 @@ export default function Products() {
                 通过这些技术支持我们得以全面地了解这些基础软件的各种玩法，以及容易遇到的各种“坑”，并以最快的速度做出解决方案。
               </div>
             </div>
-            <div className="mt-12 flex max-w-lg justify-between ">
-              <div className="flex">
+            <div className="mt-12 flex w-full flex-wrap justify-between laptop:max-w-lg ">
+              <div className="flex w-full flex-wrap justify-between laptop:w-auto">
                 <Link
-                  className="flex items-center space-x-2"
+                  className="flex w-full items-center laptop:w-auto laptop:space-x-2"
                   href="/"
                   aria-label={siteMetadata.headerTitle}
                 >
@@ -248,7 +248,7 @@ export default function Products() {
                 </Link>
 
                 <Link
-                  className="ml-5 flex items-center space-x-2"
+                  className="ml-0 mt-4 flex items-center space-x-2 laptop:ml-5 laptop:mt-0"
                   href="/"
                   aria-label={siteMetadata.headerTitle}
                 >
@@ -264,7 +264,7 @@ export default function Products() {
               </div>
 
               <Link
-                className="flex items-center space-x-2 rounded  border border-downloadText px-4 py-2"
+                className="mt-5 flex items-center space-x-2  rounded border border-downloadText px-4 py-2 laptop:mt-0"
                 href="/"
                 aria-label={siteMetadata.headerTitle}
               >
@@ -276,7 +276,7 @@ export default function Products() {
       </div>
 
       <div className="flex w-full flex-col items-center bg-white">
-        <div className="flex flex-row items-center  justify-center pt-32 text-4xl font-semibold text-title laptop:text-5xl">
+        <div className="flex flex-row items-center  justify-center pt-24 text-4xl font-semibold text-title laptop:pt-32 laptop:text-5xl">
           <div>版本与购买</div>
           <Image
             width="55px"
