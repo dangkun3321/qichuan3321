@@ -69,7 +69,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex select-none flex-col flex-wrap items-center justify-center bg-white px-4 pt-16 pb-2 laptop:px-0 laptop:pb-48 laptop:pt-32">
+      <div className="flex select-none flex-col flex-wrap items-center justify-center bg-screenBackground px-4 pt-16 pb-2 laptop:px-0 laptop:pb-48 laptop:pt-32">
         <div className="text-[2.5rem] font-semibold  text-title laptop:text-5xl">
           满足多种行业需求
         </div>
@@ -78,8 +78,8 @@ export default function Products() {
           XSwitch产品稳定可靠，经过多年打磨和众多大客户验证，功能强大而灵活，可根据您的需求进行专业定制。
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center space-y-4">
-          <div className="mt-4 flex h-72 w-full flex-col items-center rounded laptop:mr-8 laptop:w-auto laptop:border laptop:shadow-sm">
+        <div className="mt-14 flex flex-wrap items-center justify-center space-y-4 laptop:px-28 desktop:px-0">
+          <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full w-72 bg-[url('/static/images/xswitch/16.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/10.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               音视频通话
@@ -90,7 +90,7 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="mt-4 flex h-72 w-full flex-col items-center rounded laptop:mr-8 laptop:w-auto laptop:border laptop:shadow-sm">
+          <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full  w-72 bg-[url('/static/images/xswitch/11.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/11.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               线上会议
@@ -101,7 +101,7 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="mt-4 flex h-72 w-full flex-col items-center rounded laptop:mr-8 laptop:w-auto laptop:border laptop:shadow-sm">
+          <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full  w-72 bg-[url('/static/images/xswitch/12.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/12.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               呼叫中心
@@ -112,7 +112,7 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="mt-4 flex h-72 w-full flex-col items-center rounded laptop:mr-8 laptop:w-auto laptop:border laptop:shadow-sm">
+          <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full  w-72 bg-[url('/static/images/xswitch/13.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/13.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               多协议网关
@@ -124,7 +124,7 @@ export default function Products() {
             </div>
           </div>
 
-          <div className="mt-4 flex h-72 w-full flex-col items-center rounded laptop:mr-8 laptop:w-auto laptop:border laptop:shadow-sm">
+          <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full  w-72 bg-[url('/static/images/xswitch/14.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/14.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
               人工智能
@@ -138,8 +138,8 @@ export default function Products() {
       </div>
 
       <div className="w-ful relative flex select-none justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
-        <Dot className="absolute left-0 top-0  -ml-32 -mt-7 hidden laptop:block" />
-        <Dot className="absolute right-0 bottom-0 -mr-32 -mb-7 hidden laptop:block" />
+        <Dot className="absolute left-0 top-0  -ml-32 -mt-7 hidden desktop:block" />
+        <Dot className="absolute right-0 bottom-0 -mr-32 -mb-7 hidden desktop:block" />
 
         <div className="flex flex-col  items-center">
           <div className="mt-14 bg-gradient-to-r from-[#9BFFFA] to-[#C8FFB8] bg-clip-text text-[2.125rem] font-extrabold text-transparent laptop:text-5xl">
@@ -148,12 +148,12 @@ export default function Products() {
           <div className="mt-4 flex flex-col items-center space-y-2 px-4 text-center leading-7 text-[rgba(255,255,255,0.6)] laptop:max-w-lg laptop:px-0">
             XSwitch是模块化设计、积木式按需叠加和无限伸缩扩容的通信产品，更可以通过定制支持集群部署，实现更强大的功能。
           </div>
-          <Fs className=" mt-24 hidden w-full object-contain laptop:block" />
-          <div className="mt-14 h-[198.79px] w-full max-w-[389px] bg-[url('/static/images/xswitch/17.png')] bg-contain bg-no-repeat laptop:hidden"></div>
+          <Fs className=" mt-24 hidden w-full object-contain desktop:block" />
+          <div className="mt-14 h-[198.79px] w-full max-w-[389px] bg-[url('/static/images/xswitch/17.png')] bg-contain bg-no-repeat desktop:hidden"></div>
         </div>
       </div>
 
-      <div className="mt-20 flex flex-col items-center bg-white laptop:mt-32">
+      <div className="flex flex-col items-center bg-screenBackground pt-20 laptop:px-20 laptop:pt-32 desktop:px-28">
         <div className=" text-4xl font-semibold text-title laptop:text-5xl">
           为什么选择XSwitch？
         </div>
@@ -175,7 +175,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="mt-8 flex bg-white pl-10 laptop:overflow-hidden laptop:rounded-md  laptop:border laptop:pr-16 laptop:pl-16 laptop:shadow-sm">
+        <div className="mt-8 flex bg-white pl-10 laptop:overflow-hidden laptop:rounded-md laptop:border laptop:pr-16 laptop:pl-16 laptop:shadow-sm">
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
               <div>技术好 生态好</div>

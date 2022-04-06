@@ -64,6 +64,7 @@ module.exports = {
         content: '#818699',
         copyrightBackground: '#303E4D',
         imBackground: '#578CFF',
+        screenBackground: '#F7F8FC',
       },
       typography: (theme) => ({
         DEFAULT: {
