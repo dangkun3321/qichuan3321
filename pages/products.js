@@ -141,18 +141,18 @@ export default function Products() {
       </div>
 
       <div className="w-ful relative flex select-none justify-center overflow-hidden bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
-        <Dot className="absolute left-0 top-0  -ml-32 -mt-7 hidden desktop:block" />
-        <Dot className="absolute right-0 bottom-0 -mr-32 -mb-7 hidden desktop:block" />
+        <Dot className="absolute left-0 top-0 hidden laptop:-mt-32 laptop:-ml-64 laptop:block desktop:-ml-32 desktop:-mt-7" />
+        <Dot className="absolute right-0 bottom-0 hidden laptop:-mb-32  laptop:-mr-64 laptop:block desktop:-mr-32 desktop:-mb-7" />
 
-        <div className="flex flex-col  items-center">
+        <div className="flex w-full flex-col items-center justify-center">
           <div className="mt-14 bg-gradient-to-r from-[#9BFFFA] to-[#C8FFB8] bg-clip-text text-[2.125rem] font-extrabold text-transparent laptop:text-5xl">
             模块化 可定制 易扩展
           </div>
           <div className="mt-4 flex flex-col items-center space-y-2 px-4 text-center leading-7 text-[rgba(255,255,255,0.6)] laptop:max-w-lg laptop:px-0">
             XSwitch是模块化设计、积木式按需叠加和无限伸缩扩容的通信产品，更可以通过定制支持集群部署，实现更强大的功能。
           </div>
-          <Fs className=" mt-24 hidden w-full object-contain desktop:block" />
-          <div className="mt-14 h-[198.79px] w-full max-w-[389px] bg-[url('/static/images/xswitch/17.png')] bg-contain bg-no-repeat desktop:hidden"></div>
+          <Fs className=" mt-24 hidden h-full object-contain laptop:block" />
+          <div className="mt-14 h-[198.79px] w-full max-w-[389px] bg-[url('/static/images/xswitch/17.png')] bg-contain bg-no-repeat laptop:hidden"></div>
         </div>
       </div>
 
