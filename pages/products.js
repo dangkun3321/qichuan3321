@@ -140,7 +140,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="w-ful relative flex select-none justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
+      <div className="w-ful relative flex select-none justify-center overflow-hidden bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
         <Dot className="absolute left-0 top-0  -ml-32 -mt-7 hidden desktop:block" />
         <Dot className="absolute right-0 bottom-0 -mr-32 -mb-7 hidden desktop:block" />
 
