@@ -14,8 +14,8 @@ const siteMetadata = {
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
+    baiduAnalyticsId: 'aceb73d799b598617d418bca6a2bbedb', // 百度统计 ID
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo
