@@ -114,10 +114,7 @@ const Header = () => {
                   key={link.title}
                   className={cls(isProducts && isScrollToTop ? 'text-white' : 'text-downloadText')}
                 >
-                  <Link
-                    href={link.href}
-                    className="mx-2 flex items-center p-1  dark:text-gray-100 sm:p-4"
-                  >
+                  <Link href={link.href} className="mx-2 flex items-center p-1 sm:p-4">
                     {t(link.title)}
                     {link.subHref && <ArrowDown className="ml-1 fill-current" />}
                   </Link>

@@ -581,7 +581,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="w-ful relative flex   items-center justify-center py-16 laptop:py-28">
+      <div className="w-ful relative flex   items-center justify-center bg-white py-16 laptop:py-28">
         <Partner />
       </div>
 
