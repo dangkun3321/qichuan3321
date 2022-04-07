@@ -1,6 +1,9 @@
 import Link from '@/components/Link'
+import { useTranslation } from 'next-export-i18n'
 
 export default function FourZeroFour() {
+  const { t } = useTranslation()
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center md:flex-row md:items-center md:justify-center md:space-x-6">
       <div className="space-x-2 pt-6 pb-8 md:space-y-5">
@@ -9,13 +12,11 @@ export default function FourZeroFour() {
         </h1>
       </div>
       <div className="max-w-md">
-        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry we couldn't find this page.
-        </p>
-        <p className="mb-8">But dont worry, you can find plenty of other things on our homepage.</p>
+        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">{t('not found title')}</p>
+        <p className="mb-8">{t('not found subtitle')}</p>
         <Link href="/">
-          <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-navBackground px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
-            Back to homepage
+          <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-navBackground px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 focus:outline-none">
+            {t('Back to homepage')}
           </button>
         </Link>
       </div>
