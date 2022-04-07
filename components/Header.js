@@ -39,10 +39,10 @@ const Header = () => {
       setIsProducts(url === '/products' || url === '/')
     }
 
-    router.events.on('routeChangeStart', handleRouteChange)
+    router.events.on('routeChangeComplete', handleRouteChange)
 
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
+      router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
 
@@ -91,7 +91,7 @@ const Header = () => {
     <header
       className={cls(
         isProducts && isScrollToTop ? 'bg-transparent' : 'bg-white shadow-sm',
-        'fixed left-0 top-0 right-0 z-50 mx-auto flex h-16 max-h-16 w-full select-none items-center justify-center px-1 laptop:px-0 desktop:max-w-screen-desktop'
+        'fixed left-0 top-0 right-0 z-50 mx-auto flex h-16 max-h-16 w-full select-none items-center justify-center px-1 laptop:px-0 '
       )}
     >
       <div className="flex h-full w-full justify-between laptop:max-w-6xl">
@@ -182,7 +182,7 @@ const Header = () => {
 
         <div className="mr-3 hidden items-center laptop:flex">
           <Link
-            href="/download"
+            href="/blog/xswitch-install"
             className="flex h-[32px] items-center justify-center rounded-full bg-btnPrimary px-5 py-2 text-sm text-[#2D3332]"
           >
             <Download className="mr-1" />

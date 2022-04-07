@@ -9,13 +9,20 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   email: 'info@x-y-t.cn',
   github: 'https://github.com/rts-cn',
+  xyt: 'https://x-y-t.cn', // 小樱桃官网
+  rts: 'http://rts.cn', // RTS 中文社区
+  freeswitchCN: 'http://freeswitch.org.cn', // FreeSWITCH 中文社区
+  signupStandard: 'https://jinshuju.net/f/KA4jtc', // 申请标准版
+  signupEnterprise: 'https://jinshuju.net/f/KA4jtc', // 申请企业版试用
+  signupXswitchCloud: 'https://jinshuju.net/f/KA4jtc', // 申请 xswitch cloud
+  signupXswitchFree: 'https://git.xswitch.cn/xswitch/docs', // 学习版
   telephone: '0535-6753997',
   locale: 'zh',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
-    baiduAnalyticsId: 'aceb73d799b598617d418bca6a2bbedb', // 百度统计 ID
+    baiduAnalyticsId: 'a43df86b23ae409ca3d6eea68b7b7aff', // 百度统计 ID
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo

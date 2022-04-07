@@ -53,8 +53,8 @@ export default function Footer() {
               <div className="flex flex-col space-y-3 text-xs font-light text-white">
                 <Link
                   className="flex items-center space-x-2"
-                  href="/"
-                  aria-label={siteMetadata.headerTitle}
+                  href={siteMetadata.xyt}
+                  aria-label={t('xyt homepage')}
                 >
                   <Image
                     width="16px"
@@ -68,8 +68,8 @@ export default function Footer() {
 
                 <Link
                   className="flex items-center space-x-2"
-                  href="/"
-                  aria-label={siteMetadata.headerTitle}
+                  href={siteMetadata.rts}
+                  aria-label={t('rts homepage')}
                 >
                   <Image
                     width="16px"
@@ -83,8 +83,8 @@ export default function Footer() {
 
                 <Link
                   className="flex items-center space-x-2"
-                  href="/"
-                  aria-label={siteMetadata.headerTitle}
+                  href={siteMetadata.github}
+                  aria-label="Github"
                 >
                   <Github className="h-4 w-4 select-none" />
                   <span>Github</span>
@@ -93,25 +93,32 @@ export default function Footer() {
             </div>
 
             <div className="flex w-1/2 flex-col pt-12 laptop:mt-0 laptop:w-auto laptop:pt-0 laptop:pl-118">
-              <div className="mb-5 font-medium text-white">{t('Contact Us')}</div>
+              <div className="mb-5 select-none font-medium text-white">{t('Contact Us')}</div>
               <div className="flex flex-col space-y-4 text-xs font-light text-white">
-                <Link
+                <div
                   className="flex items-center space-x-2"
-                  href="/"
-                  aria-label={siteMetadata.telephone}
+                  href={`tel:${siteMetadata.telephone}`}
+                  aria-label="tel"
                 >
                   <Telephone className="h-4 w-4 select-none" />
-                  <span>{siteMetadata.telephone}</span>
-                </Link>
+                  <Link
+                    className="laptop:hidden"
+                    href={`tel:${siteMetadata.telephone}`}
+                    aria-label="tel"
+                  >
+                    {siteMetadata.telephone}
+                  </Link>
+                  <span className="hidden select-all laptop:block">{siteMetadata.telephone}</span>
+                </div>
 
-                <Link
+                <div
                   className="flex items-center space-x-2"
                   href="/"
                   aria-label={siteMetadata.email}
                 >
                   <Mail className="h-4 w-4 select-none" />
-                  <span className="-mt-1">{siteMetadata.email}</span>
-                </Link>
+                  <span className="-mt-1 select-all">{siteMetadata.email}</span>
+                </div>
               </div>
             </div>
           </div>

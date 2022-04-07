@@ -13,6 +13,7 @@ import Fs from '@/svg/fs.svg'
 import Img1 from '@/svg/img-01.svg'
 import { useTranslation } from 'next-export-i18n'
 import cls from 'classnames'
+import WechatCard from '@/components/WechatCard'
 
 export default function Products() {
   const { t } = useTranslation()
@@ -38,20 +39,19 @@ export default function Products() {
             <p className=" mt-3 text-lg font-light text-white">满足企业多样化实时音视频通信需求</p>
 
             <div className="mt-14 mb-16 flex select-none laptop:mt-24 laptop:mb-28 ">
-              <div className=" relative flex h-40 w-40 flex-col rounded-tl rounded-bl bg-btnPrimary pl-6 pt-6 text-downloadText shadow-xl ">
-                <div className="flex flex-col">
-                  <div className="pb-px  text-sm">本地部署版</div>
-                  <div className="pt-1 text-lg font-medium">免费下载</div>
+              <Link href="/blog/xswitch-install">
+                <div className=" relative flex h-40 w-40 flex-col rounded-tl rounded-bl bg-btnPrimary pl-6 pt-6 text-downloadText shadow-xl ">
+                  <div className="flex flex-col">
+                    <div className="pb-px  text-sm">本地部署版</div>
+                    <div className="pt-1 text-lg font-medium">免费下载</div>
+                  </div>
+                  <div className="flex w-full flex-1 items-center justify-end pr-7">
+                    <DownloadBold className="h-11 w-11" />
+                  </div>
                 </div>
-                <div className="flex w-full flex-1 items-center justify-end pr-7">
-                  <DownloadBold className="h-11 w-11" />
-                </div>
-                <Link href="/" className=" absolute left-0 top-0 right-0 bottom-0 opacity-0">
-                  start use
-                </Link>
-              </div>
+              </Link>
 
-              <div className="relative flex h-40 w-40 flex-col justify-between rounded-tr rounded-br bg-serviceBackground pl-6 pt-6 text-serviceText shadow-xl">
+              <div className="relative flex h-40 w-40 flex-col justify-between overflow-hidden rounded-tr rounded-br bg-serviceBackground pl-6 pt-6 text-serviceText shadow-xl">
                 <div className="flex flex-col">
                   <div className="pb-px  text-sm">企业定制版</div>
                   <div className="pt-1 text-lg font-medium">联系客服</div>
@@ -60,8 +60,11 @@ export default function Products() {
                 <div className="flex w-full flex-1 items-center justify-end pr-7">
                   <Arrow className="h-11 w-11" />
                 </div>
-                <Link href="/" className=" absolute left-0 top-0 right-0 bottom-0  opacity-0">
-                  service
+                <Link
+                  href="/"
+                  className="absolute left-0 top-0 right-0 bottom-0 opacity-0 hover:cursor-none hover:opacity-100"
+                >
+                  <WechatCard />
                 </Link>
               </div>
             </div>
@@ -383,8 +386,8 @@ export default function Products() {
               <div className="flex w-full flex-wrap justify-between laptop:w-auto">
                 <Link
                   className="flex w-full items-center laptop:w-auto laptop:space-x-2"
-                  href="/"
-                  aria-label={siteMetadata.headerTitle}
+                  href={siteMetadata.rts}
+                  aria-label={t('rts homepage')}
                 >
                   <Image
                     width="16px"
@@ -398,8 +401,8 @@ export default function Products() {
 
                 <Link
                   className="ml-0 mt-4 flex items-center space-x-2 laptop:ml-5 laptop:mt-0"
-                  href="/"
-                  aria-label={siteMetadata.headerTitle}
+                  href={siteMetadata.freeswitchCN}
+                  aria-label={t('FreeSWITCH-CN')}
                 >
                   <Image
                     width="16px"
@@ -475,7 +478,7 @@ export default function Products() {
 
               <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  申请试用
+                  <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
                 </div>
                 <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                   联系客服
@@ -525,7 +528,7 @@ export default function Products() {
 
               <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  申请试用
+                  <Link href={siteMetadata.signupStandard}>{t('Sign Up')}</Link>
                 </div>
                 <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                   联系客服
@@ -549,7 +552,7 @@ export default function Products() {
 
               <div className="flex items-center space-x-4 pt-10 pb-8">
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  申请试用
+                  <Link href={siteMetadata.signupXswitchCloud}>{t('Sign Up')}</Link>
                 </div>
                 <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                   联系客服
@@ -570,7 +573,7 @@ export default function Products() {
               </div>
               <div className="flex items-center space-x-4 pb-8">
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  免费下载
+                  <Link href={siteMetadata.signupXswitchFree}>{t('Free Download')}</Link>
                 </div>
               </div>
             </div>
