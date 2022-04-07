@@ -318,7 +318,7 @@ export default function Products() {
             <Image
               width="586px"
               height="365px"
-              src="/static/images/xswitch/22.png"
+              src="/static/images/xswitch/22.webp"
               alt={t('rts homepage')}
               className="hidden h-full w-[422px] select-none object-contain laptop:block"
             />
