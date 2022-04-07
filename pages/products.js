@@ -187,7 +187,7 @@ export default function Products() {
               </div>
             </div>
 
-            <div>强扩展性</div>
+            <div>扩展性强</div>
           </div>
 
           <div onClick={() => tabOnClick(1)} className="flex cursor-pointer items-center">
@@ -202,7 +202,7 @@ export default function Products() {
               </div>
             </div>
 
-            <div>安全稳定</div>
+            <div>安全·稳定</div>
           </div>
 
           <div onClick={() => tabOnClick(2)} className="flex cursor-pointer items-center">
@@ -217,7 +217,7 @@ export default function Products() {
               </div>
             </div>
 
-            <div>技术好 生态好</div>
+            <div>技术先进·生态开放</div>
           </div>
         </div>
 
@@ -229,7 +229,7 @@ export default function Products() {
         >
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
-              <div>强扩展性</div>
+              <div>扩展性强</div>
             </div>
 
             <div className="mt-9 flex items-center">
@@ -239,7 +239,7 @@ export default function Products() {
               </div>
             </div>
             <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
-              支持REST、Websocket、NATS等协议，支持主流的开发语言
+              三种不同类型接口从易到难随心所欲定制呼叫流程。二次开发接口支持REST、Websocket、NATS等协议，支持主流的开发语言
             </div>
 
             <div className="mt-7 flex items-center">
@@ -252,11 +252,11 @@ export default function Products() {
 
             <div className="mt-7 flex items-center">
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">
-                支持全方位的互联互通，不会把您和您的用户“锁”在系统里
-              </div>
+              <div className="ml-3 font-medium text-title">互联互通</div>
             </div>
             <div className=" ml-6 mt-2 text-sm text-content laptop:w-[34rem]">
+              互联互通是通信的本质，支持全方位的互联互通，不会把您和您的用户“锁”在系统里
+              <br />
               支持4G VoLTE及5G
               NR视频通话，支持主流的通信协议（如SIP、H323、WebRTC、RTMP等）和全方位的互联互通，如微信小程序，声网Agora、腾讯TRTC等
             </div>
@@ -304,13 +304,16 @@ export default function Products() {
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
               <div className="ml-3 font-medium text-title">系统保护</div>
             </div>
-            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">守护进程、系统过载保护</div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              守护进程、系统过载保护、通话时长限制、RBAC权限控制、可供审计的操作日志
+            </div>
 
             <div className="mt-7 flex items-center">
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">
-                RBAC权限控制、可供审计的操作日志、通话时长限制
-              </div>
+              <div className="ml-3 font-medium text-title">运行稳定</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              系统可长年累月的运行，无内存泄漏。持续的研发保证永远可以使用最新的代码和补丁。
             </div>
           </div>
 
@@ -333,12 +336,21 @@ export default function Products() {
         >
           <div className="flex flex-1 flex-col pr-12">
             <div className="mt-12 hidden text-[2rem] font-medium text-title laptop:block">
-              <div>技术好 生态好</div>
+              <div>技术先进·生态开放</div>
             </div>
 
             <div className="mt-9 flex items-center">
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">支持多运行环境</div>
+              <div className="ml-3 font-medium text-title">使用前沿技术</div>
+            </div>
+            <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
+              在保持系统稳定的前提下，我们紧跟前沿通信技术，快速实现新的通信协议和通信标准，如最新的WebRTC、AI、OPUS和AV1音视频编码、4G
+              VoLTE和5G NR视频通信等。
+            </div>
+
+            <div className="mt-9 flex items-center">
+              <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
+              <div className="ml-3 font-medium text-title">支持多种运行环境</div>
             </div>
             <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
               支持公有云平台部署、Docker容器化和K8S部署、私有化部署、支持国产操作系统和CPU、集群部署和弹性伸缩
@@ -346,12 +358,10 @@ export default function Products() {
 
             <div className="mt-7 flex items-center">
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
-              <div className="ml-3 font-medium text-title">开源社区</div>
+              <div className="ml-3 font-medium text-title">开放的接口</div>
             </div>
             <div className=" ml-6 mt-2 max-w-lg text-sm text-content">
-              我们团队维护着RTS社区和FreeSWITCH中文社区，并
-              <span className=" font-semibold  text-title">免费提供</span>
-              我们所使用的所有开源软件的技术咨询和技术支持。
+              系统提供开放的接口可以与LDAP、CRM和ERP等企业平台无缝集成和对接。
             </div>
           </div>
 
@@ -371,15 +381,13 @@ export default function Products() {
             <div className="text-4xl font-semibold text-title laptop:text-5xl">活跃的开源社区</div>
             <div className="mt-8 flex max-w-lg flex-col space-y-5 text-sm text-content">
               <div>
-                XSwitch基于开源技术构建，我们的团队为主流的开源通信软件贡献了十几万行代码，我们相信开源是最好的开发协作模式。
+                XSwitch基于开源技术构建，我们的团队也为主流的开源通信软件贡献了十几万行代码，我们相信开源是最好的开发协作模式。
               </div>
               <div>
-                我们团队维护着RTS社区和FreeSWITCH中文社区，同时
-                <span className="text-[#3E414D]">免费提供</span>
-                我们所使用的所有开源软件的技术咨询和技术支持。
+                我们团队维护着RTS社区和FreeSWITCH中文社区。开放的技术交流让我们深入了解技术发展趋势、了解一线用户的技术需求，进而更有针对性的提供产品。
               </div>
               <div>
-                通过这些技术支持我们得以全面地了解这些基础软件的各种玩法，以及容易遇到的各种“坑”，并以最快的速度做出解决方案。
+                我们团队提供我们所使用的大部分开源软件的免费和收费的技术咨询和技术支持，通过这些技术支持我们得以全面地了解这些基础软件的各种玩法，以及容易遇到的各种问题，并以最快的速度做出最好的解决方案。
               </div>
             </div>
             <div className="mt-12 flex w-full flex-wrap justify-between laptop:max-w-lg ">
@@ -439,7 +447,9 @@ export default function Products() {
           />
         </div>
         <div className=" mt-3 px-6 text-center text-sm leading-6  text-content laptop:max-w-2xl">
-          XSwitch产品稳定可靠，经过多年打磨和众多大客户验证，功能强大而灵活，可根据您的需求进行专业定制，囊括了市面上所有的视音频平台功能。
+          XSwitch产品稳定可靠，经过多年打磨和众多大客户验证，功能强大而灵活，运行稳定。
+          <br />
+          可根据您的需求进行专业定制，支撑您的业务快速发展。
         </div>
 
         <div className="flex w-full flex-wrap px-5 laptop:w-auto laptop:space-x-6 laptop:px-0">
@@ -518,9 +528,8 @@ export default function Products() {
                     <div>
                       {' '}
                       按用户数、功能和并发License收费，
-                      <span className=" font-semibold text-title">
-                        免费提供5个并发Channel测试License
-                      </span>
+                      <span className=" font-semibold text-title">免费提供</span>
+                      5个并发Channel测试License
                     </div>
                   </div>
                 </div>
