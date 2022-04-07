@@ -4,7 +4,7 @@ const siteMetadata = {
   headerTitle: 'XSwitch',
   description: '高度可定制的实时音视频通信平台',
   language: 'zh',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://xswitch.cn',
   siteLogo: '/static/images/logo.png',
   email: 'info@x-y-t.cn',
