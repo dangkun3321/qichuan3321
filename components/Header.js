@@ -31,12 +31,12 @@ const Header = () => {
     if (relUrl.indexOf('?') != -1) {
       relUrl = relUrl.split('?')[0]
     }
-    setIsProducts(relUrl === '/products' || relUrl === '/')
+    setIsProducts(relUrl === '/products/' || relUrl === '/')
   }, [])
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      setIsProducts(url === '/products' || url === '/')
+      setIsProducts(url === '/products/' || url === '/')
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
