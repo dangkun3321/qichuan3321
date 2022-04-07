@@ -17,6 +17,7 @@ const siteMetadata = {
   signupXswitchCloud: 'https://jinshuju.net/f/KA4jtc', // 申请 xswitch cloud
   signupXswitchFree: 'https://git.xswitch.cn/xswitch/docs', // 学习版
   telephone: '0535-6753997',
+  icp: '鲁ICP备17017005号',
   locale: 'zh',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
