@@ -82,7 +82,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex select-none flex-col flex-wrap items-center justify-center bg-screenBackground px-4 pt-16 pb-2 laptop:px-0 laptop:pb-48 laptop:pt-32">
+      <div className="flex select-none flex-col flex-wrap items-center justify-center bg-white px-4 pt-16 pb-2 laptop:bg-screenBackground laptop:px-0 laptop:pb-48 laptop:pt-32">
         <div className="text-[2.5rem] font-semibold  text-title laptop:text-5xl">
           满足多种行业需求
         </div>
@@ -166,7 +166,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center bg-screenBackground pt-20 laptop:px-20 laptop:pt-32 laptop:pb-12 desktop:px-28">
+      <div className="flex flex-col items-center bg-white pt-20 laptop:bg-screenBackground laptop:px-20 laptop:pt-32 laptop:pb-12 desktop:px-28">
         <div className=" text-4xl font-semibold text-title laptop:text-5xl">
           为什么选择XSwitch？
         </div>
@@ -224,7 +224,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 0 ? 'flex' : 'hidden',
-            'mt-8 bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8 bg-white pl-10 pb-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
@@ -254,10 +254,9 @@ export default function Products() {
               <div className=" h-3 w-3 rounded-sm bg-[#BDC2D4] " />
               <div className="ml-3 font-medium text-title">互联互通</div>
             </div>
-            <div className=" ml-6 mt-2 text-sm text-content laptop:w-[34rem]">
-              互联互通是通信的本质，支持全方位的互联互通，不会把您和您的用户“锁”在系统里
-              <br />
-              支持4G VoLTE及5G
+            <div className=" ml-6 mt-2 max-w-[34rem] text-sm text-content laptop:w-[34rem]">
+              互联互通是通信的本质，支持全方位的互联互通，不会把您和您的用户“锁”在系统里 支持4G
+              VoLTE及5G
               NR视频通话，支持主流的通信协议（如SIP、H323、WebRTC、RTMP等）和全方位的互联互通，如微信小程序，声网Agora、腾讯TRTC等
             </div>
 
@@ -284,7 +283,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 1 ? 'flex' : 'hidden',
-            'mt-8 bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8 bg-white pl-10 pb-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
@@ -331,7 +330,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 2 ? 'flex' : 'hidden',
-            'mt-8  bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8  bg-white pl-10 pb-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
@@ -371,15 +370,17 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex w-full justify-center bg-screenBackground pt-28 pb-12 laptop:py-28 ">
-        <div className="flex w-full max-w-7xl items-center space-x-4">
+      <div className="flex w-full justify-center bg-white pt-28  pb-12  laptop:bg-screenBackground  laptop:py-28 ">
+        <div className="flex max-w-full items-center space-x-4 laptop:w-full laptop:max-w-7xl">
           <div className="hidden w-full flex-1 items-center justify-end laptop:flex">
             <div className="  h-[380px] w-full items-end bg-contain bg-no-repeat laptop:flex laptop:bg-[url('/static/images/xswitch/18.webp')]"></div>
           </div>
 
-          <div className="flex flex-1 flex-col  pr-4 laptop:pr-0">
-            <div className="text-4xl font-semibold text-title laptop:text-5xl">活跃的开源社区</div>
-            <div className="mt-8 flex max-w-lg flex-col space-y-5 text-sm text-content">
+          <div className="flex flex-1 flex-col justify-center pr-4 laptop:pr-0">
+            <div className="w-full text-center text-4xl font-semibold text-title laptop:text-left laptop:text-5xl">
+              活跃的开源社区
+            </div>
+            <div className="mt-16 flex max-w-lg flex-col space-y-5 text-sm text-content laptop:mt-8">
               <div>
                 XSwitch基于开源技术构建，我们的团队也为主流的开源通信软件贡献了十几万行代码，我们相信开源是最好的开发协作模式。
               </div>
