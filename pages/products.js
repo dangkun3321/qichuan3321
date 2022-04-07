@@ -224,7 +224,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 0 ? 'flex' : 'hidden',
-            'mt-8 bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8 bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
@@ -284,7 +284,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 1 ? 'flex' : 'hidden',
-            'mt-8 bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8 bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
@@ -331,7 +331,7 @@ export default function Products() {
         <div
           className={cls(
             tabIndex === 2 ? 'flex' : 'hidden',
-            'mt-8  bg-white pl-10 laptop:h-[30rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
+            'mt-8  bg-white pl-10 laptop:h-[32rem] laptop:w-full laptop:max-w-7xl laptop:overflow-hidden laptop:rounded-md laptop:pr-16 laptop:pl-16 laptop:shadow'
           )}
         >
           <div className="flex flex-1 flex-col pr-12">
