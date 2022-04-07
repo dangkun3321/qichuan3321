@@ -7,8 +7,8 @@ import Image from '@/components/Image'
 
 export default function Partner() {
   return (
-    <div className="flex flex-wrap space-x-2">
-      <Pingan />
+    <div className="flex max-w-[23rem] flex-wrap justify-center space-x-2 laptop:max-w-[50rem] desktop:max-w-full">
+      <Pingan className="ml-2" />
       <Image
         width="172px"
         height="90px"
