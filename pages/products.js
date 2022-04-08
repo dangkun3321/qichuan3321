@@ -59,7 +59,10 @@ export default function Products() {
                 <div className="flex w-full flex-1 items-center justify-end pr-7">
                   <Arrow className="h-11 w-11" />
                 </div>
-                <Link href="/" className="absolute left-0 top-0 opacity-0 hover:opacity-100">
+                <Link
+                  href="/"
+                  className="absolute left-0 top-0 opacity-0 transition duration-200 ease-in-out hover:opacity-100"
+                >
                   <ContactCard />
                 </Link>
               </div>
