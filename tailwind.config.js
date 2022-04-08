@@ -61,7 +61,7 @@ module.exports = {
         fromNavbackground: 'rgba(48, 62, 78, 0.99)',
         stopNavbackground: '#263036',
         title: '#4C4E56',
-        content: '#818699',
+        content: '#4B5563',
         copyrightBackground: '#303E4D',
         imBackground: '#578CFF',
         screenBackground: '#F7F8FC',
