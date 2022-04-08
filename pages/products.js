@@ -171,7 +171,7 @@ export default function Products() {
           为什么选择XSwitch？
         </div>
         <div className="mt-4 px-6 text-center text-sm text-content laptop:mt-2 laptop:px-0">
-          其它通信厂商卖给您他们设计好的功能，我们提供您真正想要的功能
+          面向未来设计的通信产品，提供您真正想要的通信功能
         </div>
 
         <div className="mt-16 flex items-center justify-center space-x-6 text-content laptop:space-x-20">
@@ -255,8 +255,7 @@ export default function Products() {
               <div className="ml-3 font-medium text-title">互联互通</div>
             </div>
             <div className=" ml-6 mt-2 max-w-[34rem] text-sm text-content laptop:w-[34rem]">
-              互联互通是通信的本质，支持全方位的互联互通，不会把您和您的用户“锁”在系统里 支持4G
-              VoLTE及5G
+              <strong>互联互通是通信的本质</strong>。XSwitch支持4G VoLTE及5G
               NR视频通话，支持主流的通信协议（如SIP、H323、WebRTC、RTMP等）和全方位的互联互通，如微信小程序，声网Agora、腾讯TRTC等
             </div>
 
