@@ -423,13 +423,13 @@ export default function Products() {
                 </Link>
               </div>
 
-              <Link
+              {/* <Link
                 className="mt-5 flex items-center space-x-2  rounded border border-downloadText px-4 py-2 laptop:mt-0"
                 href="/"
                 aria-label={siteMetadata.headerTitle}
               >
                 <span className="text-sm text-downloadText">开源技术咨询</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -618,7 +618,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="fixed right-0 top-2/3 z-50 mr-5 hidden flex-col shadow laptop:flex">
+      {/* <div className="fixed right-0 top-2/3 z-50 mr-5 hidden flex-col shadow laptop:flex">
         <div className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-tl rounded-tr bg-imBackground">
           <People />
         </div>
@@ -626,7 +626,7 @@ export default function Products() {
         <div className="flex h-20 w-20 cursor-pointer items-center justify-center rounded-bl rounded-br bg-white">
           <Tel />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

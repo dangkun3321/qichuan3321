@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="flex w-full justify-center bg-gradient-to-br from-fromNavbackground  to-stopNavbackground bg-contain bg-no-repeat py-20 pl-6 text-xs text-copyrightText laptop:items-center  laptop:py-24">
         <div className="flex w-full flex-wrap laptop:w-auto laptop:justify-center">
           <div className="flex  w-full flex-wrap space-y-0 laptop:space-x-20 laptop:space-y-0 ">
-            <div className="flex  w-1/2 flex-col laptop:w-auto">
+            {/* <div className="flex  w-1/2 flex-col laptop:w-auto">
               <div className="mb-5 font-medium text-white">{t('Products')}</div>
               <div className="flex flex-col space-y-2 text-xs font-light text-white">
                 <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -34,7 +34,7 @@ export default function Footer() {
                   {t('call center')}
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             <div className="flex  w-1/2 flex-col laptop:w-auto">
               <div className="mb-5 font-medium text-white">{t('Resource')}</div>
