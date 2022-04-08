@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'XSwitch',
+  title: 'XSwitch - 高度可定制的实时音视频通信平台',
   author: '小樱桃科技',
   headerTitle: 'XSwitch',
-  description: '高度可定制的实时音视频通信平台',
+  description: '呼叫中心 视频会议 指挥调度 5G视频网关 VoIP SIP WebRTC',
   language: 'zh',
   theme: 'light', // system, dark or light
   siteUrl: 'https://xswitch.cn',
