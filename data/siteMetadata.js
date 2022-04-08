@@ -11,6 +11,7 @@ const siteMetadata = {
   github: 'https://github.com/rts-cn',
   xyt: 'https://x-y-t.cn', // 小樱桃官网
   rts: 'http://rts.cn', // RTS 中文社区
+  weibo: 'https://weibo.com/u/7749415518', //新浪微博
   freeswitchCN: 'http://freeswitch.org.cn', // FreeSWITCH 中文社区
   signupStandard: 'https://jinshuju.net/f/KA4jtc', // 申请标准版
   signupEnterprise: 'https://jinshuju.net/f/KA4jtc', // 申请企业版试用

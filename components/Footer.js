@@ -9,6 +9,7 @@ import Telephone from './social-icons/telephone.svg'
 import Mail from './social-icons/mail.svg'
 import styles from './Footer.module.css'
 import Oval from '@/svg/oval.svg'
+import Weibo from './social-icons/sinaweibo.svg'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -39,12 +40,15 @@ export default function Footer() {
             <div className="flex  w-1/2 flex-col laptop:w-auto">
               <div className="mb-5 font-medium text-white">{t('Resource')}</div>
               <div className="flex flex-col space-y-2 text-xs font-light text-white">
-                <Link href="/" aria-label={siteMetadata.headerTitle}>
+                <Link
+                  href="https://git.xswitch.cn/xswitch/docs"
+                  aria-label={siteMetadata.headerTitle}
+                >
                   {t('document')}
                 </Link>
-                <Link href="/" aria-label={siteMetadata.headerTitle}>
+                {/* <Link href="/" aria-label={siteMetadata.headerTitle}>
                   {t('illustrate')}
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -82,11 +86,19 @@ export default function Footer() {
                 </Link>
 
                 <Link
+                  className="flex items-center space-x-2 fill-current text-white"
+                  href={siteMetadata.weibo}
+                  aria-label={t('Weibo')}
+                >
+                  <Weibo className="h-4 w-4 select-none" />
+                  <span>{t('Weibo')}</span>
+                </Link>
+                <Link
                   className="flex items-center space-x-2"
                   href={siteMetadata.github}
                   aria-label="Github"
                 >
-                  <Github className="h-4 w-4 select-none" />
+                  <Github className="h-4 w-4 select-none fill-current text-white" />
                   <span>Github</span>
                 </Link>
               </div>
