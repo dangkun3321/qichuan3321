@@ -597,7 +597,7 @@ export default function Products() {
       <div className="w-ful flex h-72 select-none flex-col items-center justify-center space-y-4 bg-serviceOval laptop:h-96 ">
         <div className="text-[28px] text-white  laptop:text-3xl">XSwitch 让实时互动更高效</div>
         <div className="pb-8 text-sm text-white laptop:pb-0">
-          企业定制版满足您的一切视音频通讯需求
+          企业定制版满足您的一切视音频通信需求
         </div>
         <div className="flex space-x-8">
           <Link
