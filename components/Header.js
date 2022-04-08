@@ -179,7 +179,7 @@ const Header = () => {
 
         <div className="mr-3 hidden items-center laptop:flex">
           <Link
-            href="/blog/xswitch-install"
+            href="/pages/xswitch-install"
             className="flex h-[32px] items-center justify-center rounded-full bg-btnPrimary px-5 py-2 text-sm text-[#2D3332]"
           >
             <Download className="mr-1" />

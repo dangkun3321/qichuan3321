@@ -39,7 +39,7 @@ export default function Products() {
             <p className=" mt-3 text-lg font-light text-white">满足企业多样化实时音视频通信需求</p>
 
             <div className="mt-14 mb-16 flex select-none laptop:mt-24 laptop:mb-28 ">
-              <Link href="/blog/xswitch-install">
+              <Link href="/pages/xswitch-install">
                 <div className=" relative flex h-40 w-40 flex-col rounded-tl rounded-bl bg-btnPrimary pl-6 pt-6 text-downloadText shadow-xl ">
                   <div className="flex flex-col">
                     <div className="pb-px  text-sm">本地部署版</div>
