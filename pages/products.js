@@ -6,14 +6,13 @@ import siteMetadata from '@/data/siteMetadata'
 import Partner from '@/components/Partner'
 import DownloadBold from '@/svg/download-bold.svg'
 import Arrow from '@/svg/arrow.svg'
-import Tel from '@/svg/tel.svg'
-import People from '@/svg/people.svg'
 import Dot from '@/svg/dot.svg'
 import Fs from '@/svg/fs.svg'
 import Img1 from '@/svg/img-01.svg'
 import { useTranslation } from 'next-export-i18n'
 import cls from 'classnames'
-import WechatCard from '@/components/WechatCard'
+import ContactCard from '@/components/ContactCard'
+import { Popover } from '@headlessui/react'
 
 export default function Products() {
   const { t } = useTranslation()
@@ -51,7 +50,7 @@ export default function Products() {
                 </div>
               </Link>
 
-              <div className="relative flex h-40 w-40 flex-col justify-between overflow-hidden rounded-tr rounded-br bg-serviceBackground pl-6 pt-6 text-serviceText shadow-xl">
+              <div className="relative flex h-40 w-40 flex-col justify-between  rounded-tr rounded-br bg-serviceBackground pl-6 pt-6 text-serviceText shadow-xl">
                 <div className="flex flex-col">
                   <div className="pb-px  text-sm">企业定制版</div>
                   <div className="pt-1 text-lg font-medium">联系客服</div>
@@ -60,11 +59,8 @@ export default function Products() {
                 <div className="flex w-full flex-1 items-center justify-end pr-7">
                   <Arrow className="h-11 w-11" />
                 </div>
-                <Link
-                  href="/"
-                  className="absolute left-0 top-0 right-0 bottom-0 opacity-0 hover:cursor-none hover:opacity-100"
-                >
-                  <WechatCard />
+                <Link href="/" className="absolute left-0 top-0 opacity-0 hover:opacity-100">
+                  <ContactCard />
                 </Link>
               </div>
             </div>
@@ -453,9 +449,9 @@ export default function Products() {
         </div>
 
         <div className="flex w-full flex-wrap px-5 laptop:w-auto laptop:space-x-6 laptop:px-0">
-          <div className="mt-16  flex w-full flex-col overflow-hidden rounded shadow laptop:w-118 laptop:items-start ">
+          <div className="mt-16  flex w-full flex-col  rounded shadow laptop:w-118 laptop:items-start ">
             <div className="h-3 w-full bg-gradient-to-r from-[#57F8FF] to-[#87FFB9]" />
-            <div className="mt-7 flex h-[20rem] flex-col  justify-between px-6 laptop:h-80 laptop:pl-12">
+            <div className="relative mt-7 flex h-[20rem]  flex-col justify-between px-6 laptop:h-80 laptop:pl-12">
               <div className="flex flex-1 flex-col laptop:px-0">
                 <div className=" pl-1 text-2xl font-semibold text-title">企业定制版</div>
                 <div className="flex flex-col space-y-3 text-xs font-semibold text-content">
@@ -490,9 +486,15 @@ export default function Products() {
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
                 </div>
-                <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
-                  联系客服
-                </div>
+                <Popover>
+                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
+                    联系客服
+                  </Popover.Button>
+
+                  <Popover.Panel className="absolute z-10">
+                    <ContactCard click />
+                  </Popover.Panel>
+                </Popover>
               </div>
             </div>
           </div>
@@ -539,9 +541,15 @@ export default function Products() {
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupStandard}>{t('Sign Up')}</Link>
                 </div>
-                <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
-                  联系客服
-                </div>
+                <Popover>
+                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
+                    联系客服
+                  </Popover.Button>
+
+                  <Popover.Panel className="absolute z-10">
+                    <ContactCard click />
+                  </Popover.Panel>
+                </Popover>
               </div>
             </div>
           </div>
@@ -563,9 +571,15 @@ export default function Products() {
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupXswitchCloud}>{t('Sign Up')}</Link>
                 </div>
-                <div className=" rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
-                  联系客服
-                </div>
+                <Popover>
+                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
+                    联系客服
+                  </Popover.Button>
+
+                  <Popover.Panel className="absolute z-10">
+                    <ContactCard click />
+                  </Popover.Panel>
+                </Popover>
               </div>
             </div>
           </div>
@@ -601,20 +615,22 @@ export default function Products() {
         </div>
         <div className="flex space-x-8">
           <Link
-            href="/"
+            href="/pages/xswitch-install"
             aria-label={siteMetadata.headerTitle}
             className=" rounded bg-white px-9 py-4 text-sm font-medium text-trialText"
           >
             免费体验
           </Link>
 
-          <Link
-            href="/"
-            aria-label={siteMetadata.headerTitle}
-            className=" rounded border bg-serviceOval px-9 py-4 text-sm text-white"
-          >
-            联系客服
-          </Link>
+          <Popover>
+            <Popover.Button className=" rounded border bg-serviceOval px-9 py-4 text-sm text-white">
+              联系客服
+            </Popover.Button>
+
+            <Popover.Panel className="absolute z-10">
+              <ContactCard click />
+            </Popover.Panel>
+          </Popover>
         </div>
       </div>
 
