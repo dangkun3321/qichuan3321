@@ -34,3 +34,9 @@ python3 -m http.server 9000
 ## 开发
 
 本项目在此[模版](https://github.com/timlrx/tailwind-nextjs-starter-blog)基础上开发
+
+## 发布
+
+```
+make install
+```
