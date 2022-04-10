@@ -3,6 +3,7 @@ const siteMetadata = {
   author: '小樱桃科技',
   headerTitle: 'XSwitch',
   description: '呼叫中心 视频会议 指挥调度 5G视频网关 VoIP SIP WebRTC',
+  keywords: '呼叫中心,视频会议,指挥调度,5G视频网关,VoIP,SIP,WebRTC', // keywords: "关键字1,关键字2,关键字3"
   language: 'zh',
   theme: 'light', // system, dark or light
   siteUrl: 'https://xswitch.cn',
