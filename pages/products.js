@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
@@ -15,8 +15,16 @@ import ContactCard from '@/components/ContactCard'
 import { Popover } from '@headlessui/react'
 
 export default function Products() {
+  const [isContactCardShow, setContactCardShow] = useState(false)
   const { t } = useTranslation()
   const [tabIndex, setTabIndex] = useState(0)
+
+  useEffect(() => {
+    setContactCardShow(true)
+    return () => {
+      setContactCardShow(false)
+    }
+  }, [])
 
   const tabOnClick = (index) => {
     setTabIndex(index)
@@ -63,7 +71,9 @@ export default function Products() {
                   href="/"
                   className="absolute left-0 top-0 opacity-0 transition duration-200 ease-in-out hover:opacity-100"
                 >
-                  <ContactCard />
+                  <div className={cls(isContactCardShow ? 'block' : 'hidden')}>
+                    <ContactCard />
+                  </div>
                 </Link>
               </div>
             </div>
@@ -442,7 +452,7 @@ export default function Products() {
             height="43px"
             src="/static/images/xswitch/15.webp"
             alt="avatar"
-            className=" -mt-12 ml-2 h-[1.9375rem] w-[2.5rem] laptop:h-[2.875rem] laptop:w-[3.435rem]"
+            className="-mt-12 ml-2  h-[1.9375rem] w-[2.5rem] laptop:h-[43px] laptop:w-[55px]"
           />
         </div>
         <div className=" mt-3 px-6 text-center text-sm leading-6  text-content laptop:max-w-2xl">
