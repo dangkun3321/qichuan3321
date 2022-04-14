@@ -54,7 +54,7 @@ module.exports = {
         downloadText: '#3F4045',
         serviceBackground: '#434856',
         serviceText: '#DFDFDF',
-        copyrightText: '#637587',
+        copyrightText: '#E5E7EB',
         copyrightBorder: '#4F5960',
         serviceOval: '#48D5A3',
         trialText: '#35C491',

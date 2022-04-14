@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="flex w-full justify-center bg-gradient-to-br from-fromNavbackground  to-stopNavbackground bg-contain bg-no-repeat py-20 pl-6 text-xs text-copyrightText laptop:items-center  laptop:py-24">
+      <div className="flex w-full justify-center bg-gradient-to-br from-fromNavbackground  to-stopNavbackground bg-contain bg-no-repeat py-10 pl-6 text-xs text-copyrightText laptop:items-center  laptop:py-24">
         <div className="flex w-full flex-wrap laptop:w-auto laptop:justify-center">
           <div className="flex  w-full flex-wrap space-y-0 laptop:space-x-20 laptop:space-y-0 ">
             {/* <div className="flex  w-1/2 flex-col laptop:w-auto">
@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div> */}
 
-            <div className="flex  w-1/2 flex-col laptop:w-auto">
+            <div className="flex w-full  flex-col laptop:w-auto">
               <div className="mb-5 font-medium text-white">{t('Resource')}</div>
               <div className="flex flex-col space-y-2 text-xs font-light text-white">
                 <Link
@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex  w-1/2 flex-col pt-12 laptop:w-auto laptop:pt-0">
+            <div className="flex  w-full flex-col pt-12 laptop:w-auto laptop:pt-0">
               <div className="mb-5 font-medium text-white">{t('Related Links')}</div>
               <div className="flex flex-col space-y-3 text-xs font-light text-white">
                 <Link

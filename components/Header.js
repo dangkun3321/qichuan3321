@@ -14,7 +14,7 @@ const Header = () => {
   const [scrollDir, setScrollDir] = useState('scrolling down')
   const [isScrollToTop, setIsScrollToTop] = useState(true)
   const router = useRouter()
-  const [isProducts, setIsProducts] = useState(false)
+  const [isProducts, setIsProducts] = useState(true)
   const [navShow, setNavShow] = useState(false)
 
   useEffect(() => {

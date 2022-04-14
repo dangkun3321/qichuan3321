@@ -8,7 +8,7 @@ export default function Copyright() {
   return (
     <div className="flex h-14 w-full items-center justify-center border-t border-t-copyrightBorder bg-copyrightBackground text-xs text-copyrightText">
       <div className="flex w-full max-w-8xl items-center justify-center laptop:hidden">
-        {`${t('copyright')} 2016-${new Date().getFullYear()} ${t('company')}`}
+        {`${t('copyright')} ${t('company')}`}
         <Link className="pl-2" href="https://beian.miit.gov.cn/" aria-label={siteMetadata.icp}>
           {siteMetadata.icp}
         </Link>
