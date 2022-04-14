@@ -4,8 +4,11 @@ import Link from './Link'
 import Telephone from './social-icons/telephone.svg'
 import Mail from './social-icons/mail.svg'
 import cls from 'classnames'
+import { useTranslation } from 'next-export-i18n'
 
 export default function ContactCard({ click }) {
+  const { t } = useTranslation()
+
   return (
     <div
       className={cls(
@@ -15,9 +18,9 @@ export default function ContactCard({ click }) {
     >
       <div className="relative  flex h-40 w-40 flex-col justify-between overflow-hidden pl-6 pt-6 text-serviceText">
         <div className="flex flex-col">
-          {!click && <div className="pb-px  text-sm">企业定制版</div>}
+          {!click && <div className="pb-px  text-sm">{t('Enterprise Edition')}</div>}
 
-          <div className="pt-1 text-center text-lg font-medium">联系客服</div>
+          <div className="pt-1 text-center text-lg font-medium">{t('Customer Service')}</div>
         </div>
 
         <div className="flex w-full flex-1 items-center justify-center">

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
@@ -8,6 +8,14 @@ import Download from '@/svg/download.svg'
 import ArrowDown from '@/svg/arrow-down.svg'
 import cls from 'classnames'
 import { useRouter } from 'next/router'
+import { LanguageSwitcher } from 'next-export-i18n'
+import { Listbox, Transition } from '@headlessui/react'
+import ArrorDown from '@/svg/arrow-down.svg'
+
+const languages = [
+  { name: '中文', lang: 'zh' },
+  { name: 'English', lang: 'en' },
+]
 
 const Header = () => {
   const { t } = useTranslation()
@@ -16,6 +24,7 @@ const Header = () => {
   const router = useRouter()
   const [isProducts, setIsProducts] = useState(true)
   const [navShow, setNavShow] = useState(false)
+  const [selected, setSelected] = useState(languages[0])
 
   useEffect(() => {
     const scrollY = window.pageYOffset
@@ -23,21 +32,11 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    var url = document.location.toString()
-    var arrUrl = url.split('//')
-
-    var start = arrUrl[1].indexOf('/')
-    var relUrl = arrUrl[1].substring(start)
-    if (relUrl.indexOf('?') != -1) {
-      relUrl = relUrl.split('?')[0]
-    }
-    setIsProducts(relUrl === '/products/' || relUrl === '/')
+    isHomePage()
   }, [])
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      setIsProducts(url === '/products/' || url === '/')
-    }
+    const handleRouteChange = () => isHomePage()
 
     router.events.on('routeChangeComplete', handleRouteChange)
 
@@ -85,6 +84,22 @@ const Header = () => {
       }
       return !status
     })
+  }
+
+  const isHomePage = () => {
+    const url = document.location.toString()
+    const arrUrl = url.split('//')
+    const start = arrUrl[1].indexOf('/')
+    let relUrl = arrUrl[1].substring(start)
+
+    if (relUrl.indexOf('?') !== -1) {
+      relUrl = relUrl.split('?')[0]
+    }
+    setIsProducts(relUrl === '/products/' || relUrl === '/')
+  }
+
+  const languageOnChange = (e) => {
+    setSelected(e)
   }
 
   return (
@@ -185,15 +200,64 @@ const Header = () => {
             <Download className="mr-1" />
             {t('Free Download')}
           </Link>
-          {/* <div className="ml-5 flex items-center justify-center rounded-full px-1 py-2 text-sm text-white">
-  <div className="mr-1 font-medium">
-    <LanguageSwitcher lang="zh">{t('zh')}</LanguageSwitcher>
-  </div>
-  <div>|</div>
-  <div className="ml-1 font-medium">
-    <LanguageSwitcher lang="en">{t('en')}</LanguageSwitcher>
-  </div>
-</div> */}
+          <div className="ml-5 flex items-center justify-center rounded-full px-1 py-2 text-sm text-white">
+            <Listbox value={selected} onChange={languageOnChange}>
+              <div className="relative w-28">
+                <Listbox.Button className="relative flex w-full cursor-default space-x-2 py-2 pl-3 text-left focus:outline-none sm:text-sm">
+                  <span
+                    className={cls(
+                      isProducts && isScrollToTop ? ' text-white' : 'text-downloadText',
+                      'block cursor-pointer truncate'
+                    )}
+                  >
+                    {selected.name}
+                  </span>
+                  <span className="pointer-events-none flex items-center">
+                    <ArrorDown
+                      className={cls(
+                        isProducts && isScrollToTop ? ' text-gray-400' : 'text-downloadText',
+                        'flex items-center justify-center'
+                      )}
+                    />
+                  </span>
+                </Listbox.Button>
+                <Transition
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    {languages.map((language, index) => (
+                      <Listbox.Option
+                        key={index}
+                        className={({ active }) =>
+                          `relative cursor-default select-none text-center ${
+                            active ? ' bg-gray-200 font-medium text-black' : 'text-gray-900'
+                          }`
+                        }
+                        value={language}
+                      >
+                        {({ selected }) => (
+                          <>
+                            <LanguageSwitcher className="h-full w-full" lang={language.lang}>
+                              <span
+                                className={`relative block truncate py-2 ${
+                                  selected ? 'font-medium' : 'font-normal'
+                                }`}
+                              >
+                                {language.name}
+                              </span>
+                            </LanguageSwitcher>
+                          </>
+                        )}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+            </Listbox>
+          </div>
         </div>
       </div>
     </header>
