@@ -44,7 +44,7 @@ export default function Footer() {
                   href="https://git.xswitch.cn/xswitch/docs"
                   aria-label={siteMetadata.headerTitle}
                 >
-                  {t('document')}
+                  {t('Document')}
                 </Link>
                 {/* <Link href="/" aria-label={siteMetadata.headerTitle}>
                   {t('illustrate')}

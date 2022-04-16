@@ -4,8 +4,11 @@ import Link from './Link'
 import Telephone from './social-icons/telephone.svg'
 import Mail from './social-icons/mail.svg'
 import cls from 'classnames'
+import { useTranslation } from 'next-export-i18n'
 
 export default function ContactCard({ click }) {
+  const { t } = useTranslation()
+
   return (
     <div
       className={cls(
@@ -15,18 +18,14 @@ export default function ContactCard({ click }) {
     >
       <div className="relative  flex h-40 w-40 flex-col justify-between overflow-hidden pl-6 pt-6 text-serviceText">
         <div className="flex flex-col">
-          {!click && <div className="pb-px  text-sm">企业定制版</div>}
+          {!click && <div className="pb-px  text-sm">{t('Enterprise Edition')}</div>}
 
-          <div className="pt-1 text-center text-lg font-medium">联系客服</div>
+          <div className="pt-1 text-center text-lg font-medium">{t('Customer Service')}</div>
         </div>
 
         <div className="flex w-full flex-1 items-center justify-center">
           <div className="flex w-full flex-col space-y-4 text-center  text-sm text-white">
-            <div
-              className="flex items-center space-x-2"
-              href={`tel:${siteMetadata.telephone}`}
-              aria-label="tel"
-            >
+            <div className="flex items-center space-x-2">
               <Telephone className="h-4 w-4 select-none" />
               <Link
                 className="laptop:hidden"
@@ -38,7 +37,7 @@ export default function ContactCard({ click }) {
               <span className="hidden select-all laptop:block">{siteMetadata.telephone}</span>
             </div>
 
-            <div className="flex items-center space-x-2" href="/" aria-label={siteMetadata.email}>
+            <div className="flex items-center space-x-2" aria-label={siteMetadata.email}>
               <Mail className="h-4 w-4 select-none" />
               <span className="-mt-1 select-all">{siteMetadata.email}</span>
             </div>
