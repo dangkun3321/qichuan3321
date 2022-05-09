@@ -582,7 +582,7 @@ export default function Products() {
               </div>
               <div className="flex items-center space-x-4 pb-8">
                 <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  <Link href={siteMetadata.signupXswitchFree}>{t('Free Download')}</Link>
+                  <Link href="https://github.com/rts-cn/xswitch-free">{t('Free Download')}</Link>
                 </div>
               </div>
             </div>

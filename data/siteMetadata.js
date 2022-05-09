@@ -17,7 +17,6 @@ const siteMetadata = {
   signupStandard: 'https://jinshuju.net/f/KA4jtc', // 申请标准版
   signupEnterprise: 'https://jinshuju.net/f/KA4jtc', // 申请企业版试用
   signupXswitchCloud: 'https://jinshuju.net/f/KA4jtc', // 申请 xswitch cloud
-  signupXswitchFree: 'https://git.xswitch.cn/xswitch/docs', // 学习版
   telephone: '0535-6753997',
   icp: '鲁ICP备17017005号',
   locale: 'zh',
