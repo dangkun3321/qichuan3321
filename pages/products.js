@@ -430,64 +430,12 @@ export default function Products() {
         </div>
 
         <div className="flex w-full flex-wrap px-5 laptop:w-auto laptop:space-x-6 laptop:px-0">
-          <div className="mt-16  flex w-full flex-col  rounded shadow laptop:w-118 laptop:items-start ">
-            <div className="h-3 w-full bg-gradient-to-r from-[#57F8FF] to-[#87FFB9]" />
-            <div className="relative mt-7 flex h-[20rem]  flex-col justify-between px-6 laptop:h-80 laptop:pl-12">
-              <div className="flex flex-1 flex-col laptop:px-0">
-                <div className=" pl-1 text-2xl font-semibold text-title">
-                  {t('Enterprise Edition')}
-                </div>
-                <div className="flex flex-col space-y-3 text-xs font-semibold text-content">
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title" />
-                    <div> {t('lang_40')}</div>
-                  </div>
-
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_41')}</div>
-                  </div>
-
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_42')}</div>
-                  </div>
-
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_43')}</div>
-                  </div>
-
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_44')}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
-                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
-                  <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
-                </div>
-                <Popover>
-                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
-                    {t('Customer Service')}
-                  </Popover.Button>
-
-                  <Popover.Panel className="absolute z-10">
-                    <ContactCard click />
-                  </Popover.Panel>
-                </Popover>
-              </div>
-            </div>
-          </div>
-
           <div className="mt-16  flex w-full flex-col  overflow-hidden rounded shadow laptop:w-118 laptop:items-start ">
             <div className="h-3 w-full bg-[#F1F2F2]" />
             <div className="mt-7 flex h-[20rem] flex-col  justify-between px-6 laptop:h-80 laptop:pl-12">
               <div className="flex flex-1 flex-col laptop:px-0">
                 <div className=" pl-1 text-2xl font-semibold text-title">
-                  {t('Standard Edition')}
+                  {t('Community Edition')}
                 </div>
                 <div className="flex flex-col space-y-3 text-xs   font-semibold text-content">
                   <div className="mt-5 flex items-center">
@@ -513,10 +461,155 @@ export default function Products() {
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
                     <div>
+                      <span className=" font-semibold text-title">{t('lang_50')}</span>
                       {t('lang_49')}
+                    </div>
+                  </div>
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>
                       <span className=" font-semibold text-title">{t('lang_50')}</span>
                       {t('lang_51')}
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
+                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                  <Link href="/pages/xswitch-install">{t('Free Download')}</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16  flex w-full flex-col  rounded shadow laptop:w-118 laptop:items-start ">
+            <div className="h-3 w-full bg-gradient-to-r from-[#57F8FF] to-[#87FFB9]" />
+            <div className="relative mt-7 flex h-[20rem]  flex-col justify-between px-6 laptop:h-80 laptop:pl-12">
+              <div className="flex flex-1 flex-col laptop:px-0">
+                <div className=" pl-1 text-2xl font-semibold text-title">
+                  {t('Commercial Edition')}
+                </div>
+                <div className="flex flex-col space-y-3 text-xs font-semibold text-content">
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title" />
+                    <div> {t('lang_40')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_41')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_42')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_43')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
+                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                  <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
+                </div>
+                <Popover>
+                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
+                    {t('Customer Service')}
+                  </Popover.Button>
+
+                  <Popover.Panel className="absolute z-10">
+                    <ContactCard click />
+                  </Popover.Panel>
+                </Popover>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex w-full flex-wrap px-5 laptop:w-auto laptop:space-x-6 laptop:px-0">
+          <div className="mt-16  flex w-full flex-col  rounded shadow laptop:w-118 laptop:items-start ">
+            <div className="h-3 w-full bg-gradient-to-r from-[#57F8FF] to-[#87FFB9]" />
+            <div className="relative mt-7 flex h-[20rem]  flex-col justify-between px-6 laptop:h-80 laptop:pl-12">
+              <div className="flex flex-1 flex-col laptop:px-0">
+                <div className=" pl-1 text-2xl font-semibold text-title">
+                  {t('Professional Edition')}
+                </div>
+                <div className="flex flex-col space-y-3 text-xs font-semibold text-content">
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title" />
+                    <div> {t('lang_56')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_57')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_58')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_59')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
+                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                  <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
+                </div>
+                <Popover>
+                  <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
+                    {t('Customer Service')}
+                  </Popover.Button>
+
+                  <Popover.Panel className="absolute z-10">
+                    <ContactCard click />
+                  </Popover.Panel>
+                </Popover>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16  flex w-full flex-col  rounded shadow laptop:w-118 laptop:items-start ">
+            <div className="h-3 w-full bg-gradient-to-r from-[#57F8FF] to-[#87FFB9]" />
+            <div className="relative mt-7 flex h-[20rem]  flex-col justify-between px-6 laptop:h-80 laptop:pl-12">
+              <div className="flex flex-1 flex-col laptop:px-0">
+                <div className=" pl-1 text-2xl font-semibold text-title">
+                  {t('Enterprise Edition')}
+                </div>
+                <div className="flex flex-col space-y-3 text-xs   font-semibold text-content">
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title" />
+                    <div>{t('lang_61')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_62')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_63')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_64')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_65')}</div>
                   </div>
                 </div>
               </div>
