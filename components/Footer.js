@@ -40,15 +40,15 @@ export default function Footer() {
             <div className="flex w-full  flex-col laptop:w-auto">
               <div className="mb-5 font-medium text-white">{t('Resource')}</div>
               <div className="flex flex-col space-y-2 text-xs font-light text-white">
+                <Link href="/docs/xswitch-user.html" aria-label={siteMetadata.headerTitle}>
+                  {t('User Manual')}
+                </Link>
                 <Link
                   href="https://git.xswitch.cn/xswitch/docs"
                   aria-label={siteMetadata.headerTitle}
                 >
                   {t('Document')}
                 </Link>
-                {/* <Link href="/" aria-label={siteMetadata.headerTitle}>
-                  {t('illustrate')}
-                </Link> */}
               </div>
             </div>
 
