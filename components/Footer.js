@@ -43,10 +43,7 @@ export default function Footer() {
                 <Link href="/docs/xswitch-user.html" aria-label={siteMetadata.headerTitle}>
                   {t('User Manual')}
                 </Link>
-                <Link
-                  href="https://git.xswitch.cn/xswitch/docs"
-                  aria-label={siteMetadata.headerTitle}
-                >
+                <Link href="/pages/docs/" aria-label={siteMetadata.headerTitle}>
                   {t('Document')}
                 </Link>
               </div>
