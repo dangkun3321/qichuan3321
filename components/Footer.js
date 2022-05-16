@@ -101,6 +101,18 @@ export default function Footer() {
               </div>
             </div>
 
+            <div className="flex  w-1/2 flex-col laptop:w-auto">
+              <div className="mb-5 font-medium text-white">{t('Terms')}</div>
+              <div className="flex flex-col space-y-2 text-xs font-light text-white">
+                <Link href="/pages/privacy/" aria-label={siteMetadata.headerTitle}>
+                  {t('Privacy Policy')}
+                </Link>
+                <Link href="/pages/eula/" aria-label={siteMetadata.headerTitle}>
+                  {t('End User License Agreement')}
+                </Link>
+              </div>
+            </div>
+
             <div className="flex w-1/2 flex-col pt-12 laptop:mt-0 laptop:w-auto laptop:pt-0 laptop:pl-118">
               <div className="mb-5 select-none font-medium text-white">{t('Contact Us')}</div>
               <div className="flex flex-col space-y-4 text-xs font-light text-white">
