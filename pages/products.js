@@ -503,12 +503,22 @@ export default function Products() {
 
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_42')}</div>
+                    <div>{t('lang_141')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_142')}</div>
                   </div>
 
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
                     <div>{t('lang_43')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_42')}</div>
                   </div>
                 </div>
               </div>
@@ -547,7 +557,17 @@ export default function Products() {
 
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_57')}</div>
+                    <div>{t('lang_59')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_60')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
+                    <div>{t('lang_160')}</div>
                   </div>
 
                   <div className="mt-5 flex items-center">
@@ -557,7 +577,7 @@ export default function Products() {
 
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_59')}</div>
+                    <div>{t('lang_57')}</div>
                   </div>
                 </div>
               </div>
@@ -593,8 +613,13 @@ export default function Products() {
                   </div>
 
                   <div className="mt-5 flex items-center">
+                    <div className=" mr-2 h-2 w-2 rounded-full bg-title" />
+                    <div>{t('lang_64')}</div>
+                  </div>
+
+                  <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_62')}</div>
+                    <div>{t('lang_65')}</div>
                   </div>
 
                   <div className="mt-5 flex items-center">
@@ -604,12 +629,7 @@ export default function Products() {
 
                   <div className="mt-5 flex items-center">
                     <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_64')}</div>
-                  </div>
-
-                  <div className="mt-5 flex items-center">
-                    <div className=" mr-2 h-2 w-2 rounded-full bg-title pr-1" />
-                    <div>{t('lang_65')}</div>
+                    <div>{t('lang_62')}</div>
                   </div>
                 </div>
               </div>
