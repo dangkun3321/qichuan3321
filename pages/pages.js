@@ -2,6 +2,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
+import { useTranslation } from 'next-export-i18n'
 
 export const POSTS_PER_PAGE = 5
 
@@ -17,6 +18,8 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
+  const { t } = useTranslation()
+
   return (
     <>
       <PageSEO title={`Blog - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -25,7 +28,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
           posts={posts}
           initialDisplayPosts={initialDisplayPosts}
           pagination={pagination}
-          title="All Posts"
+          title={t('All Pages')}
         />
       </div>
     </>

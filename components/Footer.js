@@ -38,7 +38,7 @@ export default function Footer() {
             </div> */}
 
             <div className="flex w-full  flex-col laptop:w-auto">
-              <div className="mb-5 font-medium text-white">{t('Resource')}</div>
+              <div className="mb-5 font-medium text-white">{t('Resources')}</div>
               <div className="flex flex-col space-y-2 text-xs font-light text-white">
                 <Link href="/docs/xswitch-user.html" aria-label={siteMetadata.headerTitle}>
                   {t('User Manual')}

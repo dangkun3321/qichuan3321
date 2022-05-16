@@ -2,7 +2,8 @@ const headerNavLinks = [
   // { href: '/products', title: 'Products', subHref: { href: '/products', title: 'Products' } },
   // { href: '/solutions', title: 'Solutions', subHref: { href: '/products', title: 'Products' } },
   // { href: '/pricing', title: 'Pricing' },
-  { href: 'https://git.xswitch.cn/xswitch/docs', title: 'Resource' },
+  { href: 'https://git.xswitch.cn/xswitch/docs', title: 'Resources' },
+  { href: '/pages', title: 'Pages', subHref: { href: '/pages', title: 'Pages' } },
   // { href: '/case', title: 'Case' },
   { href: 'https://x-y-t.cn', title: 'About Us' },
 ]

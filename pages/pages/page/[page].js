@@ -2,6 +2,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import ListLayout from '@/layouts/ListLayout'
+import { useTranslation } from 'next-export-i18n'
 import { POSTS_PER_PAGE } from '..'
 
 export async function getStaticPaths() {
@@ -42,6 +43,8 @@ export async function getStaticProps(context) {
 }
 
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
+  const { t } = useTranslation()
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
@@ -50,7 +53,7 @@ export default function PostPage({ posts, initialDisplayPosts, pagination }) {
           posts={posts}
           initialDisplayPosts={initialDisplayPosts}
           pagination={pagination}
-          title="All Posts"
+          title={t('All Pages')}
         />
       </div>
     </>
