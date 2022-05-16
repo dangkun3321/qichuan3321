@@ -1,24 +1,28 @@
 import Link from '@/components/Link'
+import Image from '@/components/Image'
 import { useTranslation } from 'next-export-i18n'
 
 export default function FourZeroFour() {
   const { t } = useTranslation()
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center md:flex-row md:items-center md:justify-center md:space-x-6">
-      <div className="space-x-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-8xl md:leading-14">
-          404
-        </h1>
+    <div className="fixed  inset-0 z-50 flex flex-col items-center justify-center bg-white">
+      <div className="text-6xl font-medium text-[#2E2E2E]">{t('not found title')}</div>
+      <div className="mt-3 text-[#2E2E2E]">
+        {t('return')}{' '}
+        <span className="text-[#3B6FFF]">
+          <Link href="/">{t('homepage')}</Link>
+        </span>
       </div>
-      <div className="max-w-md">
-        <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">{t('not found title')}</p>
-        <p className="mb-8">{t('not found subtitle')}</p>
-        <Link href="/">
-          <button className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-navBackground px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 focus:outline-none">
-            {t('Back to homepage')}
-          </button>
-        </Link>
+      <div>
+        <Image
+          width="564px"
+          height="378px"
+          alt=""
+          src="/static/images/404.webp"
+          srcSet="/static/images/404@2x.webp"
+          className="mt-10 mb-12 h-[378px] w-[564px] object-cover"
+        />
       </div>
     </div>
   )
