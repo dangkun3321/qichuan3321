@@ -35,6 +35,10 @@ python3 -m http.server 9000
 
 本项目在此[模版](https://github.com/timlrx/tailwind-nextjs-starter-blog)基础上开发
 
+本系统使用了代码美化插件，在提交时会自动格式化代码，如果发现提交不成功，可以执行`git diff`查看美化后的文件，然后只要执行`git add 对应的文件`即可。
+
+参见： <https://git.xswitch.cn/xyt/xswitch-website/pulls/3/files>
+
 ## 发布
 
 ```
