@@ -18,7 +18,7 @@ XSwitch 由以下两部分构成：
 
 版本：
 
-- XSwitch 4.0.0
+- [XSwitch 4.0.0](/pages/xswitch-4.0.0)
 
 <hr/>
 
