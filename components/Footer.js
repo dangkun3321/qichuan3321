@@ -105,7 +105,7 @@ export default function Footer() {
                   aria-label="Github"
                 >
                   <Github className="h-4 w-4 select-none fill-current text-white" />
-                  <span>Github</span>
+                  <span>{t('Github Discussions')}</span>
                 </Link>
               </div>
             </div>
