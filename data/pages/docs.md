@@ -16,11 +16,11 @@ XSwitch 由以下两部分构成：
 - XUI：Web UI
 - xswitch：软交换引擎，基于 FreeSWITCH `master`版开发，也可以独立于 XUI 使用
 
-版本：
+<hr/>
+
+# 版本
 
 - [XSwitch 4.0.0](/pages/xswitch-4.0.0)
-
-<hr/>
 
 # 基本文档
 
