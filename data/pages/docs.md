@@ -31,6 +31,8 @@ XSwitch 由以下两部分构成：
 
 # API 文档
 
+- [XSwitch 集成指南](/docs/xswitch-integration-guide.html)
+- [XSwitch 认证鉴权接口](/docs/xswitch-auth.html)
 - XSwitch REST API
 - XSwitch XCC API
 - [XSwitch XCC API 示例](https://git.xswitch.cn/xswitch/xcc-examples)
