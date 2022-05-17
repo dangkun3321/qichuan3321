@@ -46,6 +46,15 @@ export default function Footer() {
                 <Link href="/pages/docs/" aria-label={siteMetadata.headerTitle}>
                   {t('Document')}
                 </Link>
+                <Link
+                  href="https://git.xswitch.cn/xswitch/xswitch"
+                  aria-label={siteMetadata.headerTitle}
+                >
+                  {t('Git Code')}
+                </Link>
+                <Link href={siteMetadata.github} aria-label={siteMetadata.headerTitle}>
+                  {t('Github Code')}
+                </Link>
               </div>
             </div>
 
@@ -92,7 +101,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   className="flex items-center space-x-2"
-                  href={siteMetadata.github}
+                  href={siteMetadata.githubDiscussions}
                   aria-label="Github"
                 >
                   <Github className="h-4 w-4 select-none fill-current text-white" />

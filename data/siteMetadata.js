@@ -10,6 +10,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   email: 'info@x-y-t.cn',
   github: 'https://github.com/rts-cn',
+  githubDiscussions: 'https://github.com/rts-cn/rts/discussions',
   xyt: 'https://x-y-t.cn', // 小樱桃官网
   rts: 'http://rts.cn', // RTS 中文社区
   weibo: 'https://weibo.com/u/7749415518', //新浪微博
