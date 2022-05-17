@@ -140,6 +140,13 @@ export default function Footer() {
                   <Mail className="h-4 w-4 select-none" />
                   <span className="-mt-1 select-all">{siteMetadata.email}</span>
                 </div>
+
+                <Link
+                  href="https://git.xswitch.cn/xswitch/docs/issues/1"
+                  aria-label={siteMetadata.headerTitle}
+                >
+                  📖 &nbsp; {t('Issues')}
+                </Link>
               </div>
             </div>
           </div>
