@@ -9,7 +9,7 @@ layout: PostSimple
 bibliography: references-data.bib
 ---
 
-XSwitch 是一个高度可定制的定时音视频通信平台。XSwitch 主要由以下两部分构成：
+XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要由以下两部分构成：
 
 - XUI：Web UI
 - xswitch：软交换引擎，基于 FreeSWITCH `master`版开发，也可以独立于 XUI 使用
