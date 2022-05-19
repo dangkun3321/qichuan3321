@@ -6,20 +6,12 @@ const headerNavLinks = [
     title: 'Resources',
     subHref: [
       {
-        href: '/docs/xswitch-user.html',
-        title: 'User Manual',
-      },
-      {
         href: '/pages/docs',
         title: 'Document',
       },
       {
-        href: 'https://git.xswitch.cn/xswitch/xswitch',
-        title: 'Git Code',
-      },
-      {
-        href: 'https://github.com/rts-cn',
-        title: 'Github Code',
+        href: '/docs/xswitch-user.html',
+        title: 'User Manual',
       },
     ],
   },
