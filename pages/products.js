@@ -47,7 +47,7 @@ export default function Products() {
               <Link href="/pages/xswitch-install">
                 <div className=" relative flex h-40 w-40 flex-col rounded-tl rounded-bl bg-btnPrimary pl-6 pt-6 text-downloadText shadow-xl ">
                   <div className="flex flex-col">
-                    <div className="pb-px  text-sm">{t('local version')}</div>
+                    <div className="pb-px  text-sm">{t('Community Edition')}</div>
                     <div className="pt-1 text-lg font-medium">{t('Free Download')}</div>
                   </div>
                   <div className="flex w-full flex-1 items-center justify-end pr-7">
@@ -58,7 +58,7 @@ export default function Products() {
 
               <div className="relative flex h-40 w-40 flex-col justify-between  rounded-tr rounded-br bg-serviceBackground pl-6 pt-6 text-serviceText shadow-xl">
                 <div className="flex flex-col">
-                  <div className="pb-px  text-sm">{t('Enterprise Edition')}</div>
+                  <div className="pb-px  text-sm">{t('Payed Edition')}</div>
                   <div className="pt-1 text-lg font-medium">{t('Customer Service')}</div>
                 </div>
 
@@ -524,9 +524,9 @@ export default function Products() {
               </div>
 
               <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
-                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                {/* <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
-                </div>
+                </div> */}
                 <Popover>
                   <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                     {t('Customer Service')}
@@ -583,9 +583,9 @@ export default function Products() {
               </div>
 
               <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
-                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                {/* <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupEnterprise}>{t('Sign Up')}</Link>
-                </div>
+                </div> */}
                 <Popover>
                   <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                     {t('Customer Service')}
@@ -635,9 +635,9 @@ export default function Products() {
               </div>
 
               <div className="flex items-center space-x-4 pt-10 pb-12 laptop:pb-8 ">
-                <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
+                {/* <div className=" rounded-sm border border-downloadText py-2 px-4 text-sm text-downloadText">
                   <Link href={siteMetadata.signupStandard}>{t('Sign Up')}</Link>
-                </div>
+                </div> */}
                 <Popover>
                   <Popover.Button className="rounded-sm border bg-downloadText py-2 px-4 text-sm text-white">
                     {t('Customer Service')}
