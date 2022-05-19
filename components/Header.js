@@ -5,12 +5,12 @@ import Logo from '@/data/logo.svg'
 import Link from './Link'
 import { useTranslation } from 'next-export-i18n'
 import Download from '@/svg/download.svg'
-import ArrowDown from '@/svg/arrow-down.svg'
 import cls from 'classnames'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from 'next-export-i18n'
 import { Listbox, Transition } from '@headlessui/react'
 import ArrorDown from '@/svg/arrow-down.svg'
+import { Popover } from '@headlessui/react'
 
 const languages = [
   { name: '中文', lang: 'zh' },
@@ -129,10 +129,43 @@ const Header = () => {
                   key={link.title}
                   className={cls(isProducts && isScrollToTop ? 'text-white' : 'text-downloadText')}
                 >
-                  <Link href={link.href} className="mx-2 flex items-center p-1 sm:p-4">
-                    {t(link.title)}
-                    {link.subHref && <ArrowDown className="ml-1 fill-current" />}
-                  </Link>
+                  {link.href && (
+                    <Link href={link.href} className="mx-2 flex items-center p-1 sm:p-4">
+                      {t(link.title)}
+                    </Link>
+                  )}
+
+                  {link.subHref && (
+                    <Popover>
+                      {({ open }) => (
+                        <>
+                          <Popover.Button className="mx-2 flex items-center p-1 sm:p-4">
+                            {t(link.title)}
+                            <ArrorDown className="ml-1" />
+                          </Popover.Button>
+
+                          {open && (
+                            <Popover.Panel static className="absolute z-10 -ml-8 mt-2">
+                              <div className="flex flex-col rounded border bg-white shadow">
+                                {link.subHref.map((link, index) => (
+                                  <a
+                                    key={index}
+                                    className="px-10 py-4 text-downloadText "
+                                    href={link.href}
+                                  >
+                                    {t(link.title)}
+                                  </a>
+                                ))}
+                              </div>
+                            </Popover.Panel>
+                          )}
+                        </>
+                      )}
+                    </Popover>
+                  )}
+                  {/* <Link href={link.href} className="mx-2 flex items-center p-1 sm:p-4">
+
+                  </Link> */}
                 </div>
               ))}
             </div>
@@ -185,6 +218,15 @@ const Header = () => {
                     onClick={onToggleNav}
                   >
                     {t(link.title)}
+
+                    {link.subHref &&
+                      link.subHref.map((link, index) => (
+                        <div key={index}>
+                          <Link href={link.href} className="text-xl">
+                            {t(link.title)}
+                          </Link>
+                        </div>
+                      ))}
                   </Link>
                 </div>
               ))}
