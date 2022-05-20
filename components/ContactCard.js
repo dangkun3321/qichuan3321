@@ -18,7 +18,7 @@ export default function ContactCard({ click }) {
     >
       <div className="relative  flex h-40 w-40 flex-col justify-between overflow-hidden pl-6 pt-6 text-serviceText">
         <div className="flex flex-col">
-          {!click && <div className="pb-px  text-sm">{t('Enterprise Edition')}</div>}
+          {!click && <div className="pb-px  text-sm">{t('Payed Edition')}</div>}
 
           <div className="pt-1 text-center text-lg font-medium">{t('Customer Service')}</div>
         </div>
