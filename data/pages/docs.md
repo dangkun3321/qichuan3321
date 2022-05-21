@@ -11,8 +11,8 @@ bibliography: references-data.bib
 
 XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要由以下两部分构成：
 
-- XUI：Web UI
-- xswitch：软交换引擎，基于 FreeSWITCH `master`版开发，也可以独立于 XUI 使用
+- XUI：Web UI，即Web版的管理界面，支持基本的系统管理和WebRTC通话。
+- xswitch（全小写）：软交换引擎，即小樱桃版的FreeSWITCH。基于FreeSWITCH `master`版开发，也可以独立于XUI使用。
 
 <hr/>
 
@@ -26,15 +26,25 @@ XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要�
 - [XSwitch简明用户手册](https://demo.xswitch.cn/xswitch.html)：极简用户手册，用于快速了解XSwitch功能及特性。
 - [XSwitch用户手册](/docs/xswitch-user.html)：详细的用户手册。
 - [XSwitch安装指南](/pages/xswitch-install/)：下载和安装指南。
-- [xswitch-free Docker镜象](https://github.com/rts-cn/xswitch-free)：纯`xswitch`，无Web UI，适于于学习FreeSWITCH。
+- [xswitch-free Docker镜象](https://github.com/rts-cn/xswitch-free)：纯`xswitch`，无Web UI，适用于学习FreeSWITCH。
 
-# API 文档
+# API文档
 
 - [XSwitch集成指南](/docs/xswitch-integration-guide.html)
 - [XSwitch认证鉴权接口](/docs/xswitch-auth.html)
 - XSwitch REST API：整理中 ... （联系我们）
 - [XSwitch XCC API](/docs/xswitch-xcc.html)：基于NATS的API，参见 [示例](https://git.xswitch.cn/xswitch/xcc-examples) 及 [Go语言SDK](https://git.xswitch.cn/xswitch/xctrl)
 
+# xswitch相关文档
+
+xswitch（即小樱桃版的FreeSWITCH）是XSwitch中的软交换媒体引擎部分。详见如下文档：
+
+- [xswitch中都有什么](/pages/xswitch/index/)
+
+如果您发现任何跟xswitch相关的问题，请[到这里给我们提工单](https://git.xswitch.cn/xswitch/xswitch/issues) 。
+
 # 更多文档
 
-- [XSwitch文档Git仓库](https://git.xswitch.cn/xswitch/docs)
+- [XSwitch常见问题解答（FAQ）](https://git.xswitch.cn/xswitch/docs#常见问题解答) 。
+- xTalk：WebRTC版通话和会议客户端。
+- [XSwitch文档Git仓库](https://git.xswitch.cn/xswitch/docs)：更多文档列表。
