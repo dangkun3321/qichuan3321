@@ -18,25 +18,23 @@ XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要�
 
 # 版本
 
-- [XSwitch 路线图(Roadmap)](/pages/roadmap)
-- [XSwitch 4.0.0](/pages/xswitch-4.0.0)
+- [XSwitch路线图(Roadmap)](/pages/roadmap)
+- [XSwitch 4.0.0](/pages/xswitch-4.0.0)：发布于2020-05-20
 
 # 基本文档
 
-- [XSwitch 简明用户手册](https://demo.xswitch.cn/xswitch.html)
-- [XSwitch 用户手册](/docs/xswitch-user.html)
-- [XSwitch 安装指南](/pages/xswitch-install/)
-- [xswitch-free Docker 镜象](https://github.com/rts-cn/xswitch-free)
+- [XSwitch简明用户手册](https://demo.xswitch.cn/xswitch.html)：极简用户手册，用于快速了解XSwitch功能及特性。
+- [XSwitch用户手册](/docs/xswitch-user.html)：详细的用户手册。
+- [XSwitch安装指南](/pages/xswitch-install/)：下载和安装指南。
+- [xswitch-free Docker镜象](https://github.com/rts-cn/xswitch-free)：纯`xswitch`，无Web UI，适于于学习FreeSWITCH。
 
 # API 文档
 
-- [XSwitch 集成指南](/docs/xswitch-integration-guide.html)
-- [XSwitch 认证鉴权接口](/docs/xswitch-auth.html)
-- XSwitch REST API
-- [XSwitch XCC API](/docs/xswitch-xcc.html)
-- [XSwitch XCC API 示例](https://git.xswitch.cn/xswitch/xcc-examples)
-- [XSwitch XCC API Go 语言 SDK](https://git.xswitch.cn/xswitch/xctrl)
+- [XSwitch集成指南](/docs/xswitch-integration-guide.html)
+- [XSwitch认证鉴权接口](/docs/xswitch-auth.html)
+- XSwitch REST API：整理中 ... （联系我们）
+- [XSwitch XCC API](/docs/xswitch-xcc.html)：基于NATS的API，参见 [示例](https://git.xswitch.cn/xswitch/xcc-examples) 及 [Go语言SDK](https://git.xswitch.cn/xswitch/xctrl)
 
 # 更多文档
 
-- [XSwitch 文档 Git 仓库](https://git.xswitch.cn/xswitch/docs)
+- [XSwitch文档Git仓库](https://git.xswitch.cn/xswitch/docs)
