@@ -51,6 +51,11 @@ wget https://xswitch.cn/download/xswitch-install.tar.gz --user xswitch --passwor
 tar zxvf xswitch-install.tar.gz
 cd xswitch-install
 ```
+## 安装注意事项：
+- 首先根据自己的操作系统，需要修改相应的文件`env.example或env-mac.example`。
+- 执行`make setup`,使用`cat .env`确认信息是否修改正确。如不正确，可重新执行以上步骤。
+- 执行`make up`进行启动。（一定安装顺序执行）
+- 网页登录时如遇到提示账号密码错误，请恢复之前修改或删除目录重新执行以上操作。
 
 然后按照`README.md`文件中的指示顺序执行即可。如果想了解更多指令信息，请继续阅读下面“指令详情说明”。
 
@@ -147,14 +152,14 @@ https://github.com/rts-cn/xswitch-free
 在服务器上安装 docker 以及 docker-compose（如果非 root 目录请在前加 sudo），如下：
 
 ```
-apt-get remove docker docker-engine docker.io containerd runc
+apt-get remove docker docker-engine docker.io containerd runc -y
 apt-get update
-apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
 curl -fsSL https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/gpg | apt-key add -
 apt-key fingerprint 0EBFCD88
 add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -cs) stable"
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io
+apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
 
 ### 更多参考
