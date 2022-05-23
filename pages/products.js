@@ -34,7 +34,7 @@ export default function Products() {
     <div className="mx-auto desktop:max-w-screen-desktop">
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
-      <div className="w-ful -z-10  -mt-16  flex h-[740px] select-none justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-contain bg-no-repeat px-3 laptop:h-[46rem]  laptop:px-0">
+      <div className="w-ful -z-10  -mt-16  flex h-[740px]  justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-contain bg-no-repeat px-3 laptop:h-[46rem]  laptop:px-0">
         <div className="flex w-full max-w-7xl">
           <div className=" mt-48 flex flex-1 flex-col items-center text-center laptop:mt-52 laptop:items-start">
             <div className="text-4xl leading-14 text-white">{t('lang_01')}</div>
@@ -43,7 +43,7 @@ export default function Products() {
 
             <p className=" mt-3 text-lg font-light text-white">{t('lang_03')}</p>
 
-            <div className="mt-14 mb-16 flex select-none laptop:mt-24 laptop:mb-28 ">
+            <div className="mt-14 mb-16 flex  laptop:mt-24 laptop:mb-28 ">
               <Link href="/pages/xswitch-install">
                 <div className=" relative flex h-40 w-40 flex-col rounded-tl rounded-bl bg-btnPrimary pl-6 pt-6 text-downloadText shadow-xl ">
                   <div className="flex flex-col">
@@ -89,7 +89,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="flex select-none flex-col flex-wrap items-center justify-center bg-white px-4 pt-16 pb-2 laptop:bg-screenBackground laptop:px-0 laptop:pb-48 laptop:pt-32">
+      <div className="flex  flex-col flex-wrap items-center justify-center bg-white px-4 pt-16 pb-2 laptop:bg-screenBackground laptop:px-0 laptop:pb-48 laptop:pt-32">
         <div className="text-[2.5rem] font-semibold  text-title laptop:text-5xl">
           {t('lang_04')}
         </div>
@@ -156,7 +156,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="w-ful relative flex select-none justify-center overflow-hidden bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
+      <div className="w-ful relative flex  justify-center overflow-hidden bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-no-repeat pb-24 ">
         <Dot className="absolute left-0 top-0 hidden laptop:-mt-32 laptop:-ml-64 laptop:block desktop:-ml-32 desktop:-mt-7" />
         <Dot className="absolute right-0 bottom-0 hidden laptop:-mb-32  laptop:-mr-64 laptop:block desktop:-mr-32 desktop:-mb-7" />
 
@@ -270,7 +270,7 @@ export default function Products() {
               height="365px"
               src="/static/images/xswitch/20.webp"
               alt={t('rts homepage')}
-              className="hidden h-full w-full select-none object-contain laptop:block"
+              className="hidden h-full w-full  object-contain laptop:block"
             />
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function Products() {
               height="365px"
               src="/static/images/xswitch/22.webp"
               alt={t('rts homepage')}
-              className="hidden h-full w-[422px] select-none object-contain laptop:block"
+              className="hidden h-full w-[422px]  object-contain laptop:block"
             />
           </div>
         </div>
@@ -379,7 +379,7 @@ export default function Products() {
                     height="16px"
                     src="/static/images/xswitch/07.png"
                     alt={t('rts homepage')}
-                    className="h-4 w-4 select-none"
+                    className="h-4 w-4 "
                   />
                   <span className="text-sm text-content">{t('rts homepage')}</span>
                 </Link>
@@ -394,7 +394,7 @@ export default function Products() {
                     height="16px"
                     src="/static/images/xswitch/19.png"
                     alt={t('FreeSWITCH-CN')}
-                    className="h-4 w-4 select-none"
+                    className="h-4 w-4 "
                   />
                   <span className="text-sm text-content">{t('FreeSWITCH-CN')}</span>
                 </Link>
@@ -708,7 +708,7 @@ export default function Products() {
         <Partner />
       </div>
 
-      <div className="w-ful flex h-72 select-none flex-col items-center justify-center space-y-4 bg-serviceOval px-5 text-center laptop:h-96 laptop:px-0 laptop:text-left ">
+      <div className="w-ful flex h-72  flex-col items-center justify-center space-y-4 bg-serviceOval px-5 text-center laptop:h-96 laptop:px-0 laptop:text-left ">
         <div className="text-[24px] text-white  laptop:text-3xl">{t('lang_54')}</div>
         <div className="pb-8 text-sm text-white laptop:pb-0">{t('lang_55')}</div>
         <div className="flex space-x-8">

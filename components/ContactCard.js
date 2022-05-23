@@ -26,7 +26,7 @@ export default function ContactCard({ click }) {
         <div className="flex w-full flex-1 items-center justify-center">
           <div className="flex w-full flex-col space-y-4 text-center  text-sm text-white">
             <div className="flex items-center space-x-2">
-              <Telephone className="h-4 w-4 select-none" />
+              <Telephone className="h-4 w-4 " />
               <Link
                 className="laptop:hidden"
                 href={`tel:${siteMetadata.telephone}`}
@@ -38,7 +38,7 @@ export default function ContactCard({ click }) {
             </div>
 
             <div className="flex items-center space-x-2" aria-label={siteMetadata.email}>
-              <Mail className="h-4 w-4 select-none" />
+              <Mail className="h-4 w-4 " />
               <span className="-mt-1 select-all">{siteMetadata.email}</span>
             </div>
           </div>

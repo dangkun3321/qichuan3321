@@ -71,7 +71,7 @@ export default function Footer() {
                     height="16px"
                     src="/static/images/xswitch/08.png"
                     alt={t('xyt homepage')}
-                    className="h-4 w-4 select-none"
+                    className="h-4 w-4 "
                   />
                   <span>{t('xyt homepage')}</span>
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
                     height="16px"
                     src="/static/images/xswitch/07.png"
                     alt={t('rts homepage')}
-                    className="h-4 w-4 select-none"
+                    className="h-4 w-4 "
                   />
                   <span>{t('rts homepage')}</span>
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
                   href={siteMetadata.weibo}
                   aria-label={t('Weibo')}
                 >
-                  <Weibo className="h-4 w-4 select-none" />
+                  <Weibo className="h-4 w-4 " />
                   <span>{t('Weibo')}</span>
                 </Link>
                 <Link
@@ -104,7 +104,7 @@ export default function Footer() {
                   href={siteMetadata.githubDiscussions}
                   aria-label="Github"
                 >
-                  <Github className="h-4 w-4 select-none fill-current text-white" />
+                  <Github className="h-4 w-4  fill-current text-white" />
                   <span>{t('Github Discussions')}</span>
                 </Link>
               </div>
@@ -123,14 +123,14 @@ export default function Footer() {
             </div>
 
             <div className="flex w-1/2 flex-col pt-12 laptop:mt-0 laptop:w-auto laptop:pt-0 laptop:pl-118">
-              <div className="mb-5 select-none font-medium text-white">{t('Contact Us')}</div>
+              <div className="mb-5  font-medium text-white">{t('Contact Us')}</div>
               <div className="flex flex-col space-y-4 text-xs font-light text-white">
                 <div
                   className="flex items-center space-x-2"
                   href={`tel:${siteMetadata.telephone}`}
                   aria-label="tel"
                 >
-                  <Telephone className="h-4 w-4 select-none" />
+                  <Telephone className="h-4 w-4 " />
                   <Link
                     className="laptop:hidden"
                     href={`tel:${siteMetadata.telephone}`}
@@ -146,7 +146,7 @@ export default function Footer() {
                   href="/"
                   aria-label={siteMetadata.email}
                 >
-                  <Mail className="h-4 w-4 select-none" />
+                  <Mail className="h-4 w-4 " />
                   <span className="-mt-1 select-all">{siteMetadata.email}</span>
                 </div>
 
