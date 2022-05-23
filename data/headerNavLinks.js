@@ -6,7 +6,7 @@ const headerNavLinks = [
     title: 'Resources',
     subHref: [
       {
-        href: '/pages/docs',
+        href: '/docs',
         title: 'Document',
       },
       {

@@ -95,7 +95,7 @@ const Header = () => {
     if (relUrl.indexOf('?') !== -1) {
       relUrl = relUrl.split('?')[0]
     }
-    setIsProducts(relUrl === '/products/' || relUrl === '/')
+    setIsProducts(relUrl === '/products/' || relUrl === '/' || relUrl === '/docs/')
   }
 
   const languageOnChange = (e) => {
