@@ -708,8 +708,8 @@ export default function Products() {
         <Partner />
       </div>
 
-      <div className="w-ful flex h-72 select-none flex-col items-center justify-center space-y-4 bg-serviceOval laptop:h-96 ">
-        <div className="text-[28px] text-white  laptop:text-3xl">{t('lang_54')}</div>
+      <div className="w-ful flex h-72 select-none flex-col items-center justify-center space-y-4 bg-serviceOval px-5 text-center laptop:h-96 laptop:px-0 laptop:text-left ">
+        <div className="text-[24px] text-white  laptop:text-3xl">{t('lang_54')}</div>
         <div className="pb-8 text-sm text-white laptop:pb-0">{t('lang_55')}</div>
         <div className="flex space-x-8">
           <Link
