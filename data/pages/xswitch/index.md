@@ -21,6 +21,7 @@ xswitch（全小写）即小樱桃版的FreeSWITCH，多年来，XSwitch的开�
 - 支持不解码录像，性能提升N倍
 - `mod_callcenter`功能增强
 - 支持4G VoLTE和5G NR视频呼叫
+- 支持音视频重协商、音视频升降级
 - 支持JWT鉴权
 - `mod_png`功能增强
 - 播放RTSP流
