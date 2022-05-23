@@ -5,7 +5,7 @@ lastmod: '2021-06-16'
 tags: ['XSwitch']
 draft: false
 summary: 'XSwitch路线图'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 

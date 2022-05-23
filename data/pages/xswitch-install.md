@@ -5,7 +5,7 @@ lastmod: '2021-02-01'
 tags: ['XSwitch']
 draft: false
 summary: 'XSwitch 是一个电信级的 IP 电话软交换系统和综合实时音视频多媒体通信平台，本文档描述 All-in-One 版安装过程。'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 

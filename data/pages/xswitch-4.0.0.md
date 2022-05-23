@@ -5,7 +5,7 @@ lastmod: '2022-05-16'
 tags: ['XSwitch', '版本']
 draft: false
 summary: 'XSwitch v4.0.0版，包含很多Bug更新及新特性'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 
