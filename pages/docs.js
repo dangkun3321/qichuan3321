@@ -74,6 +74,13 @@ export default function Docs({ staticTags, tags, posts }) {
     (tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])) || []
   )
 
+  const translateTag = (tag) => {
+    if (tag === 'xswitch') return 'XSwitch'
+    if (tag === 'how-to文档') return 'How-To文档'
+    if (tag === 'api文档') return 'API文档'
+    return tag
+  }
+
   useEffect(() => {
     const hash = decodeURI(window.location.hash)
     if (hash.length > 1) {
@@ -122,7 +129,7 @@ export default function Docs({ staticTags, tags, posts }) {
                     key={index}
                     onClick={() => handleFilteredPosts(tag, index)}
                   >
-                    {tag.toUpperCase()}
+                    {translateTag(tag)}
                   </div>
                 ))}
             </div>
