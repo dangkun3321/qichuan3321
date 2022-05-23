@@ -413,7 +413,7 @@ export default function Products() {
       </div>
 
       <div className="flex w-full flex-col items-center bg-white">
-        <a name="versions" />
+        <a id="versions" />
         <div className="flex flex-row items-center  justify-center pt-24 text-4xl font-semibold text-title laptop:pt-32 laptop:text-5xl">
           <div>{t('Versions and Purchases')}</div>
           <Image
