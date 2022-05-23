@@ -30,6 +30,7 @@ XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要�
 - [XSwitch简明用户手册](https://demo.xswitch.cn/xswitch.html)：极简用户手册，用于快速了解XSwitch功能及特性。
 - [XSwitch用户手册](/docs/xswitch-user.html)：详细的用户手册。
 - [XSwitch安装指南](/pages/xswitch-install/)：下载和安装指南。
+- [XSwitch HowTo文档](/pages/howto/index/)：如何在XSwitch中实现xxx等这些牛x的功能？
 - [xswitch-free Docker镜象](https://github.com/rts-cn/xswitch-free)：纯`xswitch`，无Web UI，适用于学习FreeSWITCH。
 
 # API文档
