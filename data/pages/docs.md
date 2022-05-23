@@ -9,6 +9,10 @@ layout: PostSimple
 bibliography: references-data.bib
 ---
 
+**版权声明：本站所有文档版权所有，仅供在本站查看，任何单位或个人没有本站书面同意不得复制和分发本站文档。**
+
+<hr/>
+
 XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要由以下两部分构成：
 
 - XUI：Web UI，即Web版的管理界面，支持基本的系统管理和WebRTC通话。
