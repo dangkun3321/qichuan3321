@@ -16,7 +16,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   const routes = [
     {
       title: t('Docs'),
-      href: '/pages/docs/',
+      href: '/docs/',
     },
     {
       title: title,
