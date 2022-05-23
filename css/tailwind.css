@@ -40,3 +40,11 @@ h1:hover > a .icon.icon-link {
 h2:hover > a .icon.icon-link {
   opacity: 1;
 }
+
+h3:hover > a .icon.icon-link {
+  opacity: 1;
+}
+
+h4:hover > a .icon.icon-link {
+  opacity: 1;
+}
