@@ -2,10 +2,10 @@
 title: 'XSwitch HowTo文档'
 date: 2022-05-23T10:00:00Z
 lastmod: '2022-05-23'
-tags: ['howto']
+tags: ['How-To文档']
 draft: false
 summary: 'XSwitch HowTo文档索引页'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 

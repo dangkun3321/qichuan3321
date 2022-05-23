@@ -13,18 +13,68 @@ import { useTranslation } from 'next-export-i18n'
 
 export async function getStaticProps() {
   const tags = await getAllTags('pages')
-  const posts = await getAllFilesFrontMatter('pages')
+  let posts = await getAllFilesFrontMatter('pages')
+  const staticTags = ['基本文档', 'api文档']
 
-  return { props: { tags, posts } }
+  delete tags['条款'] // hide this tag
+
+  const staticPosts = [
+    {
+      title: 'XSwitch简明用户手册',
+      href: 'https://demo.xswitch.cn/xswitch.html',
+      tags: ['基本文档'],
+    },
+    {
+      title: 'XSwitch用户手册',
+      href: '/docs/xswitch-user.html',
+      tags: ['基本文档'],
+    },
+    {
+      title: 'xswitch-free Docker镜象',
+      href: 'https://github.com/rts-cn/xswitch-free',
+      tags: ['基本文档'],
+    },
+    {
+      title: 'XSwitch常见问题解答（FAQ）',
+      href: 'https://git.xswitch.cn/xswitch/docs#常见问题解答',
+      tags: ['基本文档'],
+    },
+    {
+      title: 'XSwitch集成指南',
+      href: '/docs/xswitch-integration-guide.html',
+      tags: ['API文档'],
+    },
+    {
+      title: 'XSwitch认证鉴权接口',
+      href: '/docs/xswitch-auth.html',
+      tags: ['API文档'],
+    },
+    {
+      title: 'XSwitch REST API文档',
+      href: '',
+      tags: ['API文档'],
+    },
+    {
+      title: 'XSwitch XCC API文档',
+      href: '/docs/xswitch-xcc.html',
+      tags: ['API文档'],
+    },
+  ]
+
+  posts = posts.concat(staticPosts)
+
+  return { props: { staticTags, tags, posts } }
 }
 
-export default function Docs({ tags, posts }) {
+export default function Docs({ staticTags, tags, posts }) {
   const [filteredPosts, setFilteredPosts] = useState()
-  const sortedTags = tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])
+  const sortedTags = staticTags.concat(
+    (tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])) || []
+  )
   const { t } = useTranslation()
 
   useEffect(() => {
-    handleFilteredPosts(sortedTags[0])
+    handleFilteredPosts(staticTags[0])
   }, [])
 
   const handleFilteredPosts = (tag) => {
@@ -50,20 +100,12 @@ export default function Docs({ tags, posts }) {
               {sortedTags &&
                 sortedTags.map((tag, index) => (
                   <div key={index} onClick={() => handleFilteredPosts(tag)}>
-                    {tag}
+                    {tag.toUpperCase()}
                   </div>
                 ))}
             </div>
 
             <div className="mt-12 flex flex-col space-y-[19px]">
-              <Link
-                href="https://github.com/rts-cn"
-                className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
-              >
-                <Github className="h-[27px] w-[27px]" />
-                <div className="text-sm">Github</div>
-              </Link>
-
               <Link
                 href="/pages/xswitch-install"
                 className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
@@ -71,12 +113,24 @@ export default function Docs({ tags, posts }) {
                 <XswitchInstall className="h-[30px] w-[26px]" />
                 <div className="text-sm">{t('Install')}</div>
               </Link>
+
+              <Link
+                href="https://git.xswitch.cn/xswitch/docs"
+                className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
+              >
+                <Github className="h-[27px] w-[27px]" />
+                <div className="text-sm">更多文档</div>
+              </Link>
             </div>
           </div>
           <div className="mt-10 flex w-full flex-col pr-1 text-sm laptop:mt-0 laptop:pl-32 desktop:px-32">
             {filteredPosts &&
               filteredPosts.map((post, index) => (
-                <Link href={`/pages/${post.slug}`} className="border-b py-4" key={index}>
+                <Link
+                  href={post.href ? post.href : `/pages/${post.slug}`}
+                  className="border-b py-4"
+                  key={index}
+                >
                   {post.title}
                 </Link>
               ))}

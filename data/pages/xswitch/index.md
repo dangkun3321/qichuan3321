@@ -2,16 +2,16 @@
 title: 'xswitch中都有什么？'
 date: 2022-05-21T15:59:00Z
 lastmod: '2022-05-21'
-tags: ['xswitch软交换']
+tags: ['xswitch']
 draft: false
 summary: 'xswitch软交换媒体引擎（FreeSWITCH）相关文档'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 
-xswitch（全小写）即小樱桃版的FreeSWITCH，多年来，XSwitch的开发者为FreeSWITCH开源项目贡献了数不清的补丁和新特性。但并不是所有特性都能被上游接受，因此，我们单独维护了[一个分支](https://git.xswitch.cn/xswitch/xswitch)。我们始终坚持上游优先（Upstream First）的原则，尽量把对大家有用的补丁都提交到上游仓库中去，有的也会优先提到Signalwire的Enterprise版中，还有一部分在我们内部的私有分支里，未开源。下面是xswitch中的一些新功能和特性。
+xswitch（全小写）即小樱桃版的FreeSWITCH，多年来，XSwitch的开发者为FreeSWITCH开源项目贡献了数不清的补丁和新特性。但并不是所有特性都能被上游接受，因此，我们单独维护了[一个分支](https://git.xswitch.cn/xswitch/xswitch)。我们始终坚持上游优先（Upstream First）的原则，尽量把对大家有用的补丁都提交到上游仓库中去，有的也会优先提到Signalwire的Enterprise版中，还有一部分在我们内部的私有分支里，未开源。下面是xswitch中的部分新功能和新特性。
 
-- 会议相关：XSwitch对视频会议做了很多补丁，修复了一些Bug，支持xTalk，支持`10x10`画面，性能提升，单机在同一会议中可支持200方720p视频。
+- 会议相关：XSwitch对视频会议做了很多补丁，修复了一些Bug，支持xTalk，支持100人同屏（`10x10`画面），性能提升，单机在同一会议中可支持200方720p视频。
 - 把Redis当成消息队列用，发送JSON消息
 - Lua原生支持JSON，支持同步和异步HTTP请求
 - Verto支持XUI登录，支持Redis做共享Session

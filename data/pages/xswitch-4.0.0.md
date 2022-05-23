@@ -2,7 +2,7 @@
 title: 'XSwitch v4.0.0版发布'
 date: 2022-05-16T15:59:00Z
 lastmod: '2022-05-16'
-tags: ['XSwitch', '版本']
+tags: ['版本']
 draft: false
 summary: 'XSwitch v4.0.0版，包含很多Bug更新及新特性'
 layout: PostLayout

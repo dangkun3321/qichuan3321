@@ -2,10 +2,10 @@
 title: '如何在XSwitch中开启TLS'
 date: 2022-05-23T10:00:00Z
 lastmod: '2022-05-23'
-tags: ['tls']
+tags: ['How-To文档', '安全']
 draft: false
 summary: '随着时代的发展，TLS也慢慢成了SIP通信的标配'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 
