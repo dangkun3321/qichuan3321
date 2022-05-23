@@ -18,6 +18,8 @@ XSwitch 是一个高度可定制的实时音视频通信平台。XSwitch 主要�
 - XUI：Web UI，即Web版的管理界面，支持基本的系统管理和WebRTC通话。
 - xswitch（全小写）：软交换引擎，即小樱桃版的FreeSWITCH。基于FreeSWITCH `master`版开发，也可以独立于XUI使用。
 
+我们的文档尽量遵循以下规范，参见[如何写技术文档](/pages/write-docs/)。
+
 <hr/>
 
 # 版本
