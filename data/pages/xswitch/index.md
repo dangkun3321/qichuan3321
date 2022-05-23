@@ -39,4 +39,4 @@ xswitch（全小写）即小樱桃版的FreeSWITCH，多年来，XSwitch的开�
 
 以上只是个不完整的列表。详细的功能和特性我们后面还会专门写文章介绍。
 
-xswitch与原生的FreeSWITCH完全兼容，也可以不加我们的Web UI独立运行。如有需要可以直接联系我们。
+xswitch与原生的FreeSWITCH完全兼容，也可以不加我们的Web UI独立运行。如有需要可以直接联系我们。在使用过程中有任何问题也可以[到这里给我们提工单](https://git.xswitch.cn/xswitch/xswitch/issues)。
