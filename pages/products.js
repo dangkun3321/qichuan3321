@@ -37,7 +37,14 @@ export default function Products() {
       <div className="w-ful -z-10  -mt-16  flex h-[740px]  justify-center bg-gradient-to-br from-fromNavbackground to-stopNavbackground bg-contain bg-no-repeat px-3 laptop:h-[46rem]  laptop:px-0">
         <div className="flex w-full max-w-7xl">
           <div className=" mt-48 flex flex-1 flex-col items-center text-center laptop:mt-52 laptop:items-start">
-            <div className="text-4xl leading-14 text-white">{t('lang_01')}</div>
+            <div className="flex flex-wrap justify-center text-center text-4xl leading-14 text-white">
+              <span className="hidden">{t('lang_01')}</span>
+              <span>{t('title_01')}</span>
+              <span>{t('title_02')}</span>
+              <span>{t('title_03')}</span>
+              <span>{t('title_04')}</span>
+              <span>{t('title_05')}</span>
+            </div>
 
             <div className="mt-10 text-lg font-light text-white">{t('lang_02')}</div>
 
