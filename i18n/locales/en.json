@@ -10,7 +10,6 @@
   "company": "Yantai XiaoYingTao",
   "copyright": "© Copyright",
   "reserved": "Co., LTD., ALL RIGHTS RESERVED",
-  "not found title": "Sorry we couldn't find this page.",
   "not found subtitle": "But dont worry, you can find plenty of other things on our homepage.",
   "Weibo": "Sina Weibo",
   "Enterprise Edition": "Customized Edition",
@@ -106,5 +105,10 @@
   "xyt homepage": "XiaoYingTao.cn",
   "return": "return to",
   "homepage": "homepage",
-  "not found title": "NOT FOUND"
+  "not found title": "NOT FOUND",
+  "title_01": "Real-Time ",
+  "title_02": "Communication System",
+  "title_03": "Customizable and Programable ",
+  "title_04": " ",
+  "title_05": " "
 }
