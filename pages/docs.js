@@ -17,6 +17,8 @@ export async function getStaticProps() {
   const staticTags = ['基本文档', 'api文档']
 
   delete tags['条款'] // hide this tag
+  delete tags['基本文档'] // hide this tag and add manually
+  delete tags['api文档'] // hide this tag and add manually
 
   const staticPosts = [
     {
