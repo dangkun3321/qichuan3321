@@ -42,7 +42,17 @@ export async function getStaticProps({ params }) {
 
 export default function Tag({ posts, tag }) {
   // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
+  let title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
+
+  const translateTag = (tag) => {
+    if (tag === 'Xswitch') return 'XSwitch'
+    if (tag === 'How-to文档') return 'How-To文档'
+    if (tag === 'Api文档') return 'API文档'
+    return tag
+  }
+
+  title = translateTag(title)
+
   return (
     <>
       <TagSEO
