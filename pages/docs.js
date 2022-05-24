@@ -49,11 +49,11 @@ export async function getStaticProps() {
       href: '/docs/xswitch-auth.html',
       tags: ['API文档'],
     },
-    {
-      title: 'XSwitch REST API文档',
-      href: '',
-      tags: ['API文档'],
-    },
+    // {
+    //   title: 'XSwitch REST API文档',
+    //   href: '',
+    //   tags: ['API文档'],
+    // },
     {
       title: 'XSwitch XCC API文档',
       href: '/docs/xswitch-xcc.html',
