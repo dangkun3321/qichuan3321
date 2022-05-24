@@ -156,7 +156,7 @@ export default function Docs({ staticTags, tags, posts }) {
               </Link>
             </div>
           </div>
-          <div className="mt-10 flex w-full flex-col pr-1 text-sm laptop:mt-0 laptop:pl-32 desktop:px-32">
+          <div className="mt-10 flex w-full flex-col overflow-hidden pr-1 text-sm laptop:mt-0 laptop:pl-32 desktop:px-32">
             {filteredPosts &&
               filteredPosts.map((post, index) => (
                 <Link
@@ -164,7 +164,12 @@ export default function Docs({ staticTags, tags, posts }) {
                   className="border-b py-4"
                   key={index}
                 >
-                  {post.title}
+                  <div className="flex items-center overflow-hidden truncate">
+                    <div className="text-base font-medium">{post.title}</div>
+                    <div className="overflow-hidden text-ellipsis pl-4  text-sm text-gray-500 ">
+                      {post.summary}
+                    </div>
+                  </div>
                 </Link>
               ))}
           </div>

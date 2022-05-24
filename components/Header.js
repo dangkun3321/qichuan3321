@@ -150,7 +150,7 @@ const Header = () => {
                                 {link.subHref.map((link, index) => (
                                   <a
                                     key={index}
-                                    className="px-10 py-4 text-downloadText "
+                                    className="px-10 py-4 text-downloadText hover:bg-gray-50 hover:text-gray-500"
                                     href={link.href}
                                   >
                                     {t(link.title)}
