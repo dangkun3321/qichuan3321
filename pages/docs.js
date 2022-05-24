@@ -8,8 +8,8 @@ import { useState, useEffect } from 'react'
 import Github from '@/components/social-icons/github.svg'
 import XswitchInstall from '@/svg/xswitch-install.svg'
 import Bg from '@/svg/document-bg.svg'
-
 import { useTranslation } from 'next-export-i18n'
+import cls from 'classnames'
 
 export async function getStaticProps() {
   const tags = await getAllTags('pages')
@@ -67,17 +67,31 @@ export async function getStaticProps() {
 }
 
 export default function Docs({ staticTags, tags, posts }) {
+  const { t } = useTranslation()
   const [filteredPosts, setFilteredPosts] = useState()
+  const [tabIndex, setTabIndex] = useState(0)
   const sortedTags = staticTags.concat(
     (tags && Object.keys(tags).sort((a, b) => tags[b] - tags[a])) || []
   )
-  const { t } = useTranslation()
 
   useEffect(() => {
-    handleFilteredPosts(staticTags[0])
+    const hash = decodeURI(window.location.hash)
+    if (hash.length > 1) {
+      const tag = hash.split('#')[1]
+      const tagIndex = sortedTags.indexOf(tag)
+      if (tagIndex > -1) {
+        handleFilteredPosts(tag)
+        setTabIndex(tagIndex)
+      }
+    } else {
+      handleFilteredPosts(sortedTags[0], 0)
+    }
   }, [])
 
-  const handleFilteredPosts = (tag) => {
+  const handleFilteredPosts = (tag, index) => {
+    console.log(tag, index)
+    window.location.hash = tag
+    setTabIndex(index)
     const filteredPosts = posts.filter(
       (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(tag)
     )
@@ -99,7 +113,15 @@ export default function Docs({ staticTags, tags, posts }) {
             <div className="flex cursor-pointer flex-col space-y-6 text-sm">
               {sortedTags &&
                 sortedTags.map((tag, index) => (
-                  <div key={index} onClick={() => handleFilteredPosts(tag)}>
+                  <div
+                    className={cls(
+                      tabIndex === index
+                        ? 'text-primary-500 hover:text-primary-700'
+                        : 'text-gray-500 hover:text-gray-700'
+                    )}
+                    key={index}
+                    onClick={() => handleFilteredPosts(tag, index)}
+                  >
                     {tag.toUpperCase()}
                   </div>
                 ))}
@@ -119,7 +141,7 @@ export default function Docs({ staticTags, tags, posts }) {
                 className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
               >
                 <Github className="h-[27px] w-[27px]" />
-                <div className="text-sm">更多文档</div>
+                <div className="text-sm">{t('More docs')}</div>
               </Link>
             </div>
           </div>
