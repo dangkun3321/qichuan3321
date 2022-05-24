@@ -1,5 +1,5 @@
 ---
-title: '如何写技术文档？'
+title: '如何写好技术文档？'
 date: 2022-05-23T12:34:56Z
 lastmod: '2022-05-23'
 tags: ['基本文档']
@@ -13,7 +13,7 @@ bibliography: references-data.bib
 
 小樱桃是一个技术团队，我们也跟大多数程序员一样——更喜欢写代码，不喜欢写文档；讨厌别人不写文档，但自己不喜欢写文档。
 
-为什么？因为写文档是非常难的，直到我们读到这篇文章[《The documentation system》](https://documentation.divio.com/)。
+为什么？因为写文档是非常难的，直到我们读到这篇文章——[《The documentation system》](https://documentation.divio.com/)。
 
 > The Grand Unified Theory of Documentation
 > —— David Laing
@@ -42,4 +42,4 @@ bibliography: references-data.bib
 
 通过使用上述规则，文档作者和读者都很明确什么内容应该放在哪里，以及应该到哪里去找。理解了这些规则，作者就知道如何写、写什么，以及写到哪里。这就是传说中的事半功倍。
 
-推荐大家都好好看看这篇文章，我们也在不断学习，争取我们的文档也能早日进化到理想的样子。
+推荐大家都好好看看那篇文章，我们也在不断学习，争取我们的文档也能早日进化到理想的样子。
