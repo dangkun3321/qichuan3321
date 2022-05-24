@@ -4,8 +4,8 @@ date: 2022-05-23T12:34:56Z
 lastmod: '2022-05-23'
 tags: ['基本文档']
 draft: false
-summary: '写一份好的技术文档的小秘密'
-layout: PostSimple
+summary: '关于如何写一份好的技术文档的一点小秘密'
+layout: PostLayout
 bibliography: references-data.bib
 ---
 

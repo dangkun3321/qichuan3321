@@ -25,31 +25,37 @@ export async function getStaticProps() {
       title: 'XSwitch简明用户手册',
       href: 'https://demo.xswitch.cn/xswitch.html',
       tags: ['基本文档'],
+      summary: '极简用户手册，用于快速了解XSwitch功能及特性。',
     },
     {
       title: 'XSwitch用户手册',
       href: '/docs/xswitch-user.html',
       tags: ['基本文档'],
+      summary: '详细的用户手册和功能说明。',
     },
     {
       title: 'xswitch-free Docker镜象',
       href: 'https://github.com/rts-cn/xswitch-free',
       tags: ['基本文档'],
+      summary: '纯xswitch，无Web UI，适用于学习FreeSWITCH。',
     },
     {
       title: 'XSwitch常见问题解答（FAQ）',
       href: 'https://git.xswitch.cn/xswitch/docs#常见问题解答',
       tags: ['基本文档'],
+      summary: '如果您有什么问题，欢迎告诉我们。',
     },
     {
       title: 'XSwitch集成指南',
       href: '/docs/xswitch-integration-guide.html',
       tags: ['API文档'],
+      summary: '讨论各种集成方式、架构、选用合适的API等。',
     },
     {
       title: 'XSwitch认证鉴权接口',
       href: '/docs/xswitch-auth.html',
       tags: ['API文档'],
+      summary: '讨论XUI支持的认证和鉴权方式。',
     },
     // {
     //   title: 'XSwitch REST API文档',
@@ -60,6 +66,7 @@ export async function getStaticProps() {
       title: 'XSwitch XCC API文档',
       href: '/docs/xswitch-xcc.html',
       tags: ['API文档'],
+      summary: '基于NATS的API，推荐使用。',
     },
   ]
 
