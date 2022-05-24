@@ -96,8 +96,12 @@ export default function Docs({ staticTags, tags, posts }) {
   }, [])
 
   const handleFilteredPosts = (tag, index) => {
-    console.log(tag, index)
-    window.location.hash = tag
+    if (index === 0) {
+      window.location.hash = ''
+      history.replaceState('', '', location.pathname)
+    } else {
+      window.location.hash = tag
+    }
     setTabIndex(index)
     const filteredPosts = posts.filter(
       (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(tag)
