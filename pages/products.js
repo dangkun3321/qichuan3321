@@ -98,7 +98,7 @@ export default function Products() {
           {t('lang_05')}
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-0 laptop:grid-cols-3 laptop:gap-4 desktop:grid-cols-5 desktop:gap-4">
+        <div className="laptop mt-14 flex max-w-5xl flex-wrap laptop:grid-cols-3 laptop:justify-center laptop:gap-4 desktop:max-w-none desktop:grid-cols-5 desktop:gap-4">
           <div className="mt-4 flex h-72 w-full flex-col items-center rounded bg-white laptop:mr-6 laptop:w-auto laptop:shadow-sm">
             <div className="h-full w-72 bg-[url('/static/images/xswitch/10@2x.webp')] bg-contain bg-no-repeat laptop:mt-4 laptop:h-24 laptop:w-[13.2rem] laptop:bg-[url('/static/images/xswitch/10.webp')] laptop:bg-contain"></div>
             <div className="-mt-36 text-2xl font-medium text-title laptop:mt-0 laptop:text-base ">
