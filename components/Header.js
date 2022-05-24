@@ -95,7 +95,7 @@ const Header = () => {
     if (relUrl.indexOf('?') !== -1) {
       relUrl = relUrl.split('?')[0]
     }
-    setIsProducts(relUrl === '/products/' || relUrl === '/')
+    setIsProducts(relUrl === '/products/' || relUrl === '/' || relUrl === '/docs/')
   }
 
   const languageOnChange = (e) => {
@@ -106,7 +106,7 @@ const Header = () => {
     <header
       className={cls(
         isProducts && isScrollToTop ? 'bg-transparent' : 'bg-white shadow-sm',
-        'fixed left-0 top-0 right-0 z-50 mx-auto flex h-16 max-h-16 w-full select-none items-center justify-center px-1 laptop:px-0 '
+        'fixed left-0 top-0 right-0 z-50 mx-auto flex h-16 max-h-16 w-full  items-center justify-center px-1 laptop:px-0 '
       )}
     >
       <div className="flex h-full w-full justify-between laptop:max-w-6xl">
@@ -274,7 +274,7 @@ const Header = () => {
                       <Listbox.Option
                         key={index}
                         className={({ active }) =>
-                          `relative cursor-default select-none text-center ${
+                          `relative cursor-default  text-center ${
                             active ? ' bg-gray-200 font-medium text-black' : 'text-gray-900'
                           }`
                         }

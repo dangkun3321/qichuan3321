@@ -5,7 +5,7 @@ lastmod: '2022-05-16'
 tags: ['条款']
 draft: false
 summary: '隐私声明'
-layout: PostSimple
+layout: PostLayout
 bibliography: references-data.bib
 ---
 
