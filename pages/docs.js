@@ -29,7 +29,7 @@ export async function getStaticProps() {
     },
     {
       title: 'XSwitch用户手册',
-      href: '/docs/xswitch-user.html',
+      href: 'https://xswitch.cn/docs/xswitch-user.html',
       tags: ['基本文档'],
       summary: '详细的用户手册和功能说明。',
     },
@@ -47,13 +47,13 @@ export async function getStaticProps() {
     },
     {
       title: 'XSwitch集成指南',
-      href: '/docs/xswitch-integration-guide.html',
+      href: 'https://xswitch.cn/docs/xswitch-integration-guide.html',
       tags: ['API文档'],
       summary: '讨论各种集成方式、架构、选用合适的API等。',
     },
     {
       title: 'XSwitch认证鉴权接口',
-      href: '/docs/xswitch-auth.html',
+      href: 'https://xswitch.cn/docs/xswitch-auth.html',
       tags: ['API文档'],
       summary: '讨论XUI支持的认证和鉴权方式。',
     },
@@ -64,7 +64,7 @@ export async function getStaticProps() {
     // },
     {
       title: 'XSwitch XCC API文档',
-      href: '/docs/xswitch-xcc.html',
+      href: 'https://xswitch.cn/docs/xswitch-xcc.html',
       tags: ['API文档'],
       summary: '基于NATS的API，推荐使用。',
     },
