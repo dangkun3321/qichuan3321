@@ -181,8 +181,7 @@ export default function Docs({ staticTags, tags, posts }) {
                   </div>
                 </Link>
               ))}
-            <br />
-            <div className="flex items-center overflow-hidden truncate">
+            <div className="flex items-center overflow-hidden truncate py-4">
               <div className="text-base font-medium">版权声明</div>
               <div className="overflow-hidden text-ellipsis pl-4  text-sm text-gray-500 ">
                 本站所有文档版权所有，仅供在本站在线阅读，任何单位或个人没有本站书面同意不得复制和分发本站文档。
