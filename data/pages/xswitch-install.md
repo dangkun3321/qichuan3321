@@ -51,24 +51,14 @@ wget https://xswitch.cn/download/xswitch-install.tar.gz --user xswitch --passwor
 tar zxvf xswitch-install.tar.gz
 cd xswitch-install
 ```
-## 安装注意事项
 
-- 首先根据自己的操作系统，需要修改相应的文件`env.example`或`env-mac.example`。
-- 执行`make setup`，使用`cat .env`确认信息是否修改正确。如不正确，可重新执行以上步骤。
-- 执行`make up`进行启动。（**一定按照顺序执行**）
-- 网页登录时如遇到**提示账号密码错误**，请恢复之前修改或删除目录重新执行以上操作。
-
-然后按照`README.md`文件中的指示顺序执行即可。如果想了解更多指令信息，请继续阅读下面“指令详情说明”。
-
-在 Linux 操作系统上，默认使用`host`模式的网络，在 Mac 上，使用 NAT 网络（注释掉`host`模式）。
-
-## 指令详细说明
+## 安装指令及详细说明
 
 ### `make setup`
 
-执行此命令是为了生成`.env`文件，然后可以根据情况下行修改。
+执行此命令是为了下载声音文件和生成`.env`文件，`.env`里的参数为docker容器运行时的环境变量。
 
-打开`.env`文件，修改如下几个环境变量：
+打开`.env`文件，修改如下几个参数：
 
 #### 系统参数
 
@@ -102,10 +92,6 @@ RTP_END=20000                          # RTP媒体允许使用的最大端口
 ESL_PORT=8021                          # ESL对应端口
 ```
 
-### `make sounds`
-
-下载声音文件。
-
 ### `make up`
 
 启动系统。首次运行会自动拉取镜象。
@@ -138,11 +124,17 @@ ESL_PORT=8021                          # ESL对应端口
 
 执行`make bash-nginx`
 
+### 清除 XSwitch 的数据和配置
+
+执行`make clean`
+
+> 在环境安装遇到问题时，可执行该指令将环境回滚到安装前，谨慎使用。
+
 # 附件
 
-## Docker 安装
+## Docker
 
-本系统环境采用 Docker 部署，不建议直接使用系统默认安装的`docker`版本（通常比较旧），请参考 Docker 官网，根据不同的操作系统安装最新 Docker，参考地址：https://docs.docker.com/engine/install/debian/
+本系统环境采用 Docker 部署，不建议直接使用系统默认安装的`docker`版本（通常比较旧），该文档提供的安装方式仅限于`Debian Buster 10/Debian Bullseye 11`，其他操作系统请参考 [ Docker 官网 ](https://docs.docker.com/engine/install/debian)，根据不同的操作系统安装最新 Docker
 
 以下地址上有更多参考链接：
 
@@ -150,18 +142,25 @@ https://github.com/rts-cn/xswitch-free
 
 ### 安装 Docker
 
-在服务器上安装 docker 以及 docker-compose（如果非 root 目录请在前加 sudo），如下：
+在服务器上安装 Docker Engine 和 Docker Compose（如果非 root 目录请在前加 sudo），如下：
 
 ```
-apt-get remove docker docker-engine docker.io containerd runc -y
+apt-get remove docker docker-engine docker.io containerd runc
 apt-get update
-apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-curl -fsSL https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian/gpg | apt-key add -
-apt-key fingerprint 0EBFCD88
-add-apt-repository "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -cs) stable"
+apt-get install ca-certificates curl gnupg lsb-release
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io -y
+apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+
+安装完可以用`docker version` 和 `docker compose version`命令查看是否安装成功。
+
+最新版的 `Compose` 是 Docker CLI的一部分，命令执行方式改为 `docker compose`， 与旧版docker-compose可并存在服务器。两者的具体区别可查看
+https://docs.docker.com/compose/cli-command-compatibility
+
 
 ### 更多参考
 
@@ -172,7 +171,7 @@ apt-get install docker-ce docker-ce-cli containerd.io -y
 - https://www.runoob.com/docker/macos-docker-install.html
 - https://yq.aliyun.com/articles/625403
 
-### 安装 docker-compose
+### 安装旧版本 docker-compose
 
 ```
 curl -L https://get.daocloud.io/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
