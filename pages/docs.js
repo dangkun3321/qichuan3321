@@ -34,6 +34,12 @@ export async function getStaticProps() {
       summary: '详细的用户手册和功能说明。',
     },
     {
+      title: 'XSwitch运维手册',
+      href: 'https://xswitch.cn/docs/xswitch-ops.html',
+      tags: ['基本文档'],
+      summary: '在XSwitch安装部署使用过程中需要注意的事项，以及管理运维过程中的常见问题解决方案。',
+    },
+    {
       title: 'xswitch-free Docker镜象',
       href: 'https://github.com/rts-cn/xswitch-free',
       tags: ['基本文档'],
