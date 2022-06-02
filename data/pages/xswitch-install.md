@@ -33,7 +33,7 @@ XSwitch 运行于 GNU/Linux 环境，支持通用的 64 位服务器，支持虚
 
 ```bash
 apt-get update
-apt-get install -y make zip
+apt-get install -y make zip wget
 ```
 
 下面假定您已经熟悉了 Docker 的安装和使用，如果不熟悉，请参考附件中的[Docker 安装](#docker)。
@@ -158,7 +158,7 @@ apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 安装完可以用`docker version` 和 `docker compose version`命令查看是否安装成功。
 
-最新版的 `Compose` 是 Docker CLI的一部分，命令执行方式改为 `docker compose`， 与旧版docker-compose可并存在服务器。两者的具体区别可查看
+最新版的 `Compose` 是 Docker CLI的一部分，命令执行方式改为 `docker compose`， 与旧版docker-compose可并存在服务器。两者的具体区别可阅读
 https://docs.docker.com/compose/cli-command-compatibility
 
 
@@ -181,4 +181,5 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ## 其它
 
+XSwitch安装后，您可以参照 [XSwitch运维手册] (/docs/xswitch-ops.html) 对系统进行维护。
 感谢您使用 XSwitch。如果您在使用过程中有任何问题，都可以与我们联系。电子邮件：`info@x-y-t.cn` 。
