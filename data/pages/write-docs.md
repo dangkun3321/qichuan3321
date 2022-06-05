@@ -9,6 +9,8 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
+![](/static/images/write-docs/write-docs.png)
+
 > 程序员既要写好代码，又要写好文档。
 
 小樱桃是一个技术团队，我们也跟大多数程序员一样——更喜欢写代码，不喜欢写文档；讨厌别人不写文档，但自己不喜欢写文档。
