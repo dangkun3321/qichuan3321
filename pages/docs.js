@@ -76,7 +76,7 @@ export async function getStaticProps() {
     },
   ]
 
-  posts = posts.concat(staticPosts)
+  posts = staticPosts.concat(posts)
 
   return { props: { staticTags, tags, posts } }
 }
