@@ -218,3 +218,5 @@ MRCP协议的全称是Media Recource Control Protocol，是一个标准的访问
 除此之外，原生模块与MRCP服务器的另一个区别是，原生模块一般返回JSON数据，而MRCP会返回XML格式的数据。
 
 当然，如果你的ASR/TTS厂商仅支持MRCP协议，那就这么用吧。
+
+如果你在开发测试中需要离线ASR/TTS，参见[如何使用XSwitch内置的离线ASR及TTS](/pages/howto/offline-asr-tts/)。
