@@ -52,17 +52,6 @@ tar zxvf xswitch-install.tar.gz
 cd xswitch-install
 ```
 
-## 安装注意事项
-
-- 首先根据自己的操作系统，需要修改相应的文件`env.example`或`env-mac.example`。
-- 执行`make setup`，使用`cat .env`确认信息是否修改正确。如不正确，可重新执行以上步骤。
-- 执行`make up`进行启动。（**一定按照顺序执行**）
-- 网页登录时如遇到**提示账号密码错误**，请恢复之前修改或删除目录重新执行以上操作。
-
-然后按照`README.md`文件中的指示顺序执行即可。如果想了解更多指令信息，请继续阅读下面“指令详情说明”。
-
-在 Linux 操作系统上，默认使用`host`模式的网络，在 Mac 上，使用 NAT 网络（注释掉`host`模式）。
-
 ## 安装指令及详细说明
 
 ### `make setup`
