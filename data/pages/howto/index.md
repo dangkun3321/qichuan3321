@@ -20,5 +20,6 @@ bibliography: references-data.bib
 - 如何在XSwitch中使用视频会议功能？
 - 如何在XSwitch使用呼叫中心队列？
 - [如何在XSwitch中开启TLS？](/pages/howto/tls/)
+- [如何在XSwitch中开启ASR/TTS](/pages/howto/asr-tts)
 
 本页面内容正在完善中，如果您有更多关于“如何”的问题，请[给我们提工单](https://git.xswitch.cn/xswitch/docs/issues/1)。XSwitch感谢您的支持。
