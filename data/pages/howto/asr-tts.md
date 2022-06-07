@@ -58,7 +58,7 @@ speak ali|default|你好，欢迎致电烟台小樱桃网络科技有限公司
 
 也可以这样：
 
-```
+```sh
 answer
 set tts_engine=ali
 set tts_voice=default
@@ -76,7 +76,7 @@ speak 你好，欢迎致电烟台小樱桃网络科技有限公司
 
 新出现的“文本”框中填入以入内容：
 
-```
+```sh
 answer 
 set tts_engine=ali
 set tts_voice=default
@@ -85,7 +85,7 @@ info
 log err $${detect_speech_result}
 ```
 
-打开【高级】⇨【扩展功能】⇨【终端】就可以看到日志。上面使用了`err`级别的日志是为了红色能显示的更醒目。
+打开【高级】⇨【扩展功能】⇨【终端】就可以看到日志。上面使用了`err`级别的日志是为了红色能显示的更醒目，便于调试。
 
 ## 调试与排错
 
