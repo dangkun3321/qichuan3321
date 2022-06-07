@@ -96,9 +96,10 @@ make bash
 fs_cli
 ```
 
-- 在界面上检查所有配置参数是否输入正确
-- 输入`ali_token`看是否正确获取到Token
+- 在界面上检查所有配置参数是否输入正确。
+- 输入`ali_token`看是否正确获取到Token。
 - 模块会定期获取Token，日志中有类似如下的内容：`Aliyun token expires after: 213431`
+- 该模块的TTS会有缓存，默认位于`/tmp/`，可以在打完电话后输入`ls /tmp`查看是否有`tts-`开头的`.wav`文件。
 
 ## 高级应用
 
