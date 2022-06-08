@@ -16,7 +16,7 @@ bibliography: references-data.bib
 - 尝试自行解决
 - 寻求帮助
 
-但在实际工作中，又有很我技巧。我们下面说的这些技巧，其实也不光适用于XSwitch，对FreeSWITCH、基于任何问题都有帮助。
+但在实际工作中，又有很我技巧。我们下面说的这些技巧，其实也不光适用于XSwitch，对FreeSWITCH、甚至任何问题都有帮助。
 
 # 尝试自行解决
 
