@@ -21,5 +21,11 @@ bibliography: references-data.bib
 - 如何在XSwitch使用呼叫中心队列？
 - [如何在XSwitch中开启TLS？](/pages/howto/tls/)
 - [如何在XSwitch中开启ASR/TTS](/pages/howto/asr-tts)
+- [如何使用XSwitch内置的离线ASR及TTS](/pages/howto/offline-asr-tts)
 
-本页面内容正在完善中，如果您有更多关于“如何”的问题，请[给我们提工单](https://git.xswitch.cn/xswitch/docs/issues/1)。XSwitch感谢您的支持。
+本页面内容正在完善中，如果您有更多关于“如何”的问题，可以通过以下方式让我们知道：
+
+- [填表](https://jinshuju.net/f/DBb0m9)，然后定期查看本页面是否有更新，或，
+- [给我们提工单](https://git.xswitch.cn/xswitch/docs/issues/1)，每个工单我们都会跟您讨论并反馈。
+
+XSwitch感谢您的支持。
