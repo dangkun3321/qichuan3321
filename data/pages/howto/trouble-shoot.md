@@ -4,7 +4,7 @@ date: 2022-06-08T20:34:56Z
 lastmod: '2022-06-08'
 tags: ['How-To文档']
 draft: false
-summary: '如果高效调试与排错，及获取帮助'
+summary: '如何高效调试与排错，及获取帮助'
 layout: PostLayout
 bibliography: references-data.bib
 ---
