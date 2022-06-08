@@ -163,6 +163,14 @@ export default function Docs({ staticTags, tags, posts }) {
               </Link>
 
               <Link
+                href="/pages/howto/trouble-shoot/"
+                className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
+              >
+                <XswitchInstall className="h-[30px] w-[26px]" />
+                <div className="text-sm">{t('Reporting Bugs')}</div>
+              </Link>
+
+              <Link
                 href="https://git.xswitch.cn/xswitch/docs"
                 className="flex h-[60px] w-[180px] items-center justify-center space-x-4 rounded border py-4"
               >
