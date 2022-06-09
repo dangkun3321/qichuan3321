@@ -182,7 +182,7 @@ export default function Docs({ staticTags, tags, posts }) {
           <div className="mt-10 flex w-full flex-col overflow-hidden pr-1 text-sm laptop:mt-0 laptop:pl-32 desktop:px-32">
             {filteredPosts &&
               filteredPosts.map((post, index) => (
-                <Link
+                <a
                   href={post.href ? post.href : `/pages/${post.slug}`}
                   className="border-b py-4"
                   key={index}
@@ -193,7 +193,7 @@ export default function Docs({ staticTags, tags, posts }) {
                       {post.summary}
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             <div className="flex items-center overflow-hidden truncate py-4">
               <div className="text-base font-medium">版权声明</div>
