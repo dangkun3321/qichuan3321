@@ -9,6 +9,7 @@ import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Breadcrumb, { BreadcrumbItem } from '@/components/Breadcrumb'
 import { useTranslation } from 'next-export-i18n'
+import Script from 'next/script'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { t } = useTranslation()
@@ -30,6 +31,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         authorDetails={authorDetails}
         {...frontMatter}
       />
+      <Script id="mscgen__js" src="/js/mscgen-inpage.js" strategy="afterInteractive" />
       <ScrollTopAndComment />
       <Breadcrumb routes={routes} />
       <div
