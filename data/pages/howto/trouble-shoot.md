@@ -2,7 +2,7 @@
 title: '在安装或使用XSwitch时遇到问题我该怎么办？'
 date: 2022-06-08T20:34:56Z
 lastmod: '2022-06-08'
-tags: ['How-To文档']
+tags: ['How-To文档','调试排错']
 draft: false
 summary: '如何高效调试与排错，及获取帮助'
 layout: PostLayout
@@ -65,3 +65,5 @@ bibliography: references-data.bib
     - 我们的文档是通用的场景，我们对你一无所知，我们甚至不知道你用的是什么操作系统，Windows、Linux、macOS，还是其它？我们如何判断你是否遗漏了什么步骤？
 
 最后，希望所有人都能及时有效地解决自己遇到的问题，同时，向下一个问题发起挑战。
+
+你可以在[调试排错](/docs/#调试排错)页面找到更多参考资料。
