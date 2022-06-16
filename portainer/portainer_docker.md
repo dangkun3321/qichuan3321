@@ -1,8 +1,8 @@
-# docker 可视化管理
+# XSwitch 实现docker可视化管理
 
 ## 安装docker和docker-compose
 
-此版本基于debian系统安装,以管理员身份`root`安装。
+此版本基于debian系统安装，以管理员身份`root`安装。
 
 ```shell
 第一步 卸载系统自带的软件
@@ -75,7 +75,7 @@ $ docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart=always --lo
 
 ### 下载XSwitch并创建目录
 
-到[小樱桃官网](https://xswitch.cn)下载`XSwitch`
+到[小樱桃官网](https://xswitch.cn)可下载`XSwitch`
 
 ```sh
 wget https://xswitch.cn/download/xswitch-install.tar.gz --user xswitch --password password
@@ -120,9 +120,12 @@ NGINX_PROXY=192.168.100.20
 mkdir /data
 ```
 ### 添加xswitch-pg
-打开`docker-compose.yml`复制`xswitch-pg`内容到Stack.填写名称`xswitch-pg`,加载`env.example`变量。
+打开`docker-compose.yml`。
+Name填写`xswitch-pg`，复制`xswitch-pg`内容到`Web editor`框中，加载`.env`变量。
 
 ![](image/xswitch_pg.png)
+
+Web editor 内容如下
 
 ```
 version: "3"
@@ -139,6 +142,7 @@ services:
 ```
 
 ![](image/xswitch_env.png)
+
 添加完成后，显示以下图片
 
 ![](image/xswitch_finish.png)
