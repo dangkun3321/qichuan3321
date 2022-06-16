@@ -42,7 +42,7 @@ Portainer是一个可视化的Docker操作界面，提供状态显示面板、�
 ```sh
 $ docker volume create portainer_data
 $ docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart=always --log-opt max-size=1g \
--v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+-v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 如端口被占用可以自行修改，修改`9001:9001`，重启参数`--restart=always`。
 
@@ -75,14 +75,11 @@ $ docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart=always --lo
 
 ### 下载XSwitch并创建目录
 
-到[小樱桃官网](https://xswitch.cn)可下载`XSwitch`
+到[小樱桃官网](https://xswitch.cn)可免费下载`XSwitch`
 
-```sh
-wget https://xswitch.cn/download/xswitch-install.tar.gz --user xswitch --password password
-tar zxvf xswitch-install.tar.gz
-cd xswitch-install
-```
-将文件`env.example`改名`.env`存放到桌面,根据服务器的网络配置修改文件`.env`。
+![](image/xswitch_index.png)
+
+将解压文件`env.example`改名`.env`存放到桌面,根据服务器的网络配置修改文件`.env`。
 
 ```sh
 # xswitch-lua use env
