@@ -109,7 +109,7 @@ const Header = () => {
         'fixed left-0 top-0 right-0 z-50 mx-auto flex h-16 max-h-16 w-full  items-center justify-center px-1 laptop:px-0 '
       )}
     >
-      <div className="flex h-full w-full justify-between laptop:max-w-6xl">
+      <div className="flex h-full w-full justify-between laptop:max-w-7xl">
         <div className="flex items-center">
           <Link href="/" aria-label={siteMetadata.headerTitle} className="mr-14 flex items-center">
             <Logo className="ml-5 mr-3 desktop:ml-0" />
