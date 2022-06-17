@@ -93,6 +93,7 @@ export default function Docs({ staticTags, tags, posts }) {
     if (tag === 'xswitch') return 'XSwitch'
     if (tag === 'how-to文档') return 'How-To文档'
     if (tag === 'api文档') return 'API文档'
+    if (tag === 'docker') return 'Docker'
     return tag
   }
 
