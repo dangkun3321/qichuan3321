@@ -14,6 +14,7 @@ import cls from 'classnames'
 import ContactCard from '@/components/ContactCard'
 import { Popover } from '@headlessui/react'
 import Version from '@/components/Version'
+import RadianSvg from '@/svg/radian.svg'
 
 export default function Products() {
   const [isContactCardShow, setContactCardShow] = useState(false)
@@ -435,31 +436,41 @@ export default function Products() {
         <Version />
       </div>
 
-      <div className="w-ful flex items-center justify-center  py-16">
+      <div className="w-ful flex items-center justify-center  bg-white pt-16">
         <Partner />
       </div>
 
-      <div className="w-ful flex h-72  flex-col items-center justify-center space-y-4 bg-serviceOval px-5 text-center laptop:h-96 laptop:px-0 laptop:text-left ">
-        <div className="text-[24px] text-white  laptop:text-3xl">{t('lang_54')}</div>
-        <div className="pb-8 text-sm text-white laptop:pb-0">{t('lang_55')}</div>
-        <div className="flex space-x-8">
-          <Link
-            href="/pages/xswitch-install"
-            aria-label={siteMetadata.headerTitle}
-            className=" rounded bg-white px-9 py-4 text-sm font-medium text-trialText"
-          >
-            {t('Free trial')}
-          </Link>
+      <div className="relative w-full bg-[#29c68e] py-12 laptop:overflow-hidden laptop:bg-white laptop:py-0">
+        <div className="relative z-30 flex h-72 flex-col items-center justify-center space-y-5 px-5 text-center laptop:h-[550px] laptop:px-0 laptop:text-left ">
+          <div className="text-[24px] text-white laptop:mt-24  laptop:text-3xl">{t('lang_54')}</div>
+          <div className="pb-8 text-sm text-white laptop:pb-0">{t('lang_55')}</div>
+          <div className="flex space-x-8">
+            <Link
+              href="/pages/xswitch-install"
+              aria-label={siteMetadata.headerTitle}
+              className=" rounded bg-white px-9 py-3 text-sm font-medium text-trialText"
+            >
+              {t('Free trial')}
+            </Link>
 
-          <Popover>
-            <Popover.Button className=" rounded border bg-serviceOval px-9 py-4 text-sm text-white">
-              {t('Customer Service')}
-            </Popover.Button>
+            <Popover>
+              <Popover.Button className="rounded border px-9 py-3 text-sm text-white">
+                {t('Customer Service')}
+              </Popover.Button>
 
-            <Popover.Panel className="absolute z-10">
-              <ContactCard click />
-            </Popover.Panel>
-          </Popover>
+              <Popover.Panel className="absolute laptop:top-1/2 laptop:-mt-24">
+                <ContactCard click />
+              </Popover.Panel>
+            </Popover>
+          </div>
+        </div>
+
+        <div className="absolute top-0 -left-8 -right-8 z-20 hidden h-full laptop:block">
+          <Image src="/static/images/bg2x.png" alt="" className="h-full w-full object-cover" />
+        </div>
+
+        <div className="absolute -bottom-1 -left-8  -right-8 z-50  hidden overflow-hidden text-[#263036] laptop:block">
+          <RadianSvg className="w-full fill-current" />
         </div>
       </div>
     </div>
