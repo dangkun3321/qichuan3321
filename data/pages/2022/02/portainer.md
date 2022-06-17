@@ -3,7 +3,7 @@ title: '使用Portainer实现XSwitch Docker可视化管理'
 date: 2022-06-17T21:00:00Z
 lastmod: '2022-06-17'
 tags: ['Docker']
-draft: true
+draft: false
 summary: 'Portainer是一个Docker可视化管理工具，可以对方便地对Docker镜像进行管理。'
 layout: PostLayout
 bibliography: references-data.bib
@@ -82,35 +82,35 @@ $ docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart=always --lo
 
 输入12位密码后，创建用户。首次会直接登录系统。
 
-![](image/portainer_first_login.png)
+![](/static/images/2022/06/portainer/portainer_first_login.png)
 
 非首次登录，会出现以下登录界面
 
-![](image/portainer_login.png)
+![](/static/images/2022/06/portainer/portainer_login.png)
 
 ### Portainer 操作界面
 
 - 登录后，点击`Get Started`
 
-![](image/portainer_01.png)
+![](/static/images/2022/06/portainer/portainer_01.png)
 
 - 选择`local`
 
-![](image/portainer_02.png)
+![](/static/images/2022/06/portainer/portainer_02.png)
 
 - 选择`Stacks`
 
-![](image/portainer_stacks.png)
+![](/static/images/2022/06/portainer/portainer_stacks.png)
 
 - 选择`Add stacks`
 
-![](image/portainer_add_stacks.png)
+![](/static/images/2022/06/portainer/portainer_add_stacks.png)
 
 ### 下载XSwitch并创建目录
 
 到[小樱桃官网](https://xswitch.cn)可免费下载`XSwitch`
 
-![](image/xswitch_index.png)
+![](/static/images/2022/06/portainer/xswitch_index.png)
 
 将解压文件`env.example`改名`.env`存放到桌面,根据服务器的网络配置修改文件`.env`。
 
@@ -157,7 +157,7 @@ mkdir /data
 打开`docker-compose.yml`。
 Name填写`xswitch-pg`，复制`xswitch-pg`内容到`Web editor`框中，加载`.env`变量。
 
-![](image/xswitch_pg.png)
+![](/static/images/2022/06/portainer/xswitch_pg.png)
 
 Web editor 内容如下
 
@@ -175,11 +175,11 @@ services:
       - /data/postgres:/var/lib/postgresq/data
 ```
 
-![](image/xswitch_env.png)
+![](/static/images/2022/06/portainer/xswitch_env.png)
 
 添加完成后，显示以下图片
 
-![](image/xswitch_finish.png)
+![](/static/images/2022/06/portainer/xswitch_finish.png)
 
 ### 添加xswitch和xswitch-nginx-xui
 
@@ -231,18 +231,18 @@ services:
 
 完成上述添加，可以在`Containers`中查看，并查看启动状态。
 
-![](image/xswitch_free.png)
+![](/static/images/2022/06/portainer/xswitch_free.png)
 
 ### 使用XSwitch
 
 经过一翻精彩操作，我们终于可以看到`XSwitch`了。体验一下吧。
 通过浏览器输入`http://localhost`，初始账号和密码均为`admin`。
 
-![](image/xs.png)
+![](/static/images/2022/06/portainer/xs.png)
 
 输入账户和密码，进行我们XSwitch旅行吧！
 
-![](image/xs-free.png)
+![](/static/images/2022/06/portainer/xs-free.png)
 
 
 ### Portainer 简单操作
@@ -250,7 +250,7 @@ services:
 - 第一红框内有容器的操作命令如： 启动、停止、重启、删除等。
 - 第二个红框内的是容器的的一些快接按键，依次有日志、容器元数据信息、容器状态、登录容器。
 
-![](image/portainer.png)
+![](/static/images/2022/06/portainer/portainer.png)
 
 
 ### 注意事项
