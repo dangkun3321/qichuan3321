@@ -89,3 +89,7 @@ curl -d '{username: "admin", password: "1234"}' -H "application/json" https://de
 ```
 
 在`curl`命令后加上`-vvv`参数，可能看到更详细的请求和响应头域。
+
+<hr/>
+
+本文主要是以排查XSwitch登录问题为例讲解Chrome Devtools的使用方法，步骤和思路适用于任何跟浏览器相关的问题。如果你确实遇到了XSwitch相关的问题，可以继续参考[在安装或使用XSwitch时遇到问题我该怎么办](https://xswitch.cn/pages/howto/trouble-shoot/) 。
