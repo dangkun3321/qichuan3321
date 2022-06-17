@@ -9,7 +9,7 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
-在[如何使用XSwitch内置的离线ASR及TTS](https://xswitch.cn/pages/howto/offline-asr-tts/)中我们已经学会如何使用离线ASR及TTS，但由于`espeak-ng`放出来的声音不好听，在我们不屑努力下，终于找到一个声音更加清晰流畅的TTS模型[edge-tts](https://github.com/rany2/edge-tts)。  
+在[如何使用XSwitch内置的离线ASR及TTS](https://xswitch.cn/pages/howto/offline-asr-tts/)中我们已经学会如何使用离线ASR及TTS，但由于`espeak-ng`放出来的声音不好听，在我们不屑努力下，终于找到一个声音更加清晰流畅且可以免费使用的的TTS引擎[edge-tts](https://github.com/rany2/edge-tts)。
 
 本文中所讲离线TTS是基于`mod_tts_commandline`模块实现的，上一篇文章已经说明如何使用该模块，不再赘述。  
 
@@ -47,7 +47,7 @@ reload mod_tts_commandline
 `edge-tts`提供的`Voice`列表，可通过`edge-tts --list-voice`查询，下方为`edge-tts`常用`Voice`：
 
 |ShortName|Gender|Locale|
-|:---------:| :---:  | :-------:|
+|:---------| :--- | :-------|
 |zh-CN-XiaoxiaoNeural| Female |zh-CN|
 |zh-CN-XiaoyiNeural| Female |zh-CN|
 |zh-CN-YunjianNeural|Male| zh-CN |
@@ -66,16 +66,16 @@ reload mod_tts_commandline
     
 ### 配置路由规则
 
-上文中我们提到在"文本"框中填入以下内容：
+上一篇文章中我们提到在“文本”框中填入以下内容：
 
 ```
 answer
 speak tts_commandline|zh|你好，欢迎致电烟台小樱桃网络科技有限公司
 ```
 
-这种方式使用的是默认`TTS`模型`espeak-ng`。
+上面这种方式使用的是默认`TTS`模型`espeak-ng`。
 
-接下来我们修改"文本"框中的内容：
+接下来我们修改“文本”框中的内容如下：
 
 ```
 answer
@@ -90,7 +90,7 @@ speak tts_commandline|zh-CN-XiaoxiaoNeural|你好，欢迎致电烟台小樱桃�
 
 `tts.sh`实例如下，我们也可根据实际需求进行修改：
 
-```sh
+```bash
 #!/bin/sh
 
 voice=$1;
@@ -104,7 +104,7 @@ else
 fi
 ```
 
-`tts_commandline.conf.xml`
+`tts_commandline.conf.xml`配置如下：
 
 ```xml
 <configuration name="tts_commandline.conf" description="TextToSpeech Commandline configuration">
@@ -129,3 +129,6 @@ fi
 </configuration>
 ```
 
+当然，使用`edge-tts`需要连网，就不能`espeak-ng`那样离线使用了。
+
+我们会在下一个XSwitch版本中加入这些配置，如果你在使用中遇到任何问题，请抓紧告诉我们。
