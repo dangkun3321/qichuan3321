@@ -111,11 +111,15 @@ HTTP_PORT=80
 NGINX_PROXY=192.168.100.20
 ```
 
+### 安装声音文件
+
 在服务器上创建目录
 
 ```sh
 mkdir /data
 ```
+将下载目录中的 `Makefile`和`xtra_config`文件复制到`/data`文件夹中。
+
 ### 添加xswitch-pg
 打开`docker-compose.yml`。
 Name填写`xswitch-pg`，复制`xswitch-pg`内容到`Web editor`框中，加载`.env`变量。
@@ -173,6 +177,7 @@ services:
       - /data/storage/vosk:/usr/local/freeswitch/storage/vosk
       - /data/storage:/usr/local/freeswitch/storage
       - /data/sounds:/usr/local/freeswitch/sounds
+      - /data/blocks:/usr/local/freeswitch/blocks
       - /data/xtra_config.lua:/usr/local/freeswitch/xui/lua/xui/xtra_config.lua
 ```
 
@@ -192,6 +197,7 @@ services:
 完成上述添加，可以在`Containers`中查看，并查看启动状态。
 
 ![](image/xswitch_free.png)
+
 
 ### 使用XSwitch
 经过一翻精彩操作，我们终于可以看到`XSwitch`了。体验一下吧。
@@ -216,3 +222,4 @@ services:
 - 需要注意的是在添加`xswitch-pg`和`xswitch`不需要加载`.env`中`HTTP_PORT`和`NGINX_PROXY`变量。
 - 如遇到登录账号密码错误，可删除容器，重新进行添加。
 - 无法打开网页可以查看日志。如有80端口被占用可以自行调整端口。或将`xswitch`停止后重启`xswitch-nginx-xui`,最后将`xswitch`启动。
+- 缺少声音可到`/data`目录下，执行`make sounds`和`make music`
