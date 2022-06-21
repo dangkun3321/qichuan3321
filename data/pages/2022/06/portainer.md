@@ -4,7 +4,7 @@ date: 2022-06-17T21:00:00Z
 lastmod: '2022-06-17'
 tags: ['Docker']
 draft: false
-summary: 'Portainer是一个Docker可视化管理工具，可以对方便地对Docker镜像进行管理。'
+summary: 'Portainer是一个Docker可视化管理工具，可以更方便地对Docker镜像进行管理。'
 layout: PostLayout
 bibliography: references-data.bib
 ---
