@@ -45,13 +45,13 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old --restart=always --
 
 假如部署有问题，右上角会提示。如果部署的时候，要拉取镜像，部署会比较花时间（不要急着关闭界面，大部分时候不是卡了，而是下载镜像比较花时间，例如这里的报错是端口已经被占用的意思）。
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs05.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs05.png)
 
 部署完成后，会自动返回Stacks，可以看到生成的。
 
 ## Portainer的界面介绍
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs06.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs06.png)
 
 这里是已经连结好了本地docker的界面。
 
@@ -70,40 +70,40 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old --restart=always --
 
 docker start，docker stop等
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs07.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs07.png)
 
 - 对应docker start，docker stop等命令。
 点击容器名，进入容器操作。
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs08.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs08.png)
 
 - Logs：对应 docker logs 命令
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs09.png)
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs10.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs09.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs10.png)
 
 日志自动更新和滚动，提供下载功能（偶尔会下载不下来）。
 
 - Stats：查看容器运行的CPU和内存和进程
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs11.png)
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs12.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs11.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs12.png)
 
 - Console和Attach：进入容器的控制台，两者区别可以百度。对应 docker exec 和 docker Attach命令
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs13.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs13.png)
 
 Console方式会选择Command，进不去时候可以尝试切换下
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs14.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs14.png)
 
 点击“Connect”后，输入fs_cli（freeswitch的控制台）
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs15.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs15.png)
 
 - 修改已经运行的docker（修改后会重新部署）
 
--![](/static/images/2022/06/portainer-xswitch-free/portainer_xs16.png)
+![](/static/images/2022/06/portainer-xswitch-free/portainer_xs16.png)
 
 最下面一栏经常用到，用于修改docker运行的卷，网络，变量，分配的内存，权限等。
 
