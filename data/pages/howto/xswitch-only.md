@@ -34,7 +34,7 @@ conf copied to local dir, please edit docker-compose.yml to use it
 然后，打开`docker-compose.yml`文件，把里面的`image:`行改成XSwitch社区版 的镜像，如：
 
 ```yml
-    image: ccr.ccs.tencentyun.com/free/xswitch-lua-free:4.0.2
+    image: ccr.ccs.tencentyun.com/free/xswitch-lua-js-free:4.0.2
 ```
 
 挂载本地的配置文件，如：
@@ -52,7 +52,7 @@ version: "3.3"
 services:
   xswitch:
     container_name: xswitch-free
-    image: ccr.ccs.tencentyun.com/free/xswitch-lua-free:4.0.2
+    image: ccr.ccs.tencentyun.com/free/xswitch-lua-js-free:4.0.2
     environment:
         - FREESWITCH_DOMAIN=free.xswitch.cn
     env_file: .env

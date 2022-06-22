@@ -52,7 +52,7 @@ XSwitch在`mod_ai`中提供了一个`asr`服务，可离线使用，效果还不
 首先，进入宿主机上的`storage`目录，创建`vosk`目录，如下：
 
 ```
-cd storage
+cd data/storage
 mkdir vosk
 ```
 
