@@ -13,11 +13,32 @@ bibliography: references-data.bib
 
 本文中所讲TTS是基于`mod_tts_commandline`模块实现的，上一篇文章已经说明如何使用该模块，不再赘述。  
 
-由于`XSwitch`内不携带`edge-tts`，所以我们在使用之前，需要先自行安装，详情参见[edge-tts](https://github.com/rany2/edge-tts)
+为了防止`XSwitch`镜像体积过大，XSwitch中默认不带`edge-tts`，如果需要使用，可以自行安装：
+
+```sh
+make bash                # 进入XSwitch容器
+pip install edge-tts     # 安装，在容器内执行该命令
+```
+
+安装完成后，可以在容器内使用以下命令测试是否成功：
+
+```sh
+edge-tts --text "Hello, world!" --write-media hello.mp3
+```
+
+可以在宿主机上使用如下命令将该文件从容器中Copy出来：
+
+```sh
+docker cp xswitch:/tmp/hello.mp3 .
+```
+
+如果这个声音文件正常，那表示edge-tts已经安装成功了。如果有其它问题可以参见[edge-tts](https://github.com/rany2/edge-tts)。
 
 接下来我们开始改造它，目的是能让它根据`Voice`类型自动选择需要使用的`TTS`模型。  
 
 ### 修改`tts_commandline.conf.xml`  
+
+**若你使用的`XSwitch`版本为4.0.2及以上，可跳过此步骤，直接进行`配置路由规则`**
 
 - 将原始的`espeak-ng -v ${voice} -w ${file} ${text}`修改为`sh $${scripts_dir}/xui/tts.sh ${voice} ${file} ${text}`
 
@@ -131,6 +152,6 @@ fi
 </configuration>
 ```
 
-当然，使用`edge-tts`需要连网，就不能`espeak-ng`那样离线使用了。
+当然，使用`edge-tts`需要连网，就不能像`espeak-ng`那样离线使用了。
 
-我们会在下一个XSwitch版本中加入这些配置，如果你在使用中遇到任何问题，请抓紧告诉我们。
+如果你在使用中遇到任何问题，请抓紧告诉我们。
