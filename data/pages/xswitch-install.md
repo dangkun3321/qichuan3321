@@ -211,5 +211,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # 其它
 
-XSwitch安装后，您可以参照 [XSwitch运维手册](/docs/xswitch-ops.html) 对系统进行维护。
+XSwitch安装后，你可以继续学习[XSwitch快速入门](https://xswitch.cn/docs/xswitch-tutorial.html) 。也可以参照 [XSwitch运维手册](/docs/xswitch-ops.html) 对系统进行维护。
+
 感谢您使用XSwitch。如果您在使用过程中有任何问题，都可以[参考这些解决方案](/pages/howto/trouble-shoot/)，或与我们联系。电子邮件：`info@x-y-t.cn` 。

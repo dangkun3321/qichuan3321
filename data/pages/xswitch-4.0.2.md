@@ -62,6 +62,8 @@ ccr.ccs.tencentyun.com/free/xswitch-lua-free:4.0.2
 
 # 结语
 
+我们新写了一篇文档[XSwitch快速入门](https://xswitch.cn/docs/xswitch-tutorial.html)，希望你能喜欢。
+
 如果大家在使用过程中遇到什么问题，可以参考[https://xswitch.cn/pages/howto/trouble-shoot/](https://xswitch.cn/pages/howto/trouble-shoot/)。
 
 如果大家对我们的产品有好的意见或建议，欢迎[给我们提工单](https://git.xswitch.cn/xswitch/docs/issues/1)。感谢您使用XSwitch。

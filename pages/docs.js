@@ -22,6 +22,12 @@ export async function getStaticProps() {
 
   const staticPosts = [
     {
+      title: 'XSwitch快速入门',
+      href: 'https://xswitch.cn/docs/xswitch-tutorial.html',
+      tags: ['基本文档'],
+      summary: '快速了解XSwitch，打通第一个电话。',
+    },
+    {
       title: 'XSwitch简明用户手册',
       href: 'https://demo.xswitch.cn/xswitch.html',
       tags: ['基本文档'],
