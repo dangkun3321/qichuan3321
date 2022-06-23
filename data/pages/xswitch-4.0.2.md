@@ -29,12 +29,13 @@ bibliography: references-data.bib
 
 # xswitch 软交换引擎更新
 
+- 更新到版本`xswitch-1.10.7.4`
 - 支持Edge TTS
 - 增加分段录像支持
 - 会议中增加子命令`all-but`可以排除部分`member id`
 - 核心支持无分片的VP8帧
-- 会议增加conferenceControl jsapi，支持按顺序批量执行命令
-
+- 会议增加conferenceControl JSAPI，支持按顺序批量执行命令
+- 会议增加`switch-loop`轮询子命令
 
 # 模块 更新
 
