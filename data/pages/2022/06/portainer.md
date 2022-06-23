@@ -212,7 +212,7 @@ services:
       - /data/storage:/usr/local/freeswitch/storage
       - /data/sounds:/usr/local/freeswitch/sounds
       - /data/blocks:/usr/local/freeswitch/blocks
-      - /data/xtra_config.lua:/usr/local/freeswitch/xui/lua/xui/xtra_config.lua
+      - /data/xtra_config.lua:/etc/xtra/xtra_config.lua
 ```
 
 ```yml
@@ -257,5 +257,5 @@ services:
 
 - 需要注意的是在添加`xswitch-pg`和`xswitch`不需要加载`.env`中`HTTP_PORT`和`NGINX_PROXY`变量。
 - 如遇到登录账号密码错误，可删除容器，重新进行添加。
-- 无法打开网页可以查看日志。如有80端口被占用可以自行调整端口。或将`xswitch`停止后重启`xswitch-nginx-xui`,最后将`xswitch`启动。
-- 缺少声音可到`/data`目录下，执行`make sounds`和`make music`
+- 如果无法打开网页可以查看日志。如有`80`端口被占用可以自行调整端口。或将`xswitch`停止后重启`xswitch-nginx-xui`，最后将`xswitch`启动。
+- 缺少声音可到`/data`目录下，执行`make sounds`和`make music`。

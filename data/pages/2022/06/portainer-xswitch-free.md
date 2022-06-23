@@ -9,14 +9,17 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
-## Portainer的安装以及docker-compose的部署
+> 本文来自`wzhcm`
 
 Portainer的安装（前提是已经安装好docker和联网）。
 
 ### 运行Portainer界面镜像
 
 ```sh
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --log-opt max-size=1g -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer \
+--restart=always --log-opt max-size=1g \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v portainer_data:/data portainer/portainer-ce
 ```
 
 ### 运行Portainer旧版界面镜像
@@ -24,12 +27,15 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always --log-
 centos自带火狐浏览器可能打不开新版的
 
 ```sh
-docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old --restart=always --log-opt max-size=1g -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data_old:/data portainer/portainer:latest
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old \
+--restart=always --log-opt max-size=1g \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v portainer_data_old:/data portainer/portainer:latest
 ```
 
-命令里面8000和 9000是占用端口，可以修改（例如9000:9000，会占用外部的9000端口，如果要修改，可以改成9200:9000这样）。
+命令里面`8000`和`9000`是占用端口，可以修改（例如`9000:9000`，会占用外部的`9000`端口，如果要修改，可以改成`9200:9000`这样）。
 
-安装后，用浏览器打开9000端口，（例如：http://192.168.24.148:9000/）。
+安装后，用浏览器打开`9000`端口，（例如：`http://192.168.24.148:9000/`）。
 第一次打开会让新建账户，选择local方式连接（这里截图是已经建立账户的登陆界面）。
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs01.png)
@@ -56,9 +62,9 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old --restart=always --
 这里是已经连结好了本地docker的界面。
 
 - Dashboard：主界面
-- APP Templates：安装程序的模版（需要连接的上docker hub的，但国内一般都连不上，所以不常用）可以快速安装一些程序（例如mysql各种数据库，nodejs这些），会自动拉docker-compose然后运行
-- Stacks：可以用来编辑和运行docker-compose
-- Containers：可以看到所有的docker（有的不是用docker-compose方式部署，那就要到这个地方看）
+- APP Templates：安装程序的模版（需要连接的上Docker Hub的，但国内一般都连不上，所以不常用）可以快速安装一些程序（例如MySQL各种数据库，NodeJS这些），会自动拉`docker-compose`然后运行
+- Stacks：可以用来编辑和运行`docker-compose`
+- Containers：可以看到所有的docker（有的不是用`docker-compose`方式部署，那就要到这个地方看）
 - Inages：docker镜像管理
 - Networks：docker网络管理
 - Volumes：docker卷管理
@@ -68,16 +74,17 @@ docker run -d -p 8000:8000 -p 9000:9000 --name=portainer-old --restart=always --
 
 ## Portainer的常用操作
 
-docker start，docker stop等
+`docker start`，`docker stop`等
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs07.png)
 
-- 对应docker start，docker stop等命令。
+- 对应`docker start`，`docker stop`等命令。
+
 点击容器名，进入容器操作。
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs08.png)
 
-- Logs：对应 docker logs 命令
+- Logs：对应`docker logs`命令
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs09.png)
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs10.png)
@@ -97,7 +104,7 @@ Console方式会选择Command，进不去时候可以尝试切换下
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs14.png)
 
-点击“Connect”后，输入fs_cli（freeswitch的控制台）
+点击“Connect”后，输入`fs_cli`（`freeswitch`的控制台）
 
 ![](/static/images/2022/06/portainer-xswitch-free/portainer_xs15.png)
 
