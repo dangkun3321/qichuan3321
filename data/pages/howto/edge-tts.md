@@ -11,7 +11,9 @@ bibliography: references-data.bib
 
 在[如何使用XSwitch内置的离线ASR及TTS](https://xswitch.cn/pages/howto/offline-asr-tts/)中我们已经学会如何使用离线ASR及TTS，但由于`espeak-ng`放出来的声音不好听，在我们不屑努力下，终于找到一个声音更加清晰流畅且可以免费使用的的TTS引擎[edge-tts](https://github.com/rany2/edge-tts)。
 
-本文中所讲离线TTS是基于`mod_tts_commandline`模块实现的，上一篇文章已经说明如何使用该模块，不再赘述。  
+本文中所讲TTS是基于`mod_tts_commandline`模块实现的，上一篇文章已经说明如何使用该模块，不再赘述。  
+
+由于`XSwitch`内不携带`edge-tts`，所以我们在使用之前，需要先自行安装，详情参见[edge-tts](https://github.com/rany2/edge-tts)
 
 接下来我们开始改造它，目的是能让它根据`Voice`类型自动选择需要使用的`TTS`模型。  
 
