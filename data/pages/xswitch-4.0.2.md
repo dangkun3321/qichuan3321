@@ -9,6 +9,8 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
+这是一次小的更新和Bug修复，建议升级。
+
 # XUI 更新
 
 - 修改文件导出格式解决不兼容问题
@@ -56,5 +58,9 @@ bibliography: references-data.bib
 ```
 ccr.ccs.tencentyun.com/free/xswitch-lua-free:4.0.2
 ```
+
+# 结语
+
+如果大家在使用过程中遇到什么问题，可以参考[https://xswitch.cn/pages/howto/trouble-shoot/](https://xswitch.cn/pages/howto/trouble-shoot/)。
 
 如果大家对我们的产品有好的意见或建议，欢迎[给我们提工单](https://git.xswitch.cn/xswitch/docs/issues/1)。感谢您使用XSwitch。
