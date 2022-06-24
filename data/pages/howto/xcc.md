@@ -80,9 +80,29 @@ nats://username:password@192.168.0.1:4222
 
 然后，你就可以使用[XCC Examples](https://git.xswitch.cn/xswitch/xcc-examples)中的示例控制你的XSwitch了。
 
+## 在命令行上执行命令
+
+你也可以尝试在命令行上执行XSwitch中的命令，以`status`命令为例：
+
+开一个终端执行`nats sub '>'`，开另一个终端执行如下命令，一切正常的话你应该能在第一个终端上看到命令回复的结果。
+
+```sh
+echo '{
+  "jsonrpc": "2.0",
+  "id": "0",
+  "method": "XNode.NativeAPI",
+  "params": {
+    "ctrl_uuid": "uuid",
+    "cmd": "status"
+  }
+}' | nats pub cn.xswitch.node.test
+```
+
 ## 跟踪调试
 
 使用`nats sub '>'`命令订阅所有NATS消息，所有问题都一目了然。
+
+在XSwitch控制台上可以使用`xcc debug on 9`查看更详细的NATS消息日志。
 
 ## 其它
 
