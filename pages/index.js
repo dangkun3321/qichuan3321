@@ -1,5 +1,103 @@
-import Products from './products'
+import siteMetadata from '@/data/siteMetadata'
+import SectionWrapper from '@/components/SectionWrapper'
+import SectionContainer from '@/components/SectionContainers'
+import { PageSEO } from '@/components/SEO'
+import Header from '@/components/Header_v2'
+import Session_1 from '@/components/home-session/session-1'
+import Session_2 from '@/components/home-session/session-2'
+import Session_3 from '@/components/home-session/session-3'
+import Session_4 from '@/components/home-session/session-4'
+import Session_5 from '@/components/home-session/session-5'
+import Session_6 from '@/components/home-session/session-6'
+import Session_7 from '@/components/home-session/session-7'
+import Session_8 from '@/components/home-session/session-8'
+import Footer from '@/components/Footer'
 
-export default function Home() {
-  return <Products />
+export default function Page() {
+  return (
+    <>
+      {/* SEO */}
+      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+
+      {/* 顶部导航 */}
+      <Header />
+
+      {/* 高度可定制的实时音视频通信平台 */}
+      <SectionContainer>
+        <div className="bg-[#263036]">
+          <SectionWrapper>
+            <div className="bg-[#263036]">
+              <Session_1 />
+            </div>
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 满足多种行业需求 */}
+      <SectionContainer>
+        <div className="bg-[#F7F8FC]">
+          <SectionWrapper>
+            <Session_2 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 模块化 可定制 易扩展 */}
+      <SectionContainer>
+        <div className="bg-[#263036]">
+          <SectionWrapper>
+            <Session_3 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 为什么选择XSwitch？ */}
+      <SectionContainer>
+        <div className="bg-[#F7F8FC]">
+          <SectionWrapper>
+            <Session_4 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 活跃的开源社区 */}
+      <SectionContainer>
+        <div className="bg-white">
+          <SectionWrapper>
+            <Session_5 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 版本与购买 */}
+      <SectionContainer>
+        <div className="bg-[#F7F8FC]">
+          <SectionWrapper>
+            <Session_6 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 合作伙伴 */}
+      <SectionContainer>
+        <div className="bg-white">
+          <SectionWrapper>
+            <Session_7 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 让互联互通更顺畅、让实时互动更高效 */}
+      <SectionContainer>
+        <div className="bg-white">
+          <SectionWrapper>
+            <Session_8 />
+          </SectionWrapper>
+        </div>
+      </SectionContainer>
+
+      {/* 底部导航 */}
+      <Footer />
+    </>
+  )
 }
