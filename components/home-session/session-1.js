@@ -16,7 +16,7 @@ export default function Session() {
         </div>
         <div className="mx-auto w-full pt-10 text-center md:pt-16 md:pb-24 lg:pt-20 lg:pb-24 lg:text-left xl:pb-36 2xl:pt-32 2xl:pb-64">
           <div className="lg:w-3/5  desktop:pr-0">
-            <h1 className="m-auto flex flex-row flex-wrap justify-center pb-3 text-[26px] font-semibold tracking-tight text-gray-100 md:block md:max-w-full md:text-4xl md:font-extrabold md:text-white lg:text-[36px] xl:text-[46px] 2xl:text-[50px] desktop:text-[55px]">
+            <h1 className="m-auto flex flex-row flex-wrap justify-center pb-3 text-[25px] font-semibold tracking-tight text-gray-100 md:block md:max-w-full md:text-4xl md:font-extrabold md:text-white lg:text-[36px] xl:text-[46px] 2xl:text-[50px] desktop:text-[55px]">
               <span className="hidden">{t('lang_01')}</span>
               <span>{t('title_01')}</span>
               <span>{t('title_02')}</span>
