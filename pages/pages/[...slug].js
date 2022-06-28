@@ -3,6 +3,8 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import Header from '@/components/Header_v2'
+import Footer from '@/components/Footer'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -45,6 +47,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
 
   return (
     <>
+      <Header light={true} />
       {frontMatter.draft !== true ? (
         <div className="mx-auto mt-16 max-w-3xl px-4 pt-10 sm:px-6 xl:max-w-5xl xl:px-0">
           <MDXLayoutRenderer
@@ -67,6 +70,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
           </PageTitle>
         </div>
       )}
+      <Footer />
     </>
   )
 }

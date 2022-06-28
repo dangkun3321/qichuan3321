@@ -1,25 +1,6 @@
-/**
- * @typedef TocHeading
- * @prop {string} value
- * @prop {number} depth
- * @prop {string} url
- */
+import cls from 'classnames'
+import React, { useEffect, useRef, useState } from 'react'
 
-/**
- * Generates an inline table of contents
- * Exclude titles matching this string (new RegExp('^(' + string + ')$', 'i')).
- * If an array is passed the array gets joined with a pipe (new RegExp('^(' + array.join('|') + ')$', 'i')).
- *
- * @param {{
- *  toc: TocHeading[],
- *  indentDepth?: number,
- *  fromHeading?: number,
- *  toHeading?: number,
- *  asDisclosure?: boolean,
- *  exclude?: string|string[]
- * }} props
- *
- */
 const TOCInline = ({
   toc,
   indentDepth = 3,
@@ -27,7 +8,27 @@ const TOCInline = ({
   toHeading = 6,
   asDisclosure = false,
   exclude = '',
+  current,
+  title,
 }) => {
+  const tocRef = useRef()
+  const [isScroll, setScroll] = useState()
+
+  useEffect(() => {
+    if (tocRef) {
+      setScroll(tocRef.current.scrollHeight > tocRef.current.clientHeight)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (current && isScroll) {
+      refs[current].current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }, [current, isScroll])
+
   const re = Array.isArray(exclude)
     ? new RegExp('^(' + exclude.join('|') + ')$', 'i')
     : new RegExp('^(' + exclude + ')$', 'i')
@@ -37,10 +38,25 @@ const TOCInline = ({
       heading.depth >= fromHeading && heading.depth <= toHeading && !re.test(heading.value)
   )
 
+  const refs = filteredToc.reduce((song, value) => {
+    song[value.value] = React.createRef()
+    return song
+  }, {})
+
   const tocList = (
-    <ul>
+    <ul ref={tocRef} className="scrollbar-hide h-full overflow-y-auto scroll-smooth">
       {filteredToc.map((heading) => (
-        <li key={heading.value} className={`${heading.depth >= indentDepth && 'ml-6'}`}>
+        <li
+          key={heading.value}
+          ref={refs[heading.value]}
+          className={cls(
+            heading.depth >= indentDepth && 'ml-6',
+            current === heading.value
+              ? 'text-fslink'
+              : 'hover:text-fslink font-normal text-gray-600 dark:text-gray-400',
+            'py-1 font-semibold'
+          )}
+        >
           <a href={heading.url}>{heading.value}</a>
         </li>
       ))}
@@ -55,7 +71,15 @@ const TOCInline = ({
           <div className="ml-6">{tocList}</div>
         </details>
       ) : (
-        tocList
+        <>
+          {title && (
+            <div className="pb-2 font-medium uppercase text-gray-500 dark:text-gray-300 ">
+              {title}
+            </div>
+          )}
+
+          {tocList}
+        </>
       )}
     </>
   )

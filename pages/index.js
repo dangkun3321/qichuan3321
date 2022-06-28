@@ -60,7 +60,7 @@ export default function Page() {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       {/* 顶部导航 */}
-      <Header light={!isScrollToTop} />
+      <Header light={!isScrollToTop} translate />
 
       {/* 高度可定制的实时音视频通信平台 */}
       <SectionContainer>
