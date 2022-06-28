@@ -6,6 +6,7 @@ import LanguageSwitch from '@/components/LanguageSwitch'
 import HeaderLayoutWrapper from './HeadersLayoutWrapper'
 import { Popover, Transition, Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import cls from 'classnames'
 import {
   MenuIcon,
   PhoneIcon,
@@ -67,24 +68,31 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function Header({ light }) {
   const { t } = useTranslation()
 
   return (
-    <HeaderLayoutWrapper>
-      <Popover className="relative select-none bg-[#263036]">
+    <HeaderLayoutWrapper light={light}>
+      <Popover className="relative select-none">
         <div className="mx-auto max-w-full">
-          <div className="flex max-h-20 items-center justify-between py-6 md:justify-start md:space-x-16 2xl:space-x-[70px]">
+          <div className="flex max-h-[64px] items-center justify-between py-4 md:justify-start md:space-x-16 md:py-6 2xl:max-h-[66px] 2xl:space-x-[70px]">
             <div className="flex justify-start">
               <a href="#" className="flex select-none items-center space-x-3">
                 <Logo />
-                <span className="text-xl font-extrabold text-white">
+                <span
+                  className={cls(light ? 'text-gray-900' : 'text-white', 'text-xl font-extrabold')}
+                >
                   {siteMetadata.headerTitle}
                 </span>
               </a>
             </div>
             <div className="-my-2 -mr-2 md:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-transparent p-2 text-white focus:outline-none">
+              <Popover.Button
+                className={cls(
+                  light ? 'text-gray-700' : 'text-white',
+                  'inline-flex items-center justify-center rounded-md bg-transparent p-2  focus:outline-none'
+                )}
+              >
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
@@ -94,15 +102,17 @@ export default function Header() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-200' : 'text-gray-100',
-                        'group inline-flex items-center rounded px-4 py-3 text-base font-medium hover:bg-black hover:bg-opacity-20 focus:outline-none'
+                        light
+                          ? 'text-gray-900'
+                          : 'text-gray-100 hover:bg-black hover:bg-opacity-20',
+                        'group inline-flex items-center rounded px-4 py-3 text-base font-medium focus:outline-none'
                       )}
                     >
                       <span>{t('Products')}</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-200' : 'text-gray-100',
-                          'ml-2 h-5 w-5 group-hover:text-gray-200'
+                          light ? 'text-gray-900' : 'text-gray-100 group-hover:text-gray-200',
+                          'ml-2 h-5 w-5'
                         )}
                         aria-hidden="true"
                       />
@@ -117,7 +127,7 @@ export default function Header() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute z-20 -ml-4 mt-3 w-screen max-w-[440px] transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+                      <Popover.Panel className="absolute z-20 -ml-4 mt-4 w-screen max-w-[440px] transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                             {products.map((item) => (
@@ -172,7 +182,12 @@ export default function Header() {
                   key={index}
                   href={header.href}
                   target={header.href.indexOf('http') === -1 ? '' : '_blank'}
-                  className="py-3 px-4 text-base font-medium text-gray-100 hover:rounded hover:bg-black hover:bg-opacity-20 hover:text-gray-200"
+                  className={cls(
+                    light
+                      ? 'text-gray-900 hover:text-gray-800'
+                      : 'text-gray-100 hover:bg-black hover:bg-opacity-20 hover:text-gray-200',
+                    'py-3 px-4 text-base font-medium  hover:rounded  hover:bg-opacity-20'
+                  )}
                   rel="noreferrer"
                 >
                   {t(header.name)}
@@ -186,7 +201,7 @@ export default function Header() {
               >
                 {t('Get started')}
               </a> */}
-              <LanguageSwitch />
+              <LanguageSwitch light={light} />
             </div>
           </div>
         </div>
@@ -279,7 +294,7 @@ export default function Header() {
                   >
                     {t('Get started')}
                   </a>
-                  <LanguageSwitch />
+                  <LanguageSwitch light={light} />
                 </div>
               </div>
             </div>
