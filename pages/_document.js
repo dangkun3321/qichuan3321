@@ -4,6 +4,7 @@ class MyDocument extends Document {
     return (
       <Html lang="zh" className="scroll-smooth">
         <Head>
+          <meta name="theme-color" content="#263036" />
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
@@ -19,11 +20,9 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" />
-          <meta name="msapplication-TileColor" content="#000000" />
-          <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body className="antialiased">
           <Main />
           <NextScript />
         </body>
