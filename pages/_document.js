@@ -4,7 +4,7 @@ class MyDocument extends Document {
     return (
       <Html lang="zh" className="scroll-smooth">
         <Head>
-          <meta name="theme-color" content="#263036" />
+          <meta name="theme-color" content="#ffffff"></meta>
           <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
           <link
             rel="icon"
@@ -20,7 +20,7 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" />
-          <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
         </Head>
         <body className="antialiased">
           <Main />
