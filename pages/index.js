@@ -35,7 +35,7 @@ export default function Page() {
 
       {/* 满足多种行业需求 */}
       <SectionContainer>
-        <div className="bg-[#F7F8FC]">
+        <div className=" bg-white xl:bg-[#F7F8FC]">
           <SectionWrapper>
             <Session_2 />
           </SectionWrapper>
@@ -53,7 +53,7 @@ export default function Page() {
 
       {/* 为什么选择XSwitch？ */}
       <SectionContainer>
-        <div className="bg-[#F7F8FC]">
+        <div className=" bg-white lg:bg-[#F7F8FC]">
           <SectionWrapper>
             <Session_4 />
           </SectionWrapper>
@@ -71,7 +71,7 @@ export default function Page() {
 
       {/* 版本与购买 */}
       <SectionContainer>
-        <div className="bg-[#F7F8FC]">
+        <div className="bg-white lg:bg-[#F7F8FC]">
           <SectionWrapper>
             <Session_6 />
           </SectionWrapper>
@@ -89,7 +89,7 @@ export default function Page() {
 
       {/* 让互联互通更顺畅、让实时互动更高效 */}
       <SectionContainer>
-        <div className="bg-white">
+        <div className="bg-[#29c68e] lg:bg-white">
           <SectionWrapper>
             <Session_8 />
           </SectionWrapper>
