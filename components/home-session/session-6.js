@@ -31,7 +31,7 @@ export function Versions() {
     <>
       <div className="mt-12 grid w-full gap-10 overflow-hidden md:mt-16 md:grid-cols-2 md:gap-0 md:rounded-md md:border md:bg-white md:shadow-sm xl:grid-cols-4">
         {/* 社区版 */}
-        <span id="community" tabIndex="-1" className="lg:absolute lg:-top-16 lg:left-0"></span>
+        <span id="community" tabIndex="-1" className="lg:absolute lg:-top-40 lg:left-0"></span>
         <div className="relative flex flex-col overflow-hidden rounded border bg-white px-8 pt-10 pb-8 shadow-sm md:rounded-none md:border-y-0 md:border-l-0 md:border-r md:bg-transparent md:shadow-none">
           <div className="absolute top-0 left-0 right-0 h-3 bg-[#F1F2F2]" />
           <div className="text-xl font-semibold text-gray-900">{t('Community Edition')}</div>
@@ -60,7 +60,7 @@ export function Versions() {
         </div>
 
         {/* 商业版 */}
-        <span id="commercial" tabIndex="-1" className="lg:absolute lg:-top-16 lg:left-0"></span>
+        <span id="commercial" tabIndex="-1" className="lg:absolute lg:-top-40 lg:left-0"></span>
         <div className="relative flex flex-col overflow-hidden rounded border bg-white px-8 pt-10 pb-8 shadow-sm md:rounded-none md:border-y-0 md:border-l-0 md:border-r md:bg-transparent md:shadow-none">
           <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-[#87FFB9] to-[#57F8FF]" />
           <div className="text-xl font-semibold text-gray-900">{t('Commercial Edition')}</div>
@@ -95,7 +95,7 @@ export function Versions() {
         </div>
 
         {/* 专业版 */}
-        <span id="professional" tabIndex="-1" className="lg:absolute lg:-top-16 lg:left-0"></span>
+        <span id="professional" tabIndex="-1" className="lg:absolute lg:-top-40 lg:left-0"></span>
         <div className="relative flex flex-col overflow-hidden rounded border bg-white px-8 pt-10 pb-8 shadow-sm md:rounded-none md:border-y-0 md:border-l-0 md:border-r md:bg-transparent md:shadow-none">
           <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-[#FF9056] to-[#FFF87E]" />
 
@@ -131,7 +131,7 @@ export function Versions() {
         </div>
 
         {/* 企业版 */}
-        <span id="enterprise" tabIndex="-1" className="lg:absolute lg:-top-16 lg:left-0"></span>
+        <span id="enterprise" tabIndex="-1" className="lg:absolute lg:-top-40 lg:left-0"></span>
         <div className="relative flex flex-col overflow-hidden rounded border bg-white px-8 pt-10 pb-8 shadow-sm md:rounded-none md:border-y-0 md:border-l-0 md:border-r md:bg-transparent md:shadow-none">
           <div className="absolute top-0 left-0 right-0 h-3 bg-gradient-to-r from-[#9947FF] to-[#FF7EC2]" />
 
