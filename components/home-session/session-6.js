@@ -2,6 +2,7 @@ import { useTranslation } from 'next-export-i18n'
 import { Disclosure } from '@headlessui/react'
 import { Fragment } from 'react'
 import { ChevronDownIcon, CheckIcon, MinusIcon } from '@heroicons/react/solid'
+import siteMetadata from '@/data/siteMetadata'
 
 export default function Session() {
   const { t } = useTranslation()
@@ -54,9 +55,12 @@ export function Versions() {
 
             <li className="flex items-center space-x-4">&nbsp;</li>
           </ul>
-          <button className=" w-32 rounded border border-gray-900 py-2 text-sm hover:shadow-sm">
+          <a
+            href={siteMetadata.getStarted}
+            className="flex w-32 items-center justify-center rounded border border-gray-900 py-2 text-sm hover:shadow-sm"
+          >
             {t('Get started')}
-          </button>
+          </a>
         </div>
 
         {/* 商业版 */}
@@ -379,9 +383,18 @@ function Table() {
                   'border-t border-gray-200 px-4'
                 )}
               >
-                <div className="block w-full rounded-md border border-gray-800 bg-gray-800 py-2 text-center text-sm font-semibold text-white hover:bg-gray-900">
-                  {tierIdx === 0 ? t('Get started') : t('Consulting Sales')}
-                </div>
+                {tierIdx === 0 ? (
+                  <a
+                    href={siteMetadata.getStarted}
+                    className="block w-full rounded-md border border-downloadText bg-transparent py-2 text-center text-sm font-semibold text-downloadText"
+                  >
+                    {t('Get started')}
+                  </a>
+                ) : (
+                  <div className="block w-full rounded-md border border-gray-800 bg-gray-800 py-2 text-center text-sm font-semibold text-white hover:bg-gray-900">
+                    {t('Consulting Sales')}
+                  </div>
+                )}
               </div>
             </section>
           ))}
@@ -419,12 +432,18 @@ function Table() {
                 {tiers.map((tier, tierIdx) => (
                   <td key={tier.name} className="h-full py-8 px-6 align-top">
                     <div className="relative table h-full">
-                      <a
-                        href={tier.href}
-                        className="5 bottom-0 block w-24 flex-grow rounded-md border border-gray-800 bg-gray-800 py-2 text-center text-sm font-semibold text-white hover:bg-gray-900"
-                      >
-                        {tierIdx === 0 ? t('Get started') : t('Consulting Sales')}
-                      </a>
+                      {tierIdx === 0 ? (
+                        <a
+                          href={siteMetadata.getStarted}
+                          className="5 bottom-0 block w-24 flex-grow rounded-md border border-downloadText py-2 text-center text-sm font-semibold text-downloadText"
+                        >
+                          {t('Get started')}
+                        </a>
+                      ) : (
+                        <div className="5 bottom-0 block w-24 flex-grow rounded-md border border-gray-800 bg-gray-800 py-2 text-center text-sm font-semibold text-white hover:bg-gray-900">
+                          {t('Consulting Sales')}
+                        </div>
+                      )}
                     </div>
                   </td>
                 ))}

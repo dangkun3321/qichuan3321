@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-export-i18n'
 import Image from '@/components/Image'
+import siteMetadata from '@/data/siteMetadata'
 
 export default function Session() {
   const { t } = useTranslation()
@@ -32,7 +33,7 @@ export default function Session() {
             </p>
             <div className="mt-10">
               <a
-                href="#"
+                href={siteMetadata.getStarted}
                 className="rounded bg-black bg-opacity-20 px-20 py-3 text-base font-semibold text-white hover:bg-opacity-50 md:py-4 md:px-12 md:text-lg"
               >
                 {t('Get started')}

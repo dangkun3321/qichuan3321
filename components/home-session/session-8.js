@@ -17,7 +17,7 @@ export default function Partner() {
           <div className="pb-8 text-sm text-white md:text-base laptop:pb-0">{t('lang_55')}</div>
           <div className="flex space-x-8">
             <Link
-              href="/pages/xswitch-install"
+              href={siteMetadata.getStarted}
               aria-label={siteMetadata.headerTitle}
               className="flex w-32 items-center justify-center rounded bg-[#3F4045] py-2 text-sm text-white hover:shadow-sm"
             >
@@ -25,7 +25,7 @@ export default function Partner() {
             </Link>
 
             <Link
-              href="/pages/xswitch-install"
+              href="."
               aria-label={siteMetadata.headerTitle}
               className=" flex w-32 items-center justify-center rounded bg-gray-50 py-2 text-sm text-downloadText "
             >

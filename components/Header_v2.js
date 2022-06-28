@@ -60,7 +60,11 @@ const headerLinks = [
   },
 ]
 const callsToAction = [
-  { name: 'Free trial', href: '#', icon: DesktopComputerIcon },
+  {
+    name: 'Free trial',
+    href: siteMetadata.getStarted,
+    icon: DesktopComputerIcon,
+  },
   { name: 'Consulting Sales', href: '#', icon: ChatIcon },
 ]
 
