@@ -9,7 +9,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import cls from 'classnames'
 import {
   MenuIcon,
-  PhoneIcon,
+  ChatIcon,
   ShieldCheckIcon,
   XIcon,
   DesktopComputerIcon,
@@ -61,7 +61,7 @@ const headerLinks = [
 ]
 const callsToAction = [
   { name: 'Free trial', href: '#', icon: DesktopComputerIcon },
-  { name: 'Consulting Sales', href: '#', icon: PhoneIcon },
+  { name: 'Consulting Sales', href: '#', icon: ChatIcon },
 ]
 
 function classNames(...classes) {
