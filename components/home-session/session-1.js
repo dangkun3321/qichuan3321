@@ -19,11 +19,11 @@ export default function Session() {
           <div className="lg:w-3/5  desktop:pr-0">
             <h1 className="m-auto flex flex-row flex-wrap justify-center pb-3 text-[25px] font-semibold tracking-tight text-gray-100 md:block md:max-w-full md:text-4xl md:font-extrabold md:text-white lg:text-[36px] xl:text-[46px] 2xl:text-[50px] desktop:text-[55px]">
               <span className="hidden">{t('lang_01')}</span>
-              <span>{t('title_01')}</span>
-              <span>{t('title_02')}</span>
-              <span>{t('title_03')}</span>
-              <span>{t('title_04')}</span>
-              <span>{t('title_05')}</span>
+              <span className="lg:leading-12 2xl:leading-14">{t('title_01')}</span>
+              <span className="lg:leading-12 2xl:leading-14">{t('title_02')}</span>
+              <span className="lg:leading-12 2xl:leading-14">{t('title_03')}</span>
+              <span className="lg:leading-12 2xl:leading-14">{t('title_04')}</span>
+              <span className="lg:leading-12 2xl:leading-14">{t('title_05')}</span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-lg text-gray-300 md:mt-5 md:max-w-3xl lg:mx-0">
               {t('lang_02')}
