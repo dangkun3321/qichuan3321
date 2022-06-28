@@ -21,25 +21,25 @@ const products = [
   {
     name: 'Community',
     description: 'lang_77',
-    href: '#versions',
+    href: '#community',
     icon: CubeIcon,
   },
   {
     name: 'Commercial',
     description: 'lang_78',
-    href: '#versions',
+    href: '#commercial',
     icon: CloudIcon,
   },
   {
     name: 'Professional',
     description: 'lang_83',
-    href: '#versions',
+    href: '#professional',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Enterprise',
     description: 'lang_87',
-    href: '#versions',
+    href: '#enterprise',
     icon: OfficeBuildingIcon,
   },
 ]
@@ -51,7 +51,7 @@ const headerLinks = [
   },
   {
     name: 'Pricing',
-    href: '#pricing',
+    href: '#versions',
   },
   {
     name: 'About Us',
@@ -124,7 +124,9 @@ export default function Header() {
                               <a
                                 key={item.name}
                                 href={item.href}
+                                target={item.href.indexOf('http') === -1 ? '' : '_blank'}
                                 className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                                rel="noreferrer"
                               >
                                 <item.icon
                                   className="h-6 w-6 flex-shrink-0 text-[#3f4045]"
@@ -146,7 +148,9 @@ export default function Header() {
                               <div key={item.name} className="flow-root flex-1">
                                 <a
                                   href={item.href}
+                                  target={item.href.indexOf('http') === -1 ? '' : '_blank'}
                                   className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                  rel="noreferrer"
                                 >
                                   <item.icon
                                     className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -167,7 +171,9 @@ export default function Header() {
                 <a
                   key={index}
                   href={header.href}
+                  target={header.href.indexOf('http') === -1 ? '' : '_blank'}
                   className="py-3 px-4 text-base font-medium text-gray-100 hover:rounded hover:bg-black hover:bg-opacity-20 hover:text-gray-200"
+                  rel="noreferrer"
                 >
                   {t(header.name)}
                 </a>
@@ -236,7 +242,9 @@ export default function Header() {
                               <a
                                 key={item.name}
                                 href={item.href}
+                                target={item.href.indexOf('http') === -1 ? '' : '_blank'}
                                 className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                                rel="noreferrer"
                               >
                                 <item.icon
                                   className="h-6 w-6 flex-shrink-0 text-[#3f4045]"
@@ -256,7 +264,9 @@ export default function Header() {
                     <a
                       key={index}
                       href={header.href}
+                      target={header.href.indexOf('http') === -1 ? '' : '_blank'}
                       className="text-lg font-medium text-gray-900 hover:text-gray-700"
+                      rel="noreferrer"
                     >
                       {t(header.name)}
                     </a>
