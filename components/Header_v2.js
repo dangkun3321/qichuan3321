@@ -7,6 +7,7 @@ import HeaderLayoutWrapper from './HeadersLayoutWrapper'
 import { Popover, Transition, Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import Contact from '@/components/Contact'
+import Link from '@/components/Link'
 import cls from 'classnames'
 import {
   MenuIcon,
@@ -73,7 +74,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header({ light }) {
+export default function Header({ light, translate }) {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
@@ -84,7 +85,7 @@ export default function Header({ light }) {
           <div className="mx-auto max-w-full">
             <div className="flex max-h-[64px] items-center justify-between py-4 md:justify-start md:space-x-16 md:py-6 2xl:max-h-[66px] 2xl:space-x-[70px]">
               <div className="flex justify-start">
-                <a href="#" className="flex select-none items-center space-x-3">
+                <Link href="/" className="flex select-none items-center space-x-3">
                   <Logo />
                   <span
                     className={cls(
@@ -94,7 +95,7 @@ export default function Header({ light }) {
                   >
                     {siteMetadata.headerTitle}
                   </span>
-                </a>
+                </Link>
               </div>
               <div className="-my-2 -mr-2 md:hidden">
                 <Popover.Button
@@ -238,7 +239,7 @@ export default function Header({ light }) {
               >
                 {t('Get started')}
               </a> */}
-                <LanguageSwitch light={light} />
+                {translate && <LanguageSwitch light={light} />}
               </div>
             </div>
           </div>
@@ -331,7 +332,7 @@ export default function Header({ light }) {
                     >
                       {t('Get started')}
                     </a>
-                    <LanguageSwitch light={light} />
+                    {translate && <LanguageSwitch light={light} />}
                   </div>
                 </div>
               </div>
