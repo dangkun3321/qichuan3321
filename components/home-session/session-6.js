@@ -342,7 +342,7 @@ function Table() {
                         >
                           {feature.name}
                         </th>
-                        <td className="py-5 pr-4">
+                        <td className="w-28 py-5 pr-4">
                           {typeof feature.tiers[tier.name] === 'string' ? (
                             <span className="block text-right text-sm text-gray-700">
                               {feature.tiers[tier.name]}
