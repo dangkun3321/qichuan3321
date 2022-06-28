@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { SwitchHorizontalIcon, GlobeAltIcon } from '@heroicons/react/solid'
+import cls from 'classnames'
 
-export default function LanguageSwitch() {
+export default function LanguageSwitch({ light }) {
   return (
     <>
       <div className="z-20 hidden text-right md:block">
@@ -10,7 +11,10 @@ export default function LanguageSwitch() {
           <div>
             <Menu.Button
               aria-label="language"
-              className="inline-flex w-full justify-center rounded-md py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className={cls(
+                light ? 'text-gray-700' : 'text-white hover:bg-opacity-30',
+                'inline-flex w-full justify-center rounded-md py-2 text-sm font-medium focus:outline-none focus-visible:ring-0'
+              )}
             >
               <GlobeAltIcon className="w-6" />
               {/* <ChevronDownIcon
