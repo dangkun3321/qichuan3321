@@ -10,6 +10,8 @@ import XswitchInstall from '@/svg/xswitch-install.svg'
 import Bg from '@/svg/document-bg.svg'
 import { useTranslation } from 'next-export-i18n'
 import cls from 'classnames'
+import Header from '@/components/Header_v2'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
   const tags = await getAllTags('pages')
@@ -134,9 +136,10 @@ export default function Docs({ staticTags, tags, posts }) {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <Header />
 
       <div className="min-h-[200px] bg-white pb-[185px]">
-        <div className="relative flex flex-col items-center justify-center space-y-1 bg-[#313F4F] pt-32 pb-24 text-white ">
+        <div className="relative flex flex-col items-center justify-center space-y-1 bg-[#263036] py-32 pt-32 text-white ">
           <div className=" z-20 text-[32px]">{t('Document title')}</div>
           <div className="z-20 text-sm">{t('Document description')}</div>
         </div>
@@ -211,6 +214,7 @@ export default function Docs({ staticTags, tags, posts }) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
