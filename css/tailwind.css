@@ -24,6 +24,15 @@ input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
+#__next {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 .icon.icon-link {
   display: inline-block;
   width: 20px;
