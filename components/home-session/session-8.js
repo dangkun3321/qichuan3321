@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import Image from '@/components/Image'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import { useTranslation } from 'next-export-i18n'
 import RadianSvg from '@/svg/radian.svg'
+import Contact from '@/components/Contact'
 
 export default function Partner() {
+  const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
   return (
@@ -24,13 +27,14 @@ export default function Partner() {
               {t('Get started')}
             </Link>
 
-            <Link
+            <div
               href="."
               aria-label={siteMetadata.headerTitle}
-              className=" flex w-32 items-center justify-center rounded bg-gray-50 py-2 text-sm text-downloadText "
+              className=" flex w-32 cursor-pointer items-center justify-center rounded bg-gray-50 py-2 text-sm text-downloadText"
+              onClick={() => setOpen(true)}
             >
               {t('Consulting Sales')}
-            </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -42,6 +46,7 @@ export default function Partner() {
         <RadianSvg className="w-full fill-current" />
       </div>
       <div className="absolute -bottom-1 left-0 right-0 z-50 hidden h-[5px] overflow-hidden bg-[#263036] laptop:block" />
+      <Contact open={open} onClose={() => setOpen(false)} />
     </>
   )
 }
