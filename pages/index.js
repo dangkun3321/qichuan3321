@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import SectionWrapper from '@/components/SectionWrapper'
 import SectionContainer from '@/components/SectionContainers'
@@ -12,19 +13,58 @@ import Session_6 from '@/components/home-session/session-6'
 import Session_7 from '@/components/home-session/session-7'
 import Session_8 from '@/components/home-session/session-8'
 import Footer from '@/components/Footer'
+import cls from 'classnames'
 
 export default function Page() {
+  const [light, setLight] = useState(false)
+  const [scrollDir, setScrollDir] = useState('scrolling down')
+  const [isScrollToTop, setIsScrollToTop] = useState(true)
+
+  useEffect(() => {
+    const scrollY = window.pageYOffset
+    setIsScrollToTop(scrollY < 200)
+  }, [])
+
+  useEffect(() => {
+    const threshold = 0
+    let lastScrollY = window.pageYOffset
+    let ticking = false
+
+    const updateScrollDir = () => {
+      const scrollY = window.pageYOffset
+
+      if (Math.abs(scrollY - lastScrollY) < threshold) {
+        ticking = false
+        return
+      }
+      setScrollDir(scrollY > lastScrollY ? 'scrolling down' : 'scrolling up')
+      lastScrollY = scrollY > 0 ? scrollY : 0
+      ticking = false
+      setIsScrollToTop(scrollY < 200)
+    }
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollDir)
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [scrollDir, isScrollToTop])
+
   return (
     <>
       {/* SEO */}
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       {/* 顶部导航 */}
-      <Header />
+      <Header light={!isScrollToTop} />
 
       {/* 高度可定制的实时音视频通信平台 */}
       <SectionContainer>
-        <div className="bg-[#263036]">
+        <div className="bg-[#263036] pt-16">
           <SectionWrapper>
             <div className="bg-[#263036]">
               <Session_1 />
