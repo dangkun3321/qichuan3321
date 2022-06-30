@@ -11,6 +11,8 @@ bibliography: references-data.bib
 
 在[如何使用XSwitch内置的离线ASR及TTS](https://xswitch.cn/pages/howto/offline-asr-tts/)中我们已经学会如何使用离线ASR及TTS，但由于`espeak-ng`放出来的声音不好听，在我们不屑努力下，终于找到一个声音更加清晰流畅且可以免费使用的的TTS引擎[edge-tts](https://github.com/rany2/edge-tts)。
 
+文末有`edge-tts`和`espeak-ng`生成的音频实例，以供大家参考。
+
 本文中所讲TTS是基于`mod_tts_commandline`模块实现的，上一篇文章已经说明如何使用该模块，不再赘述。  
 
 为了防止`XSwitch`镜像体积过大，XSwitch中默认不带`edge-tts`，如果需要使用，可以自行安装：
@@ -151,6 +153,18 @@ fi
     </ext-maps>
 </configuration>
 ```
+
+### edge-tts
+
+<audio controls name="edge-tts">
+      <source src="/media/edge-tts.mp3" type="audio/mpeg"/>
+</audio>
+
+### espeak-ng
+
+<audio controls name="espeak">
+      <source src="/media/espeak.wav" type="audio/wav"/>
+</audio>
 
 当然，使用`edge-tts`需要连网，就不能像`espeak-ng`那样离线使用了。
 
