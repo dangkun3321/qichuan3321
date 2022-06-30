@@ -3,6 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer({
+  compress: true,
   trailingSlash: true,
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],

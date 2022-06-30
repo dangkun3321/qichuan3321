@@ -21,6 +21,7 @@ const siteMetadata = {
   telephone: '0535-6753997',
   icp: '鲁ICP备17017005号',
   locale: 'zh',
+  getStarted: 'https://xswitch.cn/docs/xswitch-tutorial.html',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
