@@ -19,13 +19,15 @@ bibliography: references-data.bib
 
 ```sh
 make bash                # 进入XSwitch容器
+apt-get update
+apt-get install python3-pip
 pip install edge-tts     # 安装，在容器内执行该命令
 ```
 
 安装完成后，可以在容器内使用以下命令测试是否成功：
 
 ```sh
-edge-tts --text "Hello, world!" --write-media hello.mp3
+edge-tts --text "Hello world" --write-media /tmp/hello.mp3
 ```
 
 可以在宿主机上使用如下命令将该文件从容器中Copy出来：
@@ -46,21 +48,20 @@ docker cp xswitch:/tmp/hello.mp3 .
 
 - 在`tts_commandline.conf.xml`新增如下配置：
 
-	```xml
-	<ext-maps>
-        <map ext="mp3" voice="zh-CN-YunxiNeural"/>
-        <map ext="mp3" voice="zh-CN-YunyangNeural"/>
-        <map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
-    </ext-maps>
-	```
-	
+```xml
+<ext-maps>
+    <map ext="mp3" voice="zh-CN-YunxiNeural"/>
+    <map ext="mp3" voice="zh-CN-YunyangNeural"/>
+    <map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
+</ext-maps>
+```
 
 退出保存，在命令行上重新加载模块：
     
 ```sh
 reload mod_tts_commandline
 ```
-    
+
 其中`$${scripts_dir}/xui/tts.sh`为`tts.sh`脚本存放路径。该脚本和`tts_commandline.conf.xml`实例见文末。
     
 当然，也可以在XUI界面上重新加载。
@@ -68,7 +69,7 @@ reload mod_tts_commandline
 注意，如果我们想使用`edge-tts`提供的其他`Voice`，则需将对应的`ShortName`如以上方式新增到配置文件内，并重新加载`mod_tts_commandline`即可。
 
 **若仍然使用`espeak-ng`，无需修改配置文件！**
-	
+
 `edge-tts`提供的`Voice`列表，可通过`edge-tts --list-voice`查询，下方为`edge-tts`常用`Voice`：
 
 |ShortName|Gender|Locale|
@@ -87,8 +88,7 @@ reload mod_tts_commandline
 |en-US-JennyNeural| Female |en-US|
 |en-GB-SoniaNeural|Female|en-GB|
 |cy-GB-NiaNeural|Female|cy-GB|
-    
-    
+
 ### 配置路由规则
 
 上一篇文章中我们提到在“文本”框中填入以下内容：
@@ -98,7 +98,7 @@ answer
 speak tts_commandline|zh|你好，欢迎致电烟台小樱桃网络科技有限公司
 ```
 
-上面这种方式使用的是默认`TTS`模型`espeak-ng`。
+上面这种方式使用的是默认`TTS`引擎是`espeak-ng`，XSwitch内置，但是不大好听。
 
 接下来我们修改“文本”框中的内容如下：
 
@@ -111,9 +111,9 @@ speak tts_commandline|zh-CN-XiaoxiaoNeural|你好，欢迎致电烟台小樱桃�
 
 然后当我们呼叫`tts`测试时，`mod_tts_commandline`会识别到我们使用的`Voice`是`zh-CN-XiaoxiaoNeural`，它会自动选用`edge-tts`为我们播放离线`TTS`语音。
 
-注意，由于`edge-tts`合成的音频文件格式为`.mp3`，需要我们在命令行提前加载`mod_shout`模块，否则会出现不支持`mp3`格式的报错！
+注意，由于`edge-tts`合成的音频文件格式为`.mp3`，需要确保在XSwitch中提前加载了`mod_shout`模块，否则会出现不支持`mp3`格式的报错！
 
-`tts.sh`实例如下，我们也可根据实际需求进行修改：
+`tts.sh`实例如下，也可根据你的实际需要进行修改：
 
 ```bash
 #!/bin/sh
@@ -123,9 +123,9 @@ file=$2;
 text=$3;
 
 if [ "$voice" = "zh-CN-XiaoxiaoNeural" -o "$voice" = "zh-CN-YunyangNeural" -o "$voice" = "zh-CN-XiaoxiaoNeural" ]; then
- edge-tts --text "$text" --voice "$voice"  --write-media "$file";
+    edge-tts --text "$text" --voice "$voice"  --write-media "$file";
 else
- espeak-ng -v "$voice" -w "$file" "$text";
+    espeak-ng -v "$voice" -w "$file" "$text";
 fi
 ```
 
@@ -154,18 +154,25 @@ fi
 </configuration>
 ```
 
-### edge-tts
+## 音频示例
+
+俗话说百闻不如一见，但这里，不管怎么说都不如一“闻”，听听有什么区别。
+
+- edge-tts
 
 <audio controls name="edge-tts">
       <source src="/media/edge-tts.mp3" type="audio/mpeg"/>
 </audio>
 
-### espeak-ng
+- espeak-ng
 
 <audio controls name="espeak">
-      <source src="/media/espeak.wav" type="audio/wav"/>
+      <source src="/media/espeak.mp3" type="audio/mpeg"/>
 </audio>
 
-当然，使用`edge-tts`需要连网，就不能像`espeak-ng`那样离线使用了。
+## 小结
 
-如果你在使用中遇到任何问题，请抓紧告诉我们。
+- `edge-tts`好听，但需要连网
+- `espeak-ng`可以离线使用，但听着有点难受
+- 两者都支持中、英文等多种语言
+- 两者都可以免费使用，在开发、测试时用起来很方便
