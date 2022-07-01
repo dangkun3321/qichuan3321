@@ -18,10 +18,10 @@ bibliography: references-data.bib
 为了防止`XSwitch`镜像体积过大，XSwitch中默认不带`edge-tts`，如果需要使用，可以自行安装：
 
 ```sh
-make bash                # 进入XSwitch容器
-apt-get update
-apt-get install python3-pip
-pip install edge-tts     # 安装，在容器内执行该命令
+make bash                            # 进入XSwitch容器
+apt-get update                       # 更新Linux软件源数据
+apt-get install python3-pip          # 安装Python pip
+pip install edge-tts                 # 安装edge-tts
 ```
 
 安装完成后，可以在容器内使用以下命令测试是否成功：
@@ -176,3 +176,7 @@ fi
 - `espeak-ng`可以离线使用，但听着有点难受
 - 两者都支持中、英文等多种语言
 - 两者都可以免费使用，在开发、测试时用起来很方便
+
+## 相关文章
+
+- [如何在XSwitch Docker镜像中添加你需要的东西](/pages/howto/add-your-owen-stuff/)
