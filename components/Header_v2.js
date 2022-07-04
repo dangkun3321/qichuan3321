@@ -24,25 +24,25 @@ const products = [
   {
     name: 'Community',
     description: 'lang_77',
-    href: '#community',
+    href: '/#community',
     icon: CubeIcon,
   },
   {
     name: 'Commercial',
     description: 'lang_78',
-    href: '#commercial',
+    href: '/#commercial',
     icon: CloudIcon,
   },
   {
     name: 'Professional',
     description: 'lang_83',
-    href: '#professional',
+    href: '/#professional',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Enterprise',
     description: 'lang_87',
-    href: '#enterprise',
+    href: '/#enterprise',
     icon: OfficeBuildingIcon,
   },
 ]
@@ -54,7 +54,7 @@ const headerLinks = [
   },
   {
     name: 'Pricing',
-    href: '#versions',
+    href: '/#versions',
   },
   {
     name: 'About Us',
