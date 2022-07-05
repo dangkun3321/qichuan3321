@@ -1,5 +1,4 @@
 ## Source: https://github.com/alexkaratarakis/gitattributes
-## Modified * text=auto to * text eol=lf to force LF endings.
 
 ## GITATTRIBUTES FOR WEB PROJECTS
 #
@@ -13,10 +12,10 @@
 ######################################################################
 
 # Auto detect
-##   Force LF line endings automatically for files detected as
+##   Handle line endings automatically for files detected as
 ##   text and leave all files detected as binary untouched.
 ##   This will handle all files NOT defined below.
-*                 text eol=lf
+*                 text=auto eol=lf
 
 # Source code
 *.bash            text eol=lf
@@ -156,6 +155,7 @@ Procfile          text
 *.mp3             binary
 *.ogg             binary
 *.ra              binary
+*.wav             binary
 
 # Video
 *.3gpp            binary
