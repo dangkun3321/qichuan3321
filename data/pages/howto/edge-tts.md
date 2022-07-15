@@ -44,15 +44,34 @@ docker cp xswitch:/tmp/hello.mp3 .
 
 **若你使用的`XSwitch`版本为4.0.2及以上，可跳过此步骤，直接进行`配置路由规则`**
 
-- 将原始的`espeak-ng -v ${voice} -w ${file} ${text}`修改为`sh $${scripts_dir}/xui/tts.sh ${voice} ${file} ${text}`
+- 将原始的`espeak-ng -v ${voice} -w ${file} ${text}`修改为`sh $${scripts_dir}/scripts/tts.sh ${voice} ${file} ${text}`
 
-- 在`tts_commandline.conf.xml`新增如下配置：
+- 在`tts_commandline.conf.xml`新增`auto-unlink`:
+
+```xml
+	<param name="auto-unlink" value="false"/>
+```  
+
+当`auto-unlink`为`true`时，通话结束后会自动删除生成的音频文件，为`false`时，则不删除音频文件。
+
+- 在`tts_commandline.conf.xml`新增`voice map`：
 
 ```xml
 <ext-maps>
-    <map ext="mp3" voice="zh-CN-YunxiNeural"/>
-    <map ext="mp3" voice="zh-CN-YunyangNeural"/>
-    <map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
+	<map ext="mp3" voice="zh-CN-YunxiNeural"/>
+	<map ext="mp3" voice="zh-CN-YunyangNeural"/>
+	<map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
+	<map ext="mp3" voice="zh-CN-XiaoyiNeural"/>
+	<map ext="mp3" voice="zh-CN-YunjianNeural"/>
+	<map ext="mp3" voice="zh-CN-YunxiaNeural"/>
+	<map ext="mp3" voice="zh-TW-HsiaoChenNeural"/>
+	<map ext="mp3" voice="zh-HK-HiuMaanNeural"/>
+	<map ext="mp3" voice="en-IE-EmilyNeural"/>
+	<map ext="mp3" voice="en-US-AriaNeural"/>
+	<map ext="mp3" voice="en-US-GuyNeural"/>
+	<map ext="mp3" voice="en-US-JennyNeural"/>
+	<map ext="mp3" voice="en-GB-SoniaNeural"/>
+	<map ext="mp3" voice="cy-GB-NiaNeural"/>
 </ext-maps>
 ```
 
@@ -122,11 +141,33 @@ voice=$1;
 file=$2;
 text=$3;
 
-if [ "$voice" = "zh-CN-XiaoxiaoNeural" -o "$voice" = "zh-CN-YunyangNeural" -o "$voice" = "zh-CN-XiaoxiaoNeural" ]; then
-    edge-tts --text "$text" --voice "$voice"  --write-media "$file";
-else
-    espeak-ng -v "$voice" -w "$file" "$text";
+if [ -f "$file" ]; then
+    exit
 fi
+
+case "$voice" in
+    "zh-CN-XiaoxiaoNeural" \
+    | "zh-CN-YunyangNeural" \
+    | "zh-CN-YunxiNeural" \
+    | "zh-CN-XiaoyiNeural" \
+    | "zh-CN-YunjianNeural" \
+    | "zh-CN-YunxiaNeural" \
+    | "zh-TW-HsiaoChenNeural" \
+    | "zh-HK-HiuMaanNeural" \
+    | "en-IE-EmilyNeural" \
+    | "en-US-AriaNeural" \
+    | "en-US-GuyNeural" \
+    | "en-US-JennyNeural" \
+    | "en-GB-SoniaNeural" \
+    | "cy-GB-NiaNeural")
+        edge-tts --text "$text" --voice "$voice"  --write-media "$file"
+        ;;
+    *)
+        espeak-ng -s 220 -v "$voice" -w "$file" "$text";
+esac
+
+exit
+
 ```
 
 `tts_commandline.conf.xml`配置如下：
@@ -144,12 +185,24 @@ fi
     Example commands can be found at:
     https://freeswitch.org/confluence/display/FREESWITCH/mod_tts_commandline#mod_tts_commandline-Examplecommands
     -->
-    <param name="command" value="sh $${scripts_dir}/xui/tts.sh ${voice} ${file} ${text}"/>
+    <param name="command" value="sh $${scripts_dir}/scripts/tts.sh ${voice} ${file} ${text}"/>
+    <param name="auto-unlink" value="false"/>
     </settings>
     <ext-maps>
-        <map ext="mp3" voice="zh-CN-YunxiNeural"/>
-        <map ext="mp3" voice="zh-CN-YunyangNeural"/>
-        <map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
+		<map ext="mp3" voice="zh-CN-YunxiNeural"/>
+		<map ext="mp3" voice="zh-CN-YunyangNeural"/>
+		<map ext="mp3" voice="zh-CN-XiaoxiaoNeural"/>
+		<map ext="mp3" voice="zh-CN-XiaoyiNeural"/>
+		<map ext="mp3" voice="zh-CN-YunjianNeural"/>
+		<map ext="mp3" voice="zh-CN-YunxiaNeural"/>
+		<map ext="mp3" voice="zh-TW-HsiaoChenNeural"/>
+		<map ext="mp3" voice="zh-HK-HiuMaanNeural"/>
+		<map ext="mp3" voice="en-IE-EmilyNeural"/>
+		<map ext="mp3" voice="en-US-AriaNeural"/>
+		<map ext="mp3" voice="en-US-GuyNeural"/>
+		<map ext="mp3" voice="en-US-JennyNeural"/>
+		<map ext="mp3" voice="en-GB-SoniaNeural"/>
+		<map ext="mp3" voice="cy-GB-NiaNeural"/>
     </ext-maps>
 </configuration>
 ```
