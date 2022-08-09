@@ -60,6 +60,8 @@ cd xswitch-install
 
 执行此命令是为了下载声音文件和生成`.env`文件，`.env`里的参数为docker容器运行时的环境变量。
 
+注意，`.env`文件在Linux下默认是个隐藏文件，可以使用`ls -la`或`find . -name .env`、`cat .env`等命令显示，详见[Docker关于`.env`文件的相关说明](https://docs.docker.com/compose/environment-variables/#the-env-file)。
+
 打开`.env`文件，修改如下几个参数：
 
 #### 系统参数
