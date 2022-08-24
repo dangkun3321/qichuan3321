@@ -9,19 +9,23 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
+本文是小樱桃使用的Markdown规范，分享给大家，希望对大家有帮助。
+
 ## 什么是Markdown？
 
 - Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
 - Markdown语言在2004年由约翰·格鲁伯（John Gruber）创建。
 - Markdown编写的文档可以导出HTML 、Word、图像、PDF、Epub等多种格式的文档。
 - Markdown编写的文档后缀为`.md`、`.markdown`。
+- Markdown注重用简洁的标记语法描述文章的章节和段落结构，写文档的人无需要过多关注排版。
+- 与HTML、XML等标记语言类似，Makerdown也是一种标记语言。不同的是，后者是可以给“人”看的，而前者是给浏览器或其它软件看的。
 
 Markdown是格式简单易学又不失强大的功能，目前主流的文档平台都支持Markdown格式。关Markdown的语法，参见：
 
 - https://markdown.com.cn/cheat-sheet.html
 - https://www.zhihu.com/question/19963642
 
-在实际使用时，由于软件和平台的不同，Markdown语言也不尽相同，下面是小樱桃的Markdown规范，请遵照执行。
+在实际使用时，由于软件和平台的不同，Markdown语法也不尽相同，甚至有很多言。小樱桃有时候会使用Markdown同时生成HTML和PDF，因此，为了保持最大兼容性（也为了更好看），制定以下规范，请遵照执行。
 
 ## 标题中`#`与标题要有一个空格
 
