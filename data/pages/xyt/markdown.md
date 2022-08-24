@@ -24,6 +24,7 @@ Markdown是格式简单易学又不失强大的功能，目前主流的文档平
 
 - https://markdown.com.cn/cheat-sheet.html
 - https://www.zhihu.com/question/19963642
+- https://docs.github.com/cn/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 在实际使用时，由于软件和平台的不同，Markdown语法也不尽相同，甚至有很多言。小樱桃有时候会使用Markdown同时生成HTML和PDF，因此，为了保持最大兼容性（也为了更好看），制定以下规范，请遵照执行。
 
