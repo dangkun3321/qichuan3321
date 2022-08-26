@@ -72,7 +72,7 @@ export function Versions() {
           <div className="text-xl font-semibold text-gray-900">{t('Commercial Edition')}</div>
           <div className="mt-2 min-h-[40px] text-sm leading-4 text-gray-600">{t('lang_78')}</div>
           <div className="text-base font-medium text-gray-900">
-            <span className="text-base font-medium">1万</span>
+            <span className="text-base font-medium">1.3万</span>
             <span className="ml-1 text-xs">起</span>
           </div>
           <ul className="mt-10 flex-1 space-y-2 pb-12 text-gray-600">
@@ -111,7 +111,7 @@ export function Versions() {
           <div className="text-xl font-semibold text-gray-900">{t('Professional Edition')}</div>
           <div className="mt-2 min-h-[40px] text-sm leading-4 text-gray-600">{t('lang_83')}</div>
           <div className="text-base font-medium text-gray-900">
-            <span className="text-base font-medium">3万</span>
+            <span className="text-base font-medium">6万</span>
             <span className="ml-1 text-xs">起</span>
           </div>
           <ul className="mt-10 flex-1 space-y-2 pb-12 text-gray-600">
@@ -150,7 +150,7 @@ export function Versions() {
           <div className="text-xl font-semibold text-gray-900">{t('Enterprise Edition')}</div>
           <div className="mt-2 min-h-[40px] text-sm leading-4 text-gray-600">{t('lang_87')}</div>
           <div className="text-base font-medium text-gray-900">
-            <span className="text-base font-medium">5万</span>
+            <span className="text-base font-medium">22万</span>
             <span className="ml-1 text-xs">起</span>
           </div>
           <ul className="mt-10 flex-1 space-y-2 pb-12 text-gray-600">
