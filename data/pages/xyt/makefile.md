@@ -9,7 +9,7 @@ layout: PostLayout
 bibliography: references-data.bib
 ---
 
-小樱桃在项目文件中大量使用Makefile，如果你不了解Makefile，或者你不知道怎么给别人解释Makefile，看这篇文件，或者把这篇文章分享给他人。
+小樱桃在项目文件中大量使用Makefile，如果你不了解Makefile，或者你不知道怎么给别人解释Makefile，看这篇文章，或者分享给他人。
 
 ## 什么是Makefile
 
