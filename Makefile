@@ -11,5 +11,8 @@ release:
 install:
 	echo upload to xswitch.cn
 	rsync -avz out/*  root@xswitch.cn:/var/www/xswitch/
+
+publish: release install
+
 clean:
 	rm -rf package-lock.json node_modules

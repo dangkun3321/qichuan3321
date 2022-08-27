@@ -42,6 +42,13 @@ python3 -m http.server 9000
 ## 发布
 
 ```
+make publish
+```
+
+或
+
+```
+make release
 make install
 ```
 
