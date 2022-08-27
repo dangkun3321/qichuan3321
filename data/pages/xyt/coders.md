@@ -283,13 +283,14 @@ done
 * 开始试着编码
 * 找一个好的编辑器并熟悉它。在 Mac上我们以前习惯用 TextMate和Sublime text 2( 2( http://ruby-china.org/topics/3107 )，在 )，在 Linux 上推荐 vi vi http://qgymje.iteye.com/blog/503120 ，现在推荐使用VS Code: https://code.visualstudio.com/
 * 多写代码，多向大家请教
-* 学好[Markdown](https://xswitch.cn/pages/xyt/markdown/)
+* 学好[Markdown](/pages/xyt/markdown/)
+* 理解[Makefile](/pages/xyt/makefile/)
 * 学会[Docker](https://github.com/rts-cn/xswitch-free)
 * 学会[提问](http://www.freeswitch.org.cn/blog/2012/10/how-to-ask/)
 * 学会[调试](http://www.freeswitch.org.cn/blog/2012/09/rubber-duck-problem-solving/)
-* 尝试[写文档](https://xswitch.cn/pages/write-docs/)
+* 尝试[写文档](/pages/write-docs/)
 * 学习[程序员技术练级攻略](http://coolshell.cn/articles/4990.html)。
-* 学习[更多文档](https://xswitch.cn/docs/)
+* 学习[更多文档](/docs/)
 
 此外，遇到问题，可以到 Google上搜索，其次是 https://cn.bing.com/ ，再次者是百度。搜出来的文章，一般像简书、知乎、RUNOOB上的文章一般质量比较高一些。
 
