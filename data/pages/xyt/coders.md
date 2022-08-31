@@ -4,7 +4,7 @@ date: 2022-08-24T15:59:00Z
 lastmod: '2021-08-24'
 tags: ['小樱桃']
 draft: false
-summary: '小樱桃Markdown规范'
+summary: '小樱桃技术人员必读'
 layout: PostLayout
 bibliography: references-data.bib
 ---
